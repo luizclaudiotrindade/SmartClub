@@ -4,13 +4,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * @author luiz Claudio
+ * @author Luiz Claudio
  */
 @Controller
 public class SistemaController {
-	@RequestMapping("olaMundoSpring")
+	@RequestMapping("index")
 	public String olaMundo() {
-		System.out.println("Executando a lÃ³gica com Spring MVC.");
-		return "olaMundo";
+		System.out.println("Executando a lógica com Spring MVC.");
+		return "blog";
 	}
 }
