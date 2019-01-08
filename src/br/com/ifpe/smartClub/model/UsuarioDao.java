@@ -6,20 +6,26 @@ import javax.persistence.Persistence;
 import javax.persistence.Query;
 
 public class UsuarioDao {
-	private static final String PERSISTENCE_UNIT = "usuario";
+	private static final String PERSISTENCE_UNIT = "smartClub";
 
-	public boolean verificarExistencia(String usuario, String senha) {
-		if (usuario.equals("") || senha.equals("")) {
+	
+	
+	
+	public boolean verificarExistencia(Usuario usuario) {
+		
+		if (usuario.getUsuario().equals("") || usuario.getSenha().equals("")) {
+			return false;
+		}
+		if (usuario.getUsuario()==null || usuario.getSenha()==null) {
 			return false;
 		}
 
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT);
 		EntityManager manager = factory.createEntityManager();
 		Query query = null;
-		query = manager
-				.createQuery("FROM Usuario WHERE usuario LIKE :paramUsuario AND senha LIKE :paramSenha ORDER BY id");
-		query.setParameter("paramCodigo", "%" + usuario + "%");
-		query.setParameter("paramDescricao", "%" + senha + "%");
+		query = manager.createQuery("FROM Usuario WHERE usuario = :paramUsuario AND senha = :paramSenha ORDER BY id");
+		query.setParameter("paramUsuario",  usuario.getUsuario() );
+		query.setParameter("paramSenha", usuario.getSenha() );
 
 		manager.close();
 		factory.close();
@@ -28,5 +34,6 @@ public class UsuarioDao {
 		
 	
 	}
+	
 
 }
