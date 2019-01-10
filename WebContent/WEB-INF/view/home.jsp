@@ -160,7 +160,7 @@
 		class="breadcumb-area bg-img d-flex align-items-center justify-content-center">
 		
 		<div class="bradcumbContent">
-			<h2>SmarstClub</h2>
+			<h2>Smart Club</h2>
 		</div>
 
 	</section>
@@ -187,7 +187,7 @@
 									<span class="input-group-text"><i class="fas fa-user"></i></span>
 								</div>
 								<input name="usuario" type="text" class="form-control"
-									placeholder="Usuario">
+									placeholder="Email">
 							</div>
 							<div class="input-group form-group">
 								<div class="input-group-prepend">

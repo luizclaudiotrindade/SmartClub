@@ -21,6 +21,11 @@ public class SistemaController {
 		System.out.println("Executando cadastro usuario");
 		return "cadastro";
 	}
+	@RequestMapping("/beneficio")
+	public String beneficio() {
+		System.out.println("Iniciando a Pagina de beneficio");
+		return "beneficios";
+	}
 	
 	
 
