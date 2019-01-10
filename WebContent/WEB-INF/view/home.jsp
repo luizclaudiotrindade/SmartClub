@@ -157,91 +157,83 @@
 
 	<!-- ##### Breadcumb Area Start ##### -->
 	<section
-		class="breadcumb-area bg-img d-flex align-items-center justify-content-center"
-		style="background-image: url(<%=request.getContextPath()%>/resources/bootstrap/img/bg-img/bg-8.jpg);">
+		class="breadcumb-area bg-img d-flex align-items-center justify-content-center">
+		
 		<div class="bradcumbContent">
 			<h2>SmarstClub</h2>
 		</div>
-		
+
 	</section>
-	<!-- Inicio Moldal Login -->
 	<!-- Modal -->
-	
 	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
 		aria-labelledby="exampleModalLabel" aria-hidden="true">
-		 
-		 <div class="modal-center">
-        
-		<div class="modal-body">
-		
-				
-				
-					<div class="card">
-						<div class="card-header">
-							<h3>Smart Clsssadsdsadub Login</h3>
-							<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span>
-
-                    </button>
-							<!-- APIS facebook google e twiter  
-			<div class="d-flex justify-content-end social_icon">
-					<span><i class="fab fa-facebook-square"></i></span>
-					<span><i class="fab fa-google-plus-square"></i></span>
-					<span><i class="fab fa-twitter-square"></i></span>
-				</div>
-				-->
-						</div>
-						<div class="card-body">
-							<form action="autenticar" method="post">
-								<div class="input-group form-group">
-									<div class="input-group-prepend">
-										<span class="input-group-text"><i class="fas fa-user"></i></span>
-									</div>
-									<input name="usuario" type="text" class="form-control" placeholder="Usuario">
-
+		<div class="modal-dialog" role="document">
+			<div class="modal-content"
+				style="background-color: rgba(0, 0, 0, 0.5) !important;">
+				<div class="card" style="width: 498px">
+					<div class="card-header">
+						<!--  aqui está a parte do header do moldal de login  -->
+						<button type="button" class="close" style="color:#b3b3b3" data-dismiss="modal"
+							aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<!--  fim do header -->
+						<!--  aqui está todo o corpo -->
+					<div class="card-body">
+						<form action="autenticar" method="post">
+							<div class="input-group form-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="fas fa-user"></i></span>
 								</div>
-								<div class="input-group form-group">
-									<div class="input-group-prepend">
-										<span class="input-group-text"><i class="fas fa-key"></i></span>
-									</div>
-									<input  name="senha" type="password" class="form-control"
-										placeholder="Senha">
-								</div>
-								
-								<div class="form-group">
-									<input type="submit" value="Login"
-										class="btn float-right login_btn">
-										
-								</div>
-							</form>
-						</div>
-						<div class="card-footer">
-							<div class="d-flex justify-content-center links" style="">
-								Ainda não é cadastrado?<a href="#">Cadastre-se</a>
+								<input name="usuario" type="text" class="form-control"
+									placeholder="Usuario">
 							</div>
-							<div class="d-flex justify-content-center">
-								<a style="color:white;" href="#">Recuperar Conta?</a>
+							<div class="input-group form-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="fas fa-key"></i></span>
+								</div>
+								<input name="senha" type="password" class="form-control"
+									placeholder="Senha">
 							</div>
+							<div class="form-group">
+								<input type="submit" value="Login"
+									class="btn float-right login_btn">
+							</div>
+							<input type="checkbox" value="lembrar-me"><p style="color:white">Lembrar-me?</p>
+						</form>
+
+					</div>
+					<!--  fim do body do moldal -->
+					<!--  inicio do footer -->
+					<div class="card-footer">
+						<div class="d-flex justify-content-center links" style="">
+							Ainda não é cadastrado?<a href="#">Cadastre-se</a>
+						</div>
+						<div class="d-flex justify-content-center">
+							<a style="color: white;" href="#">Recuperar Conta?</a>
 						</div>
 					</div>
-				
-			
-		</div>
-
-		<!-- Fim  Moldal Login -->
-		<!-- ##### Breadcumb Area End ##### -->
-		<!-- Copywrite Text -->
-		<div class="col-12">
-			<div class="copywrite-text mt-30">
-				<p>
-					<a href="#"> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						Copyright &copy;<script>
-							document.write(new Date().getFullYear());
-						</script> Todos os direitos reservados a SmartClub <i class="fa fa-heart-o"
-						aria-hidden="true"></i> Ass: <a href="https://colorlib.com"
-						target="_blank">SmartClub</a> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-				</p>
+					<!-- fim do footer do moldal -->
+				</div>
 			</div>
 		</div>
+
+		<footer>
+			<!-- ##### Breadcumb Area End ##### -->
+			<!-- Copywrite Text -->
+			<div class="col-12">
+				<div class="copywrite-text mt-30">
+					<p>
+						<a href="#"> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+							Copyright &copy;<script>
+								document.write(new Date().getFullYear());
+							</script> Todos os direitos reservados a SmartClub <i
+							class="fa fa-heart-o" aria-hidden="true"></i> Ass: <a
+							href="https://colorlib.com" target="_blank">SmartClub</a> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					</p>
+				</div>
+			</div>
 	</div>
 	</div>
 	</footer>

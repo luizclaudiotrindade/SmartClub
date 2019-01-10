@@ -13,7 +13,7 @@ import br.com.ifpe.smartClub.model.UsuarioDao;
 public class SistemaController {
 	@RequestMapping("/home")
 	public String olaMundo() {
-		System.out.println("Executando a l�gica com Spring MVC.");
+		System.out.println("Iniciando a Pagina inicial");
 		return "home";
 	}
 	@RequestMapping("/cadastro")
@@ -27,9 +27,10 @@ public class SistemaController {
 	@RequestMapping("/autenticar")
 	public String autenticar(Usuario usuario){
 		UsuarioDao dao = new UsuarioDao();
-		if(dao.verificarExistencia(usuario)==true){;
+		if(dao.verificarExistencia(usuario)==true){
+			System.out.println("O usuario foi logado com sucesso!");
 		return "usuarioLogadoSucesso";
 		}
-		 return "forward:usuarioLogadoSucesso";
+		 return "forward:home";
 	}
 }

@@ -1,5 +1,7 @@
 package br.com.ifpe.smartClub.model;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -12,7 +14,7 @@ public class UsuarioDao {
 	
 	
 	public boolean verificarExistencia(Usuario usuario) {
-		
+		boolean retorno= false;
 		if (usuario.getUsuario().equals("") || usuario.getSenha().equals("")) {
 			return false;
 		}
@@ -26,14 +28,22 @@ public class UsuarioDao {
 		query = manager.createQuery("FROM Usuario WHERE usuario = :paramUsuario AND senha = :paramSenha ORDER BY id");
 		query.setParameter("paramUsuario",  usuario.getUsuario() );
 		query.setParameter("paramSenha", usuario.getSenha() );
-
+		
+		List<Usuario> lista = query.getResultList();
+		if (lista.size() > 0) {
+			System.out.println("Encontrou");	
+			return retorno=true;
+			}
+		else {System.out.println("Não encontrou");
+			 retorno= false;
+			}
+		
 		manager.close();
 		factory.close();
-
-		return true;
+		
+		return retorno;
 		
 	
 	}
-	
 
 }
