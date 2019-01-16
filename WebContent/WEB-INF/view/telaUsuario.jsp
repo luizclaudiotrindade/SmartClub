@@ -82,7 +82,7 @@
 									<div class="single-cool-fact">
 										<div class="scf-text">
 											<i class="icon-beach"></i>
-											<p>Quarto Extra</p>
+											<p>Diária +1</p>
 										</div>
 									</div>
 							</li>
@@ -92,7 +92,17 @@
 									<div class="single-cool-fact">
 										<div class="scf-text">
 											<i class="icon-beach"></i>
-											<p>Quarto Extra</p>
+											<p>Diária +1</p>
+										</div>
+									</div>
+							</li>
+							<li>
+								<!-- Single Cool Facts -->
+								<div class="col-12 col-sm-4">
+									<div class="single-cool-fact">
+										<div class="scf-text">
+											<i class="icon-sunset"></i>
+											<p>Quarto Triplo</p>
 										</div>
 									</div>
 							</li>
@@ -102,17 +112,7 @@
 									<div class="single-cool-fact">
 										<div class="scf-text">
 											<i class="icon-beach"></i>
-											<p>Quarto Extra</p>
-										</div>
-									</div>
-							</li>
-							<li>
-								<!-- Single Cool Facts -->
-								<div class="col-12 col-sm-4">
-									<div class="single-cool-fact">
-										<div class="scf-text">
-											<i class="icon-beach"></i>
-											<p>Quarto Extra</p>
+											<p>Estacionamento</p>
 										</div>
 									</div>
 							</li>
@@ -126,7 +126,7 @@
 									<div class="single-cool-fact">
 										<div class="scf-text">
 											<i class="icon-beach"></i>
-											<p>Quarto Extra</p>
+											<p>Translado</p>
 										</div>
 									</div>
 								</div>
@@ -137,7 +137,7 @@
 									<div class="single-cool-fact">
 										<div class="scf-text">
 											<i class="icon-beach"></i>
-											<p>Quarto Extra</p>
+											<p>Todas as refeições</p>
 										</div>
 									</div>
 							</li>
@@ -147,7 +147,7 @@
 									<div class="single-cool-fact">
 										<div class="scf-text">
 											<i class="icon-beach"></i>
-											<p>Quarto Extra</p>
+											<p>Open Bar</p>
 										</div>
 									</div>
 							</li>
