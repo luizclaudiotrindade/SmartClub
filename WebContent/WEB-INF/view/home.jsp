@@ -70,7 +70,7 @@
 							<!-- Nav Start -->
 							<div class="classynav">
 								<ul>
-									<li><a href="index.html">Home</a></li>
+									<li><a href="home">Home</a></li>
 									<li><a href="about-us.html">About Us</a></li>
 									<!-- mega menu desativado  e services desativados
                                     <li><a href="#">Pages</a>

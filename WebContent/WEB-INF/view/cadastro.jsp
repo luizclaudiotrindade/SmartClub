@@ -59,7 +59,7 @@
 					<!-- Nav Start -->
 					<div class="classynav">
 						<ul>
-							<li><a href="index.html">Home</a></li>
+							<li><a href="home">Home</a></li>
 							<li><a href="about-us.html">About Us</a></li>
 							<!-- mega menu desativado  e services desativados
                                     <li><a href="#">Pages</a>
@@ -120,11 +120,7 @@
 
 						</ul>
 
-						<!-- Button -->
-						<div class="menu-btn">
-							<button type="button" class="btn palatin-btn" data-toggle="modal"
-								data-target="#exampleModal">Login</button>
-						</div>
+											
 
 					</div>
 					<!-- Nav End -->
@@ -133,6 +129,61 @@
 			</div>
 		</div>
 	</div>
+	<form action="cadastro" method="post">
+
+		<div class="form-group">
+			<label for="inputDescricao">Nome</label> <input type="text"
+				id="inputNome" class="form-control" name="nome"
+				style="width: 200px;" maxlength="100" required="required" />
+		</div>
+		
+		<div class="form-group">
+			<label for="inputCPF">CPF</label> <input type="text"
+				id="inputCPF" class="form-control" name="cpf"
+				style="width: 200px;" maxlength="100" required="required" />
+		</div>
+		
+		<div class="form-group">
+			<label for="inputEmail">Email</label> <input type="text"
+				id="inputEmail" class="form-control" name="email"
+				style="width: 200px;" maxlength="100" required="required" />
+		</div>
+
+		<div class="form-group">
+			<label for="inputSenha">Senha</label> <input type="password"
+				id="inputSenha" class="form-control" name="senha"
+				style="width: 200px;" maxlength="100" required="required" />
+		</div>
+
+		<div class="form-group">
+			<label for="inputTelefone">Telefone</label> <input type="text"
+				id="inputTelefone" class="form-control" name="telefone"
+				style="width: 200px;" maxlength="100" required="required" />
+		</div>
+	
+		<div class="form-group">
+			Sexo<br> Masculino:<input type="checkbox" name="masculino"	value="m">
+			
+					 Feminino:<input type="checkbox" name="feminino"value="f"><br>
+		</div>
+		
+		<div class="form-group">
+			<label for="inputIdade">Idade</label> <input type="text"
+				id="inputIdade" class="form-control" name="idade"
+				style="width: 200px;" maxlength="100" required="required" />
+		</div>
+
+		<div class="form-group">
+			<label for="inputEndereco">Endereço</label> <input type="text"
+				id="inputDescricao" class="form-control" name="descricao"
+				style="width: 200px;" maxlength="100" required="required" />
+		</div>
+		
+		<p>
+			<button type="submit" class="btn btn-primary">&nbsp;Cadastrar &nbsp;</button>
+		</p>
+	</form>
+	
 	</header>
 
 
