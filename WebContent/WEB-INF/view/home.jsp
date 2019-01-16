@@ -70,7 +70,7 @@
 							<!-- Nav Start -->
 							<div class="classynav">
 								<ul>
-									<li><a href="index.html">Home</a></li>
+									<li><a href="home">Home</a></li>
 									<li><a href="about-us.html">About Us</a></li>
 									<!-- mega menu desativado  e services desativados
                                     <li><a href="#">Pages</a>
@@ -208,7 +208,7 @@
 					<!--  inicio do footer -->
 					<div class="card-footer">
 						<div class="d-flex justify-content-center links" style="">
-							Ainda não é cadastrado?<a href="#">Cadastre-se</a>
+							Ainda não é cadastrado?<a href="cadastro">Cadastre-se</a>
 						</div>
 						<div class="d-flex justify-content-center">
 							<a style="color: white;" href="#">Recuperar Conta?</a>
