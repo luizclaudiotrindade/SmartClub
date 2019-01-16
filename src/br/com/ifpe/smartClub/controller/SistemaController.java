@@ -26,9 +26,12 @@ public class SistemaController {
 		System.out.println("Iniciando a Pagina de beneficio");
 		return "beneficios";
 	}
+	@RequestMapping("/telaUsuario")
+	public String telaUsuario() {
+		System.out.println("Iniciando a tela usuario");
+		return "telaUsuario";
+	}
 	
-	
-
 	@RequestMapping("/autenticar")
 	public String autenticar(Usuario usuario){
 		UsuarioDao dao = new UsuarioDao();

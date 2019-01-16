@@ -208,7 +208,7 @@
 					<!--  inicio do footer -->
 					<div class="card-footer">
 						<div class="d-flex justify-content-center links" style="">
-							Ainda não é cadastrado?<a href="#">Cadastre-se</a>
+							Ainda não é cadastrado?<a href="beneficio">Cadastre-se</a>
 						</div>
 						<div class="d-flex justify-content-center">
 							<a style="color: white;" href="#">Recuperar Conta?</a>

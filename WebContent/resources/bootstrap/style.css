@@ -51,6 +51,7 @@
   padding: 0; }
 
 body {
+	
   font-family: "FuturaLT-Book";
   font-size: 14px; }
 
@@ -372,8 +373,8 @@ img {
   position: relative;
   z-index: 1;
   display: inline-block;
-  min-width: 123px;
-  height: 53px;
+  min-width: 82px;
+  height: 40px;
   color: #ffffff;
   border: none;
   border-radius: 0;
@@ -446,7 +447,7 @@ img {
             font-size: 14px; } }
         @media only screen and (min-width: 768px) and (max-width: 991px) {
           .header-area .palatin-main-menu .classy-navbar .classynav ul li a {
-            background-color: #cb8670; } }
+            background-color: transparent; } }
         @media only screen and (max-width: 767px) {
           .header-area .palatin-main-menu .classy-navbar .classynav ul li a {
             background-color: #cb8670; } }

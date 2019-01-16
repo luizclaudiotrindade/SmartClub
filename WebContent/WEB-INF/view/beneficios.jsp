@@ -15,8 +15,6 @@
 <!-- Core Stylesheet -->
 <link rel="stylesheet" type="text/css"
 	href="<%=request.getContextPath()%>/resources/bootstrap/style.css" />
-<link rel="stylesheet" type="text/css"
-	href="<%=request.getContextPath()%>/resources/bootstrap/login.css" />
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
@@ -29,6 +27,8 @@
 	crossorigin="anonymous">
 
 <title>Smart-Club</title>
+<style>
+</style>
 </head>
 <body>
 	<!-- ##### Header Area Start ##### -->
@@ -148,9 +148,6 @@
 	<!-- ##### Breadcumb Area End ##### -->
 	</section>
 	<!-- ##### Breadcumb Area End ##### -->
-
-
-
 	<!-- ##### Service Intro Area Start ##### -->
 	<section class="services-intro">
 	<div class="container">
@@ -160,7 +157,8 @@
 				<div class="service-intro-text mb-100">
 					<div class="section-heading">
 						<div class="line-"></div>
-						<h2>Nossos Beneficios</h2>
+						<h2>Escolha um dos nossos planos para se cadastrar..
+						</h2>
 					</div>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 						Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla
@@ -263,7 +261,7 @@
 						<p>Malesuada lorem maximus mauris sceleri sque, at rutrum
 							nulla dictum. Ut ac ligula sapien. Suspendisse cursus. faucibus
 							finibus.</p>
-						<button type="button" class="btn">Aderir</button>
+						<a  class="btn" href="cadastro">Aderir</a>
 					</div>
 				</div>
 			</div>

@@ -135,23 +135,7 @@
 	</div>
 	</header>
 
-<!-- ##### Breadcumb Area End ##### -->
-		<!-- Copywrite Text -->
-		<div class="col-12">
-			<div class="copywrite-text mt-30">
-				<p>
-					<a href="#"> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						Copyright &copy;<script>
-							document.write(new Date().getFullYear());
-						</script> Todos os direitos reservados a SmartClub <i class="fa fa-heart-o"
-						aria-hidden="true"></i> Ass: <a href="https://colorlib.com"
-						target="_blank">SmartClub</a> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-				</p>
-			</div>
-		</div>
-	</div>
-	</div>
-	
+
 	</footer>
 
 	<script type="text/javascript"
