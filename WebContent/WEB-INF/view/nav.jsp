@@ -1,3 +1,14 @@
+<style>
+.classy-navbar .nav-brand {
+    font-size: 26px;
+    font-weight: 500;
+    color: #565656;
+    display: inline-block;
+    margin-right: -66px;
+}
+
+</style>
+
 <!-- Preloader -->
 <div class="preloader d-flex align-items-center justify-content-center">
 	<div class="cssload-container">
@@ -15,9 +26,9 @@
 				<nav class="classy-navbar justify-content-between" id="palatinNav">
 
 					<!-- Nav brand -->
-					<a href="index.html" class="nav-brand"><img
-						src="<%=request.getContextPath()%>/resources/bootstrap/img/core-img/logo.png"
-						alt=""></a>
+					<img
+						src="<%=request.getContextPath()%>/resources/bootstrap/img/core-img/logoooo.png"
+						style="max-width:19%" alt="Logo tipo Smart Club">
 
 					<!-- Navbar Toggler -->
 					<div class="classy-navbar-toggler">
@@ -113,5 +124,5 @@
 			</div>
 		</div>
 	</div>
-
 </header>
+

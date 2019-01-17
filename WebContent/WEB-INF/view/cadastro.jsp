@@ -21,10 +21,10 @@
 <title>Insert title here</title>
 <style>
 .breadcumb-area {
-    position: relative;
-    z-index: 10;
-    width: 100%;
-    height: 655px;
+	position: relative;
+	z-index: 10;
+	width: 100%;
+	height: 655px;
 }
 </style>
 </head>
@@ -32,55 +32,46 @@
 
 	<!--  navegação -->
 	<c:import url="nav.jsp" />
-	
+
 	<form action="cadastro" method="post"
-		class="breadcumb-area bg-img d-flex align-items-center justify-content-center" >
-		
-		<div class="row">
+		class="breadcumb-area bg-img d-flex align-items-center justify-content-center">
+
+		<div style="margin-left: 3%; margin-top: 25%" class="row">
+			<!-- Form Name -->
+			<legend>Preencha Seus Dados</legend>
 			<div class="col">
-				<input type="text" class="form-control" placeholder="Nome">
-			</div>
-			
-			<div class="col">
-				<input type="text" class="form-control" placeholder="Sobrenome">
-				<input type="text" class="form-control" placeholder="E-mail">
-			</div>
-			
-				
-		</div>
-		
-		<div class="col">
-				<input type="text" class="form-control" placeholder="Senha">
-				</div>
-				
-				<div class="col">
+				<p>
+					<input type="text" class="form-control" placeholder="Nome">
+				</p>
+				<p>
+					<input type="text" class="form-control" placeholder="Sobrenome">
+				</p>
+				<input type="text" class="form-control" placeholder="E-mail"><br>
+				<input type="text" class="form-control" placeholder="Senha"><br>
 				<input type="text" class="form-control" placeholder="Telefone">
-				</div>
-				
-				<div class="col">
-				<input type="text" class="form-control" placeholder="Cpf">
-				</div>
-				
-				<div class="col">
-				<input type="text" class="form-control" placeholder="Rg">
-				</div>
-				
-				<div class="col">
-				<input type="text" class="form-control" placeholder="Endereco">
-				</div>
-				
-				<div class="col">
-				<input type="text" class="form-control" placeholder="Sexo">
-				</div>
-				
-				<div class="col">
-				<input type="text" class="form-control" placeholder="Idade">
-				</div>
-            </div>
+
+				<input type="text" class="form-control" placeholder="Cpf"><br>
+
+				<input type="text" class="form-control" placeholder="Rg"><br>
+
+				<input type="text" class="form-control" placeholder="Endereco"><br>
+
+				<input type="text" class="form-control" placeholder="Sexo"><br>
+
+				<input type="text" class="form-control" placeholder="Idade"><br>
+				<input type="submit" class="form-control"
+					style="background-color: green;" value="Cadastrar">
+			</div>
+
+
+		</div>
+
+
+
 		</header>
 
 
-		</footer>
+	<footer> teste</footer>
 
 		<script type="text/javascript"
 			src="<%=request.getContextPath()%>/resources/bootstrap/js/jquery/jquery-2.2.4.min.js"></script>

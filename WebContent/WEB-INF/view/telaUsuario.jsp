@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -41,143 +42,8 @@
 </style>
 </head>
 <body>
+<c:import url="nav.jsp" />
 
-	<!-- Preloader -->
-	<div class="preloader d-flex align-items-center justify-content-center">
-		<div class="cssload-container">
-			<div class="cssload-loading"></div>
-		</div>
-	</div>
-
-	<!-- ##### Header Area Start ##### -->
-	<header class="header-area"> <!-- Navbar Area -->
-	<div class="palatin-main-menu">
-		<div class="classy-nav-container breakpoint-off">
-			<div class="container">
-				<!-- Menu -->
-				<nav class="classy-navbar justify-content-between" id="palatinNav">
-
-
-				<div class="classy-navbar-toggler">
-					<span class="navbarToggler"><span></span><span></span><span></span></span>
-				</div>
-
-				<!-- Menu -->
-				<div class="classy-menu">
-
-					<!-- close btn -->
-					<div class="classycloseIcon">
-						<div class="cross-wrap">
-							<span class="top"></span><span class="bottom"></span>
-						</div>
-					</div>
-
-					<!-- Nav Start -->
-					<div class="classynav">
-						<ul>
-
-							<li>
-								<!-- Single Cool Facts -->
-								<div class="col-12 col-sm-4">
-									<div class="single-cool-fact">
-										<div class="scf-text">
-											<i class="icon-beach"></i>
-											<p>Diária +1</p>
-										</div>
-									</div>
-							</li>
-							<li>
-								<!-- Single Cool Facts -->
-								<div class="col-12 col-sm-4">
-									<div class="single-cool-fact">
-										<div class="scf-text">
-											<i class="icon-beach"></i>
-											<p>Diária +1</p>
-										</div>
-									</div>
-							</li>
-							<li>
-								<!-- Single Cool Facts -->
-								<div class="col-12 col-sm-4">
-									<div class="single-cool-fact">
-										<div class="scf-text">
-											<i class="icon-sunset"></i>
-											<p>Quarto Triplo</p>
-										</div>
-									</div>
-							</li>
-							<li>
-								<!-- Single Cool Facts -->
-								<div class="col-12 col-sm-4">
-									<div class="single-cool-fact">
-										<div class="scf-text">
-											<i class="icon-beach"></i>
-											<p>Estacionamento</p>
-										</div>
-									</div>
-							</li>
-							<!-- Nav brand -->
-							<a href="index.html" class="nav-brand"><img
-								src="<%=request.getContextPath()%>/resources/bootstrap/img/core-img/logo.png"
-								alt=""></a>
-							<li>
-								<!-- Single Cool Facts -->
-								<div class="col-12 col-sm-4">
-									<div class="single-cool-fact">
-										<div class="scf-text">
-											<i class="icon-beach"></i>
-											<p>Translado</p>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li>
-								<!-- Single Cool Facts -->
-								<div class="col-12 col-sm-4">
-									<div class="single-cool-fact">
-										<div class="scf-text">
-											<i class="icon-beach"></i>
-											<p>Todas as refeições</p>
-										</div>
-									</div>
-							</li>
-							<li class="active">
-								<!-- Single Cool Facts -->
-								<div class="col-12 col-sm-4">
-									<div class="single-cool-fact">
-										<div class="scf-text">
-											<i class="icon-beach"></i>
-											<p>Open Bar</p>
-										</div>
-									</div>
-							</li>
-
-
-						</ul>
-
-					</div>
-
-				</div>
-				<!-- Nav End -->
-			</div>
-
-			</nav>
-		</div>
-
-	</div>
-
-	</div>
-
-	<style>
-.round.hollow.blue {
-	color: #3EA6CE;
-	background-color: #FFF;
-	-webkit-box-shadow: 0px 0px 0px 3px #3EA6CE;
-	-moz-box-shadow: 0px 0px 0px 3px #3EA6CE;
-	box-shadow: 0px 0px 0px 3px #3EA6CE;
-}
-</style>
-	</header>
 <section
 		class="breadcumb-area bg-img d-flex align-items-center justify-content-center"
 		style="background-image: url(<%=request.getContextPath()%>/resources/bootstrap/img/bg-img/bg-9.jpg);">
