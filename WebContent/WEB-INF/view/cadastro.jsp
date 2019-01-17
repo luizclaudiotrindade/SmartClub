@@ -24,7 +24,7 @@
 	position: relative;
 	z-index: 10;
 	width: 100%;
-	height: 655px;
+	height: auto;
 }
 </style>
 </head>
@@ -36,43 +36,98 @@
 	<form action="cadastro" method="post"
 		class="breadcumb-area bg-img d-flex align-items-center justify-content-center">
 
-		<div style="margin-left: 3%; margin-top: 25%" class="row">
+		<div style="margin-left: 3%; margin-top: 12%" class="row">
 			<!-- Form Name -->
 			<legend>Preencha Seus Dados</legend>
 			<div class="col">
 				<p>
-					<input type="text" class="form-control" placeholder="Nome">
+					<input type="text" class="form-control" placeholder="Nome" name="nome" required>
 				</p>
 				<p>
-					<input type="text" class="form-control" placeholder="Sobrenome">
+					<input type="text" class="form-control" placeholder="Sobrenome" name="sobreNome" required>
 				</p>
-				<input type="text" class="form-control" placeholder="E-mail"><br>
-				<input type="text" class="form-control" placeholder="Senha"><br>
-				<input type="text" class="form-control" placeholder="Telefone">
+				<input type="text" class="form-control" placeholder="E-mail" name="email" required><br>
+				
+				<input type="password" class="form-control" placeholder="Senha" name="senha" required><br>
+				
+				<input type="text" class="form-control" placeholder="Telefone" name="telefone" required><br>
 
-				<input type="text" class="form-control" placeholder="Cpf"><br>
+				<input type="text" class="form-control" placeholder="Cpf"name="cpf" required><br>
 
-				<input type="text" class="form-control" placeholder="Rg"><br>
+				<input type="text" class="form-control" placeholder="Rg" name="rg" required><br>
 
-				<input type="text" class="form-control" placeholder="Endereco"><br>
+				<input type="text" class="form-control" placeholder="Endereco" name="endereco" required><br>
 
-				<input type="text" class="form-control" placeholder="Sexo"><br>
+				<input type="text" class="form-control" placeholder="Sexo" name="sexo" required><br>
 
-				<input type="text" class="form-control" placeholder="Idade"><br>
-				<input type="submit" class="form-control"
-					style="background-color: green;" value="Cadastrar">
+				<input type="text" class="form-control" placeholder="Idade" name="idade" required><br>
+				<input type="submit" class="btn btn-dark" value="cadastrar " href="home">
+							
+			</div>
+		</div>
+		</form>
+		</header><br><br>
+		
+			<!-- ##### Footer Area Start ##### -->
+	<footer class="footer-area">
+	<div class="container">
+		<div class="row">
+
+			<!-- Footer Widget Area -->
+			<div class="col-12 col-lg-5">
+				<div class="footer-widget-area mt-50">
+					<a href="#" class="d-block mb-5"><img
+						src="img/core-img/logo.png" alt=""></a>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla
+						dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.
+					</p>
+				</div>
 			</div>
 
+			<!-- Footer Widget Area -->
+			<div class="col-12 col-md-6 col-lg-4">
+				<div class="footer-widget-area mt-50">
+					<h6 class="widget-title mb-5">Find us on the map</h6>
+					<img src="img/bg-img/footer-map.png" alt="">
+				</div>
+			</div>
 
+			<!-- Footer Widget Area -->
+			<div class="col-12 col-md-6 col-lg-3">
+				<div class="footer-widget-area mt-50">
+					<h6 class="widget-title mb-5">Subscribe to our newsletter</h6>
+					<form action="#" method="post" class="subscribe-form">
+						<input type="email" name="subscribe-email" id="subscribeemail"
+							placeholder="Your E-mail">
+						<button type="submit">Subscribe</button>
+					</form>
+				</div>
+			</div>
+
+			<!-- Copywrite Text -->
+			<div class="col-12">
+				<div class="copywrite-text mt-30">
+					<p>
+						<a href="#"> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+							Copyright &copy;<script>
+								document.write(new Date().getFullYear());
+							</script> All rights reserved | This template is made with <i
+							class="fa fa-heart-o" aria-hidden="true"></i> by <a
+							href="https://colorlib.com" target="_blank">Colorlib</a> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					</p>
+				</div>
+			</div>
 		</div>
-
-
-
-		</header>
-
-
-	<footer> teste</footer>
-
+	</div>
+	
+	</footer>
+	<script>
+		function cadastro() {
+			window.open("cadastro");
+		}
+	</script>
+	
 		<script type="text/javascript"
 			src="<%=request.getContextPath()%>/resources/bootstrap/js/jquery/jquery-2.2.4.min.js"></script>
 

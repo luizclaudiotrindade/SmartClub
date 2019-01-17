@@ -16,6 +16,8 @@
 	</div>
 </div>
 
+
+
 <!-- ##### Header Area Start ##### -->
 <header class="header-area">
 	<!-- Navbar Area -->
@@ -118,11 +120,13 @@
 							</div>
 
 						</div>
+						
 						<!-- Nav End -->
 					</div>
 				</nav>
 			</div>
 		</div>
 	</div>
+	
 </header>
 
