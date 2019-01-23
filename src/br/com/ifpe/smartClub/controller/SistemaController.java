@@ -12,54 +12,64 @@ import br.com.ifpe.smartClub.model.UsuarioDao;
  */
 @Controller
 public class SistemaController {
-	@RequestMapping("/home")
+	@RequestMapping("home")
 	public String olaMundo() {
 		System.out.println("Iniciando a Pagina inicial");
-		return "home";
+		return "home/home";
 	}
+
 	@RequestMapping("/cadastro")
 	public String cadastro() {
 		System.out.println("Executando cadastro usuario");
 		return "cadastro";
 	}
+
 	@RequestMapping("/beneficio")
 	public String beneficio() {
 		System.out.println("Iniciando a Pagina de beneficio");
-		return "beneficios";
+		return "beneficio/beneficios";
 	}
+
 	@RequestMapping("/telaUsuario")
 	public String telaUsuario() {
 		System.out.println("Iniciando a tela usuario");
 		return "telaUsuario";
 	}
-	
+
 	@RequestMapping("/autenticar")
-	public String autenticar(Usuario usuario){
+	public String autenticar(Usuario usuario) {
 		UsuarioDao dao = new UsuarioDao();
-		if(dao.verificarExistencia(usuario)==true){
+		if (dao.verificarExistencia(usuario) == true) {
 			System.out.println("O usuario foi logado com sucesso!");
-		return "usuarioLogadoSucesso";
+			return "usuarioLogadoSucesso";
 		}
-		 return "forward:home";
+		return "forward:home";
 	}
-		
+
 	@RequestMapping("/loginAdm")
-	public String loginAdm() {				
-			System.out.println("Executando loginAdm");
-			return "loginAdm";
-				
-}
-	@RequestMapping("/hotel")
-	public String telaHotel() {				
-			System.out.println("iniciando telaHotel");
-			return "cadastrarHotel";
-				
+	public String loginAdm() {
+		System.out.println("Executando loginAdm");
+		return "loginAdm";
+
 	}
-	
+
+	@RequestMapping("/hotel")
+	public String telaHotel() {
+		System.out.println("iniciando telaHotel");
+		return "cadastrarHotel";
+
+	}
+
 	@RequestMapping("/quarto")
-	public String telaQuarto() {				
-			System.out.println("Iniciando telaQuarto");
-			return "cadastrarQuarto";
-	
-}
+	public String telaQuarto() {
+		System.out.println("Iniciando telaQuarto");
+		return "cadastrarQuarto";
+
+	}
+	@RequestMapping("/QuemSomos")
+	public String quemSomos() {
+		System.out.println("Iniciando a Pagina de beneficio");
+		return "quemSomos";
+	}
+
 }

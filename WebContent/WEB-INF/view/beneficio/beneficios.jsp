@@ -73,10 +73,9 @@
 						<div class="classynav">
 							<ul>
 								<li><a href="home">Home</a></li>
-								<li><a href="about-us.html">About Us</a></li>
-								
-								<li><a href="services.html">Services</a></li>
-								<li class="active"><a href="contact.html">Contact</a></li>
+								<li><a href="quemSomos">Quem Somos</a></li>
+								<li class=""><a href="contato">Contato</a></li>
+								<li class=""><a href="beneficio">Beneficio</a></li>
 							</ul>
 						</div>						
 						<!-- Nav End -->

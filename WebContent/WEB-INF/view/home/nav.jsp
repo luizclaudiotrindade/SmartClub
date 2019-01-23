@@ -50,7 +50,7 @@
 						<div class="classynav">
 							<ul>
 								<li><a href="home">Home</a></li>
-								<li><a href="about-us.html">About Us</a></li>
+								<li><a href="QuemSomos">Quem Somos</a></li>
 								<!-- mega menu desativado  e services desativados
                                     <li><a href="#">Pages</a>
                                         <ul class="dropdown">
@@ -105,8 +105,8 @@
                                         </div>
                                     </li>
                                     -->
-								<li><a href="services.html">Services</a></li>
-								<li class="active"><a href="contact.html">Contact</a></li>
+								<li><a href="contato">Contato</a></li>
+								<li class=""><a href="beneficio">Beneficios</a></li>
 
 							</ul>
 
