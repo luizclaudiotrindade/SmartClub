@@ -45,5 +45,36 @@ public class UsuarioDao {
 		
 	
 	}
+	public boolean verificarAdm(LoginAdm loginAdm) {
+		boolean retorno= false;
+		if (loginAdm.getNome().equals("") || loginAdm.getSenha().equals("")) {
+			return false;
+		}
+		if (loginAdm.getNome()==null || loginAdm.getSenha()==null) {
+			return false;
+		}
 
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT);
+		EntityManager manager = factory.createEntityManager();
+		Query query = null;
+		query = manager.createQuery("FROM LoginAdm WHERE nome = :paramNome AND senha = :paramSenha ORDER BY id");
+		query.setParameter("paramNome", loginAdm.getNome() );
+		query.setParameter("paramSenha", loginAdm.getSenha() );
+		
+		List<LoginAdm> lista = query.getResultList();
+		if (lista.size() > 0) {
+			System.out.println("Encontrou");	
+			return retorno=true;
+			}
+		else {System.out.println("Não encontrou");
+			 retorno= false;
+			}
+		
+		manager.close();
+		factory.close();
+		
+		return retorno;
+		
+	
+	}
 }

@@ -3,6 +3,7 @@ package br.com.ifpe.smartClub.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import br.com.ifpe.smartClub.model.LoginAdm;
 import br.com.ifpe.smartClub.model.Usuario;
 import br.com.ifpe.smartClub.model.UsuarioDao;
 
@@ -41,4 +42,24 @@ public class SistemaController {
 		}
 		 return "forward:home";
 	}
+		
+	@RequestMapping("/loginAdm")
+	public String loginAdm() {				
+			System.out.println("Executando loginAdm");
+			return "loginAdm";
+				
+}
+	@RequestMapping("/hotel")
+	public String telaHotel() {				
+			System.out.println("iniciando telaHotel");
+			return "cadastrarHotel";
+				
+	}
+	
+	@RequestMapping("/quarto")
+	public String telaQuarto() {				
+			System.out.println("Iniciando telaQuarto");
+			return "cadastrarQuarto";
+	
+}
 }

@@ -1,12 +1,11 @@
 <style>
 .classy-navbar .nav-brand {
-    font-size: 26px;
-    font-weight: 500;
-    color: #565656;
-    display: inline-block;
-    margin-right: -66px;
+	font-size: 26px;
+	font-weight: 500;
+	color: #565656;
+	display: inline-block;
+	margin-right: -66px;
 }
-
 </style>
 
 <!-- Preloader -->
@@ -30,7 +29,7 @@
 					<!-- Nav brand -->
 					<img
 						src="<%=request.getContextPath()%>/resources/bootstrap/img/core-img/logoooo.png"
-						style="max-width:19%" alt="Logo tipo Smart Club">
+						style="max-width: 19%" alt="Logo tipo Smart Club">
 
 					<!-- Navbar Toggler -->
 					<div class="classy-navbar-toggler">
@@ -115,18 +114,15 @@
 							<div class="menu-btn">
 								<button type="button" class="btn palatin-btn"
 									data-toggle="modal" data-target="#exampleModal">Login</button>
-
-
 							</div>
-
 						</div>
-						
+
 						<!-- Nav End -->
 					</div>
 				</nav>
 			</div>
 		</div>
 	</div>
-	
+
 </header>
 
