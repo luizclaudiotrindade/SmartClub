@@ -3,7 +3,8 @@ package br.com.ifpe.smartClub.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import br.com.ifpe.smartClub.model.LoginAdm;
+import br.com.ifpe.smartClub.model.CadastroUsuario;
+import br.com.ifpe.smartClub.model.CadastroUsuarioDao;
 import br.com.ifpe.smartClub.model.Usuario;
 import br.com.ifpe.smartClub.model.UsuarioDao;
 
@@ -21,7 +22,14 @@ public class SistemaController {
 	@RequestMapping("/cadastro")
 	public String cadastro() {
 		System.out.println("Executando cadastro usuario");
-		return "cadastro";
+		return "home/cadastro";
+	}
+
+	@RequestMapping("save")
+	public String save(CadastroUsuario usuario) {
+CadastroUsuarioDao dao = new CadastroUsuarioDao();
+		dao.salvar(usuario);
+		return "cadastradoSucesso";
 	}
 
 	@RequestMapping("/beneficio")
@@ -66,6 +74,7 @@ public class SistemaController {
 		return "cadastrarQuarto";
 
 	}
+
 	@RequestMapping("/QuemSomos")
 	public String quemSomos() {
 		System.out.println("Iniciando a Pagina de beneficio");

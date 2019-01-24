@@ -8,20 +8,20 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "cadastro_usuario")
+@Table(name = "usuario")
 
 public class CadastroUsuario {
 	
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;	
+    private int idusuario;	
 	
 	@Column
 	private String nome;
 	
 	@Column
-	private int cpf;
+	private String cpf;
 	
 	@Column
 	private String email;
@@ -30,24 +30,35 @@ public class CadastroUsuario {
 	private String senha;
 	
 	@Column
-	private int telefone;
+	private String telefone;
 	
 	@Column
 	private String sexo;
 	
 	@Column
-	private int idade; 
+	private String idade; 
 	
 	@Column
 	private String endereco;
+	@Column 
+	private String rg;
 		
 	
-	public int getId() {
-		return id;
+	public String getRg() {
+		return rg;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setRg(String rg) {
+		this.rg = rg;
+	}
+
+
+	public int getIdusuario() {
+		return idusuario;
+	}
+
+	public void setIdusuario(int idusuario) {
+		this.idusuario = idusuario;
 	}
 
 	public String getNome() {
@@ -58,11 +69,11 @@ public class CadastroUsuario {
 		this.nome = nome;
 	}
 
-	public int getCpf() {
+	public String getCpf() {
 		return cpf;
 	}
 
-	public void setCpf(int cpf) {
+	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
 
@@ -82,11 +93,11 @@ public class CadastroUsuario {
 		this.senha = senha;
 	}
 
-	public int getTelefone() {
+	public String getTelefone() {
 		return telefone;
 	}
 
-	public void setTelefone(int telefone) {
+	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
 
@@ -98,11 +109,11 @@ public class CadastroUsuario {
 		this.sexo = sexo;
 	}
 
-	public int getIdade() {
+	public String getIdade() {
 		return idade;
 	}
 
-	public void setIdade(int idade) {
+	public void setIdade(String idade) {
 		this.idade = idade;
 	}
 
@@ -113,6 +124,8 @@ public class CadastroUsuario {
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
+
+	
 
 	
 		

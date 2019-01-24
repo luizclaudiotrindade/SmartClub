@@ -33,7 +33,7 @@
 	<!--  navegação -->
 	<c:import url="nav.jsp" />
 
-	<form action="cadastro" method="post"
+	<form action="save" method="post"
 		class="breadcumb-area bg-img d-flex align-items-center justify-content-center">
 
 		<div style="margin-left: 3%; margin-top: 12%" class="row">
@@ -41,27 +41,27 @@
 			<legend>Preencha Seus Dados</legend>
 			<div class="col">
 				<p>
-					<input type="text" class="form-control" placeholder="Nome" name="nome" required>
+				<input maxlength="32" type="text" class="form-control" placeholder="Nome" name="nome" required>
 				</p>
-				<p>
-					<input type="text" class="form-control" placeholder="Sobrenome" name="sobreNome" required>
-				</p>
-				<input type="text" class="form-control" placeholder="E-mail" name="email" required><br>
+				<input maxlength="32" type="text" class="form-control" placeholder="E-mail" name="email" required><br>
 				
-				<input type="password" class="form-control" placeholder="Senha" name="senha" required><br>
+				<input maxlength="32" type="password" class="form-control" placeholder="Senha" name="senha" required><br>
 				
-				<input type="text" class="form-control" placeholder="Telefone" name="telefone" required><br>
+				<input maxlength="9" type="text" class="form-control" placeholder="Telefone" name="telefone" required><br>
 
-				<input type="text" class="form-control" placeholder="Cpf"name="cpf" required><br>
+				<input maxlength="11" type="text" class="form-control" placeholder="Cpf"name="cpf" required><br>
 
-				<input type="text" class="form-control" placeholder="Rg" name="rg" required><br>
+				<input  maxlength="8" type="text" class="form-control" placeholder="Rg" name="rg" required><br>
 
-				<input type="text" class="form-control" placeholder="Endereco" name="endereco" required><br>
+				<input maxlength="60" type="text" class="form-control" placeholder="Endereco" name="endereco" required><br>
 
-				<input type="text" class="form-control" placeholder="Sexo" name="sexo" required><br>
+				<input maxlength="1" type="text" class="form-control" placeholder="Sexo" name="sexo" required><br>
 
-				<input type="text" class="form-control" placeholder="Idade" name="idade" required><br>
-				<input type="submit" class="btn btn-dark" value="cadastrar " href="home">
+				<input maxlength="2" type="text" class="form-control" placeholder="Idade" name="idade" required><br>
+				
+				<input type="submit" class="btn btn-dark" value="cadastrar">
+				<a class="btn btn-dark" href="home">Inicio</a>
+				
 							
 			</div>
 		</div>

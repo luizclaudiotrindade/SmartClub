@@ -185,8 +185,8 @@
 							<li>Translado</li>
 							<li>Refeições</li>
 						</ul>
-						<button type="button" onclick="cadastro()" class="btn btn-dark">Aderir
-							</button>
+						<a type="submit" value="Aderir"  class="btn btn-dark" href="cadastro" >Aderir</a>
+							
 					</div>
 				</div>
 			</div>
