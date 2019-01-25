@@ -11,39 +11,38 @@ import javax.persistence.Table;
 @Table(name = "usuario")
 
 public class CadastroUsuario {
-	
-	
+
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idusuario;	
-	
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int idusuario;
+
 	@Column
 	private String nome;
-	
+
 	@Column
 	private String cpf;
-	
+
 	@Column
 	private String email;
-	
+
 	@Column
 	private String senha;
-	
+
 	@Column
 	private String telefone;
-	
+
 	@Column
 	private String sexo;
-	
+
 	@Column
-	private String idade; 
-	
+	private String idade;
+
 	@Column
 	private String endereco;
-	@Column 
-	private String rg;
-		
 	
+	@Column
+	private String rg;
+
 	public String getRg() {
 		return rg;
 	}
@@ -51,7 +50,6 @@ public class CadastroUsuario {
 	public void setRg(String rg) {
 		this.rg = rg;
 	}
-
 
 	public int getIdusuario() {
 		return idusuario;
@@ -125,9 +123,4 @@ public class CadastroUsuario {
 		this.endereco = endereco;
 	}
 
-	
-
-	
-		
-		
 }

@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.com.ifpe.smartClub.model.CadastroUsuario;
 import br.com.ifpe.smartClub.model.CadastroUsuarioDao;
-import br.com.ifpe.smartClub.model.Usuario;
+
 import br.com.ifpe.smartClub.model.UsuarioDao;
 
 /**
@@ -26,10 +26,10 @@ public class SistemaController {
 	}
 
 	@RequestMapping("save")
-	public String save(CadastroUsuario usuario) {
+	public String save(CadastroUsuario cadastroUsuario) {
 CadastroUsuarioDao dao = new CadastroUsuarioDao();
-		dao.salvar(usuario);
-		return "cadastradoSucesso";
+		dao.salvar(cadastroUsuario);
+		return "usuario/cadastradoSucesso";
 	}
 
 	@RequestMapping("/beneficio")
@@ -41,15 +41,15 @@ CadastroUsuarioDao dao = new CadastroUsuarioDao();
 	@RequestMapping("/telaUsuario")
 	public String telaUsuario() {
 		System.out.println("Iniciando a tela usuario");
-		return "telaUsuario";
+		return "usuario/telaUsuario";
 	}
 
 	@RequestMapping("/autenticar")
-	public String autenticar(Usuario usuario) {
+	public String autenticar(CadastroUsuario usuario) {
 		UsuarioDao dao = new UsuarioDao();
 		if (dao.verificarExistencia(usuario) == true) {
 			System.out.println("O usuario foi logado com sucesso!");
-			return "usuarioLogadoSucesso";
+			return "usuario/usuarioLogadoSucesso";
 		}
 		return "forward:home";
 	}
@@ -78,7 +78,7 @@ CadastroUsuarioDao dao = new CadastroUsuarioDao();
 	@RequestMapping("/QuemSomos")
 	public String quemSomos() {
 		System.out.println("Iniciando a Pagina de beneficio");
-		return "quemSomos";
+		return "home/quemSomos";
 	}
 
 }

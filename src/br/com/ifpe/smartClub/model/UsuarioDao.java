@@ -13,23 +13,23 @@ public class UsuarioDao {
 	
 	
 	
-	public boolean verificarExistencia(Usuario usuario) {
+	public boolean verificarExistencia(CadastroUsuario usuario) {
 		boolean retorno= false;
-		if (usuario.getUsuario().equals("") || usuario.getSenha().equals("")) {
+		if (usuario.getEmail().equals("") || usuario.getSenha().equals("")) {
 			return false;
 		}
-		if (usuario.getUsuario()==null || usuario.getSenha()==null) {
+		if (usuario.getEmail()==null || usuario.getSenha()==null) {
 			return false;
 		}
 
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT);
 		EntityManager manager = factory.createEntityManager();
 		Query query = null;
-		query = manager.createQuery("FROM Usuario WHERE usuario = :paramUsuario AND senha = :paramSenha ORDER BY id");
-		query.setParameter("paramUsuario",  usuario.getUsuario() );
+		query = manager.createQuery("FROM CadastroUsuario WHERE email = :paramEmail AND senha = :paramSenha ORDER BY id");
+		query.setParameter("paramEmail",  usuario.getEmail() );
 		query.setParameter("paramSenha", usuario.getSenha() );
 		
-		List<Usuario> lista = query.getResultList();
+		List<CadastroUsuario> lista = query.getResultList();
 		if (lista.size() > 0) {
 			System.out.println("Encontrou");	
 			return retorno=true;

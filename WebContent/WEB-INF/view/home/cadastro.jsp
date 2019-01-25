@@ -94,17 +94,6 @@
 			</div>
 
 			<!-- Footer Widget Area -->
-			<div class="col-12 col-md-6 col-lg-3">
-				<div class="footer-widget-area mt-50">
-					<h6 class="widget-title mb-5">Subscribe to our newsletter</h6>
-					<form action="#" method="post" class="subscribe-form">
-						<input type="email" name="subscribe-email" id="subscribeemail"
-							placeholder="Your E-mail">
-						<button type="submit">Subscribe</button>
-					</form>
-				</div>
-			</div>
-
 			<!-- Copywrite Text -->
 			<div class="col-12">
 				<div class="copywrite-text mt-30">
@@ -120,14 +109,7 @@
 			</div>
 		</div>
 	</div>
-	
 	</footer>
-	<script>
-		function cadastro() {
-			window.open("cadastro");
-		}
-	</script>
-	
 		<script type="text/javascript"
 			src="<%=request.getContextPath()%>/resources/bootstrap/js/jquery/jquery-2.2.4.min.js"></script>
 

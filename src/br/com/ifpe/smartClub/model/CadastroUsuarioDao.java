@@ -7,11 +7,11 @@ import javax.persistence.Persistence;
 public class CadastroUsuarioDao {
 	private static final String PERSISTENCE_UNIT = "smartClub";
 
-	public void salvar(CadastroUsuario usuario) {
+	public void salvar(CadastroUsuario cadastroUsuario) {
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT);
 		EntityManager manager = factory.createEntityManager();
 		manager.getTransaction().begin();
-		manager.persist(usuario);
+		manager.persist(cadastroUsuario);
 		manager.getTransaction().commit();
 		manager.close();
 		factory.close();
