@@ -41,38 +41,22 @@
 </head>
 <body>
 
-	
+	<ul class="list-group">
+		<a href="hotel">
+			<li
+			class="list-group-item list-group-item-success d-flex justify-content-center">Cadastrar	Hotel</li>
+		</a>
+		<a href="quarto">
+			<li
+			class="list-group-item list-group-item-info d-flex justify-content-center">Cadastrar Quarto</li>
+		</a>
+	</ul>
+	</ul>
+	<br>
+	<a class="btn btn-dark text-white d-flex justify-content-center"href="loginAdm">Encerrar</a>
+	</div>
 
-	<form action="loginAdm" Method="post"
-		class="breadcumb-area bg-img d-flex align-items-center justify-content-center">
-
-		<div style="margin-left: 3%; margin-top: 12%" class="row">
-
-			<!-- Form Name -->
-			<legend>Bem Vindo Administrador!!</legend>
-			<div class="container">
-				<p>
-					<input type="text" class="form-control" placeholder="Nome"name="nome" required>
-				</p>
-
-				<p>
-					<input type="password" class="form-control" placeholder="Senha"	name="senha" required><br>
-				</p>
-
-		
-			<input type="submit"  class="btn btn-primary" value="Logar" href="adm">
-				
-						
-			<a class="btn btn-dark justify-content-center"href="home">Voltar</a>
-
-				
-			</div>
-		</div>
-	</form>
-
-	
-
-	<script type="text/javascript"
+<script type="text/javascript"
 		src="<%=request.getContextPath()%>/resources/bootstrap/js/jquery/jquery-2.2.4.min.js"></script>
 
 	<!-- Popper js --> <script type="text/javascript"
