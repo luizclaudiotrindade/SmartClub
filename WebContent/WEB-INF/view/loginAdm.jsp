@@ -26,7 +26,7 @@
 <style>
 .breadcumb-area {
 	position: relative;
-	z-index: 10;
+	z-index: 11;
 	width: 100%;
 	height: auto;
 }
