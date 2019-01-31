@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>	
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -29,64 +29,73 @@
 
 <title>Smart-Club</title>
 <style>
+.contrast, .contrast nav, .contrast div, .contrast li, .contrast ol,
+	.contrast header, .contrast footer, .contrast section, .contrast main,
+	.contrast aside, .contrast article {
+	background: black !important;
+	color: white !important;
+}
 </style>
+<script type="text/javascript"
+	src="<%=request.getContextPath()%>/resources/bootstrap/js/bootstrap/autoContraste.js"></script>
+
 </head>
 <body>
-<!-- Preloader -->
-<div class="preloader d-flex align-items-center justify-content-center">
-	<div class="cssload-container">
-		<div class="cssload-loading"></div>
+	<!-- Preloader -->
+	<div class="preloader d-flex align-items-center justify-content-center">
+		<div class="cssload-container">
+			<div class="cssload-loading"></div>
+		</div>
 	</div>
-</div>
 
 
 
-<!-- ##### Header Area Start ##### -->
-<header class="header-area">
-	<!-- Navbar Area -->
+	<!-- ##### Header Area Start ##### -->
+	<header class="header-area"> <!-- Navbar Area -->
 	<div class="palatin-main-menu">
 		<div class="classy-nav-container breakpoint-off">
 			<div class="container">
 				<!-- Menu -->
 				<nav class="classy-navbar justify-content-between" id="palatinNav">
 
-					<!-- Nav brand -->
-					<img
-						src="<%=request.getContextPath()%>/resources/bootstrap/img/core-img/logoooo.png"
-						style="max-width:19%" alt="Logo tipo Smart Club">
+				<!-- Nav brand --> <img
+					src="<%=request.getContextPath()%>/resources/bootstrap/img/core-img/logoooo.png"
+					style="max-width: 19%" alt="Logo tipo Smart Club"> <!-- Navbar Toggler -->
+				<div class="classy-navbar-toggler">
+					<span class="navbarToggler"><span></span><span></span><span></span></span>
+				</div>
 
-					<!-- Navbar Toggler -->
-					<div class="classy-navbar-toggler">
-						<span class="navbarToggler"><span></span><span></span><span></span></span>
-					</div>
+				<!-- Menu -->
+				<div class="classy-menu">
 
-					<!-- Menu -->
-					<div class="classy-menu">
-
-						<!-- close btn -->
-						<div class="classycloseIcon">
-							<div class="cross-wrap">
-								<span class="top"></span><span class="bottom"></span>
-							</div>
+					<!-- close btn -->
+					<div class="classycloseIcon">
+						<div class="cross-wrap">
+							<span class="top"></span><span class="bottom"></span>
 						</div>
-						<!-- Nav Start -->
-						<div class="classynav">
-							<ul>
-								<li><a href="home">Home</a></li>
-								<li><a href="quemSomos">Quem Somos</a></li>
-								<li class=""><a href="contato">Contato</a></li>
-								<li class=""><a href="beneficio">Beneficio</a></li>
-							</ul>
-						</div>						
-						<!-- Nav End -->
 					</div>
+					<!-- Nav Start -->
+					<div class="classynav">
+						<ul>
+							<li><a href="home">Homee</a></li>
+							<li><a href="quemSomos">Quem Somos</a></li>
+							<li class=""><a href="contato">Contato</a></li>
+							<li class=""><a href="beneficio">Beneficio</a></li>
+							<li><a href="#altocontraste" id="altocontraste"
+								accesskey="3" onclick="window.toggleContrast()"
+								onkeydown="window.toggleContrast()">Alto contraste [Alt + 3]</a></li>
+
+						</ul>
+					</div>
+					<!-- Nav End -->
+				</div>
 				</nav>
 			</div>
 		</div>
-	</div>	
-</header>
+	</div>
+	</header>
 
-	
+
 	</header>
 	<!-- ##### Breadcumb Area Start ##### -->
 	<section
@@ -102,7 +111,7 @@
 	<!-- ##### Service Intro Area Start ##### -->
 	<section class="services-intro">
 	<div class="container">
-	
+
 		<div class="row align-items-center">
 			<!-- Service Intro Text -->
 			<div class="col-12 col-lg-6">
@@ -120,7 +129,7 @@
 
 				</div>
 			</div>
-			
+
 
 			<!-- Services Features -->
 			<div class="col-12 col-lg-6">
@@ -175,7 +184,7 @@
 					<!-- Content -->
 					<div class="feature-content">
 						<i class="icon-resort"></i>
-						<h3>Plano1</h3>
+						<h3>Plano Anual</h3>
 						<ul>
 							<li>Diaria +1</li>
 							<li>Diaria +1</li>
@@ -185,8 +194,9 @@
 							<li>Translado</li>
 							<li>Refeições</li>
 						</ul>
-						<a type="submit" value="Aderir"  class="btn btn-dark" href="cadastro" >Aderir</a>
-							
+						<a type="submit" value="Aderir" class="btn btn-dark"
+							href="cadastro">Aderir</a>
+
 					</div>
 				</div>
 			</div>
@@ -199,15 +209,14 @@
 					<!-- Content -->
 					<div class="feature-content">
 						<i class="icon-sunset"></i>
-						<h3>Plano2</h3>
+						<h3>Plano Mensal</h3>
 						<ul>
 							<li>Diaria +1</li>
 							<li>Quarto Triplo</li>
 							<li>Open Bar</li>
 							<li>Estacionamento</li>
-							<li>Refeição</li>
+							<li>Refeição</li><br><br>
 						</ul>
-						<button type="button" class="btn btn-secondary">Secondary</button>
 
 					</div>
 				</div>
@@ -221,7 +230,7 @@
 					<!-- Content -->
 					<div class="feature-content">
 						<i class="icon-island"></i>
-						<h3>Plano 3</h3>
+						<h3>Plano Semestral </h3>
 						<ul>
 							<li>Diaria +1</li>
 							<li>Diaria +1</li>
@@ -229,9 +238,8 @@
 							<li>Open Bar</li>
 							<li>Estacionamento</li>
 							<li>Translado</li>
-							<li>Refeição</li>
+							<li>Refeiçãoe</li><br>
 						</ul>
-						<button type="button"  class="btn btn-secondary">Secondary</button>
 					</div>
 				</div>
 			</div>
@@ -374,9 +382,9 @@
 			</div>
 		</div>
 	</div>
-	
+
 	</footer>
-	
+
 	<script type="text/javascript"
 		src="<%=request.getContextPath()%>/resources/bootstrap/js/jquery/jquery-2.2.4.min.js"></script>
 

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -30,12 +30,22 @@
 	href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
 	integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
 	crossorigin="anonymous">
+<style>
+.contrast, .contrast nav, .contrast div, .contrast li, .contrast ol,
+	.contrast header, .contrast footer, .contrast section, .contrast main,
+	.contrast aside, .contrast article {
+	background: black !important;
+	color: white !important;
+}
+</style>
 </head>
+
 <body>
-<c:import url="nav.jsp" />
+	<c:import url="nav.jsp" />
 
-
-<script type="text/javascript"
+	<script type="text/javascript"
+		src="<%=request.getContextPath()%>/resources/bootstrap/js/bootstrap/autoContraste.js"></script>
+	<script type="text/javascript"
 		src="<%=request.getContextPath()%>/resources/bootstrap/js/jquery/jquery-2.2.4.min.js"></script>
 
 	<!-- Popper js -->

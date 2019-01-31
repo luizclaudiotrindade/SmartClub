@@ -109,6 +109,7 @@ padding-left: 6px;
 						<!-- Nav Start -->
 						<div class="classynav">
 							<ul>
+							
 								<li><!-- Single Cool Facts -->
 					<div class="col-12 col-sm-4">
 						<div class="single-cool-fact">
@@ -251,10 +252,14 @@ padding-left: 6px;
                                                 <li><a href="blog.html">News</a></li>
                                                 <li><a href="contact.html">Contact</a></li>
                                                 <li><a href="elements.html">Elements</a></li>
+                                            
                                             </ul>
                                         </div>
                                     </li>
                                     -->
+						
+							</ul>
+						
 							
 							</div>
 
@@ -312,9 +317,22 @@ padding-left: 6px;
 
 		</div>
 		<div class="container">
-			<div class="col-sm">Hotel 1:</div>
-			<div class="col-sm">Hotel 2:</div>
-			<div class="col-sm">Hotel 3:</div>
+		<table id="tabelaListaProduto" class="table table-striped table-bordered">
+		<thead>
+			<tr>
+				<th >Nome</th> 
+				<th >Descrição</th>
+				<th >Endereço</th>
+			</tr>
+		<c:forEach var="hoteis" items="${listaHotel}">
+			<tr>
+
+				<td style="vertical-align: middle;">${hoteis.nome}</td>
+				<td style="vertical-align: middle;">${hoteis.descricao}</td>
+				<td style="vertical-align: middle;">${hoteis.endereco}</td>
+			</tr>
+		</c:forEach>
+		</table>
 		</div>
 	</div>
 	

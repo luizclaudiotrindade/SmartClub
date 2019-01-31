@@ -6,6 +6,20 @@
 	display: inline-block;
 	margin-right: -66px;
 }
+  .contrast,
+.contrast nav,
+.contrast div,
+.contrast li,
+.contrast ol,
+.contrast header,
+.contrast footer,
+.contrast section,
+.contrast main,
+.contrast aside,
+.contrast article {
+    background: black !important;
+    color: white !important;
+}
 </style>
 
 <!-- Preloader -->
@@ -107,6 +121,8 @@
                                     -->
 								<li><a href="contato">Contato</a></li>
 								<li class=""><a href="beneficio">Beneficios</a></li>
+								<li><a href="beneficio">Cadastre-se</a></li>
+								<li><a href="#altocontraste" id="altocontraste" accesskey="3" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()">Alto contraste [Alt + 3]</a></li>
 
 							</ul>
 

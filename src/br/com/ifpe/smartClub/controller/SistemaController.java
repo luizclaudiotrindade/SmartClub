@@ -1,11 +1,17 @@
 package br.com.ifpe.smartClub.controller;
 
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import br.com.ifpe.smartClub.model.Beneficios;
+import br.com.ifpe.smartClub.model.BeneficiosDao;
 import br.com.ifpe.smartClub.model.CadastroUsuario;
 import br.com.ifpe.smartClub.model.CadastroUsuarioDao;
-
+import br.com.ifpe.smartClub.model.Hotel;
+import br.com.ifpe.smartClub.model.HotelDao;
 import br.com.ifpe.smartClub.model.UsuarioDao;
 
 /**
@@ -20,9 +26,12 @@ public class SistemaController {
 	}
 
 	@RequestMapping("/cadastro")
-	public String cadastro() {
+	public String cadastro(Model model) {
 		System.out.println("Executando cadastro usuario");
-		return "home/cadastro";
+			BeneficiosDao dao = new BeneficiosDao();
+			List<Beneficios> listaBeneficios = dao.listar();
+			model.addAttribute("listaBeneficio", listaBeneficios);
+			return "home/cadastro";
 	}
 
 	@RequestMapping("save")
@@ -37,10 +46,16 @@ CadastroUsuarioDao dao = new CadastroUsuarioDao();
 		System.out.println("Iniciando a Pagina de beneficio");
 		return "beneficio/beneficios";
 	}
+	
+
+	
 
 	@RequestMapping("/telaUsuario")
-	public String telaUsuario() {
+	public String telaUsuario(Model model) {
 		System.out.println("Iniciando a tela usuario");
+				HotelDao dao = new HotelDao();
+				List<Hotel> listaHotel = dao.listar();
+				model.addAttribute("listaHotel", listaHotel);
 		return "usuario/telaUsuario";
 	}
 
