@@ -31,9 +31,9 @@
 <body>
 
 	<!--  navegação -->
-	<c:import url="nav.jsp" />
+	<c:import url="home/nav.jsp" />
 
-	<form action="cadastro" method="post"
+	<form action="hotel" method="post"
 		class="breadcumb-area bg-img d-flex align-items-center justify-content-center">
 
 		<div style="margin-left: 3%; margin-top: 12%" class="row">
@@ -57,8 +57,8 @@
 				
 				
 				
-				<input type="submit" class="btn btn-dark" value="cadastrar Hotel " href="home">
-							
+				<input type="submit" class="btn btn-dark" value="Cadastrar Hotel " href="home">
+				<a href="<%=request.getContextPath()%>/Adm"" class="btn btn-danger" role="button">Cancelar</a> &nbsp;			
 			</div>
 		</div>
 		</form>
@@ -89,17 +89,7 @@
 				</div>
 			</div>
 
-			<!-- Footer Widget Area -->
-			<div class="col-12 col-md-6 col-lg-3">
-				<div class="footer-widget-area mt-50">
-					<h6 class="widget-title mb-5">Subscribe to our newsletter</h6>
-					<form action="#" method="post" class="subscribe-form">
-						<input type="email" name="subscribe-email" id="subscribeemail"
-							placeholder="Your E-mail">
-						<button type="submit">Subscribe</button>
-					</form>
-				</div>
-			</div>
+			
 
 			<!-- Copywrite Text -->
 			<div class="col-12">
