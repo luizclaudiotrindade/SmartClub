@@ -77,7 +77,7 @@
 					<!-- Nav Start -->
 					<div class="classynav">
 						<ul>
-							<li><a href="home">Homee</a></li>
+							<li><a href="home">Home</a></li>
 							<li><a href="quemSomos">Quem Somos</a></li>
 							<li class=""><a href="contato">Contato</a></li>
 							<li class=""><a href="beneficio">Beneficio</a></li>
