@@ -26,6 +26,8 @@
 	href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
 	integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
 	crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	
 
 <title>Smart-Club</title>
 <style>
@@ -77,10 +79,10 @@
 					<!-- Nav Start -->
 					<div class="classynav">
 						<ul>
-							<li><a href="home">Homee</a></li>
+							<li><a href="home">Home</a></li>
 							<li><a href="quemSomos">Quem Somos</a></li>
 							<li class=""><a href="contato">Contato</a></li>
-							<li class=""><a href="beneficio">Beneficio</a></li>
+							<li class=""><a href="beneficio">Beneficios</a></li>
 							<li><a href="#altocontraste" id="altocontraste"
 								accesskey="3" onclick="window.toggleContrast()"
 								onkeydown="window.toggleContrast()">Alto contraste [Alt + 3]</a></li>
@@ -102,7 +104,7 @@
 		class="breadcumb-area bg-img d-flex align-items-center justify-content-center"
 		style="background-image: url(<%=request.getContextPath()%>/resources/bootstrap/img/bg-img/bg-5.jpg);">
 	<div class="bradcumbContent">
-		<h2>Services</h2>
+		<h2>Benefícios</h2>
 	</div>
 	</section>
 	<!-- ##### Breadcumb Area End ##### -->
@@ -118,14 +120,12 @@
 				<div class="service-intro-text mb-100">
 					<div class="section-heading">
 						<div class="line-"></div>
-						<h2>Escolha um dos nossos planos para se cadastrar..</h2>
+						<h2>Escolha um dos nossos planos para se cadastrar.</h2>
 					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla
-						dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-						malesuada lorem maximus mauris sceleri sque, at rutrum nulla
-						dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
+					<p>Conheça aqui os nossos serviços. Nosso hotel oferece 3 planos com Wi-Fi gratuito, estacionamento gratuito, Translado, Open Bar, Piscina e muito mais.
+					Os quartos do hotel estão equipados com TV de tela plana, o banheiro privativo conta com chuveiro elétrico.
+					Todos os quartos incluem ar-condicionado, mesa de trabalho e alguns com 2 ou mais camas, de acordo com
+					quantidade de pessoas que irão se hospedar. Faça já a sua reserva.</p>
 
 				</div>
 			</div>
@@ -150,7 +150,7 @@
 						<div class="single-cool-fact">
 							<div class="scf-text">
 								<i class="icon-swimming-pool"></i>
-								<p>Pscina Infinita</p>
+								<p>Piscina Infinita</p>
 							</div>
 						</div>
 					</div>
@@ -159,7 +159,7 @@
 					<div class="col-12 col-sm-4">
 						<div class="single-cool-fact">
 							<div class="scf-text">
-								<i class="icon-beach"></i>
+								<i class="glyphicon glyphicon-bed"></i>
 								<p>Quarto Extra</p>
 							</div>
 						</div>
@@ -183,7 +183,7 @@
 						style="background-image: url(<%=request.getContextPath()%>/resources/bootstrap/img/bg-img/12.jpg);"></div>
 					<!-- Content -->
 					<div class="feature-content">
-						<i class="icon-resort"></i>
+						<i class="icon-credit-card"></i>
 						<h3>Plano Anual</h3>
 						<ul>
 							<li>Diaria +1</li>
@@ -208,16 +208,15 @@
 						style="background-image: url(<%=request.getContextPath()%>/resources/bootstrap/img/bg-img/13.jpg);"></div>
 					<!-- Content -->
 					<div class="feature-content">
-						<i class="icon-sunset"></i>
+						<i class="icon-credit-card"></i>
 						<h3>Plano Mensal</h3>
 						<ul>
 							<li>Diaria +1</li>
 							<li>Quarto Triplo</li>
 							<li>Open Bar</li>
 							<li>Estacionamento</li>
-							<li>Refeição</li><br><br>
+							<li>Refeições</li><br><br>
 						</ul>
-
 					</div>
 				</div>
 			</div>
@@ -229,7 +228,7 @@
 						style="background-image: url(<%=request.getContextPath()%>/resources/bootstrap/img/bg-img/14.jpg);"></div>
 					<!-- Content -->
 					<div class="feature-content">
-						<i class="icon-island"></i>
+						<i class="icon-credit-card"></i>
 						<h3>Plano Semestral </h3>
 						<ul>
 							<li>Diaria +1</li>
@@ -238,8 +237,9 @@
 							<li>Open Bar</li>
 							<li>Estacionamento</li>
 							<li>Translado</li>
-							<li>Refeiçãoe</li><br>
+							<li>Refeição</li><br>
 						</ul>
+						
 					</div>
 				</div>
 			</div>
@@ -257,11 +257,10 @@
 			<div class="col-12 col-sm-6 col-lg-4">
 				<div class="single-service-area mb-100 wow fadeInUp"
 					data-wow-delay="100ms">
-					<i class="icon-trekking"></i>
-					<h4>Bike Rentals</h4>
-					<p>Nulla massa dui, posuere non erat in, eleifend mattis dui.
-						Vivamus luctus luctus rhoncus. Donec sagittis nulla id finibus
-						iaculis. Mauris odio tortor.</p>
+					<i class="icon-calendar"></i>
+					<h4>Diaria +1</h4>
+					<p>Todas as refeições(Café, Almoço e Jantar) + Piscina ao ar livre e Atividades esportivas + Open Bar + 
+					Acesso gratuito à internet em todas as áreas do hotel.</p>
 				</div>
 			</div>
 
@@ -269,11 +268,9 @@
 			<div class="col-12 col-sm-6 col-lg-4">
 				<div class="single-service-area mb-100 wow fadeInUp"
 					data-wow-delay="200ms">
-					<i class="icon-boat"></i>
-					<h4>Boat Trips</h4>
-					<p>Nulla massa dui, posuere non erat in, eleifend mattis dui.
-						Vivamus luctus luctus rhoncus. Donec sagittis nulla id finibus
-						iaculis. Mauris odio tortor.</p>
+					<i class="glyphicon glyphicon-bed"></i>
+					<h4>Quarto Triplo</h4>
+					<p>Quartos com 3 camas de solteiro com 3 pessoas ou com 1 cama de casal e 2 de solteiro para 4 pessoas.</p>
 				</div>
 			</div>
 
@@ -281,11 +278,9 @@
 			<div class="col-12 col-sm-6 col-lg-4">
 				<div class="single-service-area mb-100 wow fadeInUp"
 					data-wow-delay="300ms">
-					<i class="icon-plane"></i>
-					<h4>Restaurants</h4>
-					<p>Nulla massa dui, posuere non erat in, eleifend mattis dui.
-						Vivamus luctus luctus rhoncus. Donec sagittis nulla id finibus
-						iaculis. Mauris odio tortor.</p>
+					<i class="icon-limousine"></i>
+					<h4>Estacionamento</h4>
+					<p>O nosso estacionamento é totalmente gratuito. Não cobramos taxa de pagamento.</p>
 				</div>
 			</div>
 
@@ -293,11 +288,10 @@
 			<div class="col-12 col-sm-6 col-lg-4">
 				<div class="single-service-area mb-100 wow fadeInUp"
 					data-wow-delay="400ms">
-					<i class="icon-beach"></i>
-					<h4>Quarto Triplo</h4>
-					<p>Nulla massa dui, posuere non erat in, eleifend mattis dui.
-						Vivamus luctus luctus rhoncus. Donec sagittis nulla id finibus
-						iaculis. Mauris odio tortor.</p>
+					<i class="icon-limousine"></i>
+					<h4>Translado</h4>
+					<p>Para você que vem de outro estado ou cidade para se hospedar em nosso hotel, oferecemos um veículo
+					exclusivo para transportar você e sua família do seu ponto de desembarque até o nosso estabelecimento.</p>
 				</div>
 			</div>
 
@@ -305,11 +299,9 @@
 			<div class="col-12 col-sm-6 col-lg-4">
 				<div class="single-service-area mb-100 wow fadeInUp"
 					data-wow-delay="500ms">
-					<i class="icon-boarding-pass"></i>
-					<h4>Event Tikets</h4>
-					<p>Nulla massa dui, posuere non erat in, eleifend mattis dui.
-						Vivamus luctus luctus rhoncus. Donec sagittis nulla id finibus
-						iaculis. Mauris odio tortor.</p>
+					<i class="glyphicon glyphicon-cutlery"></i>
+					<h4>Todas as Refeições</h4>
+					<p>Café da manhã + Almoço + Lanche + Jantar. Cada refeição é servida diariamente no salão de refeições do hotel.</p>
 				</div>
 			</div>
 
@@ -317,11 +309,9 @@
 			<div class="col-12 col-sm-6 col-lg-4">
 				<div class="single-service-area mb-100 wow fadeInUp"
 					data-wow-delay="600ms">
-					<i class="icon-sign"></i>
-					<h4>Hiking</h4>
-					<p>Nulla massa dui, posuere non erat in, eleifend mattis dui.
-						Vivamus luctus luctus rhoncus. Donec sagittis nulla id finibus
-						iaculis. Mauris odio tortor.</p>
+					<i class="icon-cocktail-1"></i>
+					<h4>Open Bar</h4>
+					<p>Com água mineral + Refrigerante + bebidas alcólicas somente para pessoas com 18 anos ou mais.</p>
 				</div>
 			</div>
 
