@@ -76,20 +76,7 @@ CadastroUsuarioDao dao = new CadastroUsuarioDao();
 
 	}
 
-	@RequestMapping("/hotel")
-	public String telaHotel() {
-		System.out.println("iniciando telaHotel");
-		return "cadastrarHotel";
-
-	}
-
-	@RequestMapping("/quarto")
-	public String telaQuarto() {
-		System.out.println("Iniciando telaQuarto");
-		return "cadastrarQuarto";
-
-	}
-
+		
 	@RequestMapping("/QuemSomos")
 	public String quemSomos() {
 		System.out.println("Iniciando a Pagina de beneficio");

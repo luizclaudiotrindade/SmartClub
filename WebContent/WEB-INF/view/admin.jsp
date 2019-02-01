@@ -44,15 +44,15 @@
     <div class="stepwizard-row setup-panel">
         <div class="stepwizard-step">
             <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
-            <p>Step 1</p>
+            <p>Cadastro 1</p>
         </div>
         <div class="stepwizard-step">
             <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
-            <p>Step 2</p>
+            <p>Cadastro 2</p>
         </div>
         <div class="stepwizard-step">
             <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
-            <p>Step 3</p>
+            <p>Finalizar Cadastro 3</p>
         </div>
     </div>
 </div>
@@ -60,40 +60,93 @@
     <div class="row setup-content" id="step-1">
         <div class="col-xs-12">
             <div class="col-md-12">
-                <h3> Step 1</h3>
-                <div class="form-group">
-                    <label class="control-label">First Name</label>
-                    <input  maxlength="100" type="text" required="required" class="form-control" placeholder="Enter First Name"  />
+                <h3> Cadastrar Hotel</h3>
+                
+                 <div class="form-group">
+                    <label class="control-label">Nome do Hotel</label>
+                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="nome do hotel" />
                 </div>
+              
                 <div class="form-group">
-                    <label class="control-label">Last Name</label>
-                    <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Last Name" />
+                    <label class="control-label">CNPJ</label>
+                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="cnpj"  />
                 </div>
-                <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
+                
+                
+                <div class="form-group">
+                    <label class="control-label">Endereço</label>
+                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="endereco"  />
+                </div>
+                
+                 <div class="form-group">
+                    <label class="control-label">Telefone</label>
+                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="telefone"  />
+                </div>
+                
+                 <div class="form-group">
+                    <label class="control-label">Bairro</label>
+                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="bairro"  />
+                </div>
+                
+                 <div class="form-group">
+                    <label class="control-label">Cidade</label>
+                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="cidade"  />
+                </div>
+                
+                 <div class="form-group">
+                    <label class="control-label">Estado</label>
+                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="estado"  />
+                </div>
+                
+                <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Próximo</button>
+                
+                
             </div>
         </div>
     </div>
     <div class="row setup-content" id="step-2">
         <div class="col-xs-12">
             <div class="col-md-12">
-                <h3> Step 2</h3>
-                <div class="form-group">
-                    <label class="control-label">Company Name</label>
-                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Enter Company Name" />
+                <h3> Cadastrar Quarto</h3>
+               
+               <div class="form-group">
+                    <label class="control-label">Nome do Hotel</label>
+                    <input  maxlength="100" type="text" required="required" class="form-control" placeholder="Nome do Hotel"  />
                 </div>
                 <div class="form-group">
-                    <label class="control-label">Company Address</label>
-                    <input maxlength="200" type="text" required="required" class="form-control" placeholder="Enter Company Address"  />
+                    <label class="control-label">Nome do Quarto</label>
+                    <input maxlength="100" type="text" required="required" class="form-control" placeholder="Nome do Quarto" />
                 </div>
-                <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
+                
+                <div class="form-group">
+                    <label class="control-label">Quantidade de Pessoas</label>
+                    <input  maxlength="100" type="text" required="required" class="form-control" placeholder="Quantidade de Pessoas"  />
+                </div>
+                
+                <div class="form-group">
+                    <label class="control-label">Fotos do Quarto</label>
+                    <input  maxlength="100" type="file" required="required" class="form-control" placeholder="Fotos do Quarto"  />
+                </div>
+                
+                
+                <div class="form-group">
+                    <label class="control-label">Valor</label>
+                    <input  maxlength="100" type="text" required="required" class="form-control" placeholder="Valor"  />
+                </div>
+                                
+                <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Próximo</button>
+                
             </div>
         </div>
     </div>
     <div class="row setup-content" id="step-3">
         <div class="col-xs-12">
             <div class="col-md-12">
-                <h3> Step 3</h3>
-                <button class="btn btn-success btn-lg pull-right" type="submit">Finish!</button>
+                <h3> Finalizar Cadastro</h3>
+                
+                <p>Salve o seu Cadastro</p>
+               
+                <button class="btn btn-success btn-lg pull-right" type="submit">Salvar</button>
             </div>
         </div>
     </div>
