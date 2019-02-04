@@ -2,6 +2,8 @@ package br.com.ifpe.smartClub.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +14,8 @@ import br.com.ifpe.smartClub.model.CadastroUsuario;
 import br.com.ifpe.smartClub.model.CadastroUsuarioDao;
 import br.com.ifpe.smartClub.model.Hotel;
 import br.com.ifpe.smartClub.model.HotelDao;
+import br.com.ifpe.smartClub.model.LoginAdm;
+import br.com.ifpe.smartClub.model.LoginAdmDao;
 import br.com.ifpe.smartClub.model.UsuarioDao;
 
 /**
@@ -89,10 +93,16 @@ CadastroUsuarioDao dao = new CadastroUsuarioDao();
 		return "home/contato";
 	}
 	
-	@RequestMapping("/Adm")
-	public String admin() {
-		System.out.println("Iniciando a tela Admin");
-		return "admin";
+	@RequestMapping("/admin")
+	public String efetuarLogin(LoginAdm loginAdm, HttpSession session, Model	model) {
+	LoginAdmDao dao = new LoginAdmDao();
+	LoginAdm loginAdmLogado = dao.buscarLoginAdm(loginAdm);
+	if (loginAdmLogado != null) {
+	session.setAttribute("loginAdmLogado", loginAdmLogado);
+	return "home";
+	}
+	model.addAttribute("msg", "Não foi encontrado um usuário com o login e senha informados.");
+	return "index";
 	}
 	
 }
