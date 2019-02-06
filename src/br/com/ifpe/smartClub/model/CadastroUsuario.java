@@ -14,6 +14,7 @@ public class CadastroUsuario {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+
 	private int idusuario;
 
 	@Column

@@ -122,7 +122,7 @@
 								<li><a href="contato">Contato</a></li>
 								<li class=""><a href="beneficio">Beneficios</a></li>
 								<li><a href="beneficio">Cadastre-se</a></li>
-								<li><a href="#altocontraste" id="altocontraste" accesskey="3" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()">Alto contraste [Alt + 3]</a></li>
+								<li><a href="#altocontraste" id="altocontraste" accesskey="3" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()"><svg-icon><src href="sprite.svg#si-glyph-contrast" /></svg-icon></a></li>
 
 							</ul>
 

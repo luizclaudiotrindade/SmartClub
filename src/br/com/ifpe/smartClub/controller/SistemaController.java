@@ -83,7 +83,7 @@ CadastroUsuarioDao dao = new CadastroUsuarioDao();
 		
 	@RequestMapping("/QuemSomos")
 	public String quemSomos() {
-		System.out.println("Iniciando a Pagina de beneficio");
+		System.out.println("Iniciando a Pagina Quem Somos");
 		return "home/quemSomos";
 	}
 

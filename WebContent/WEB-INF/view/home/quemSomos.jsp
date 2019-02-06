@@ -1,11 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
 <meta charset="utf-8">
 <meta charset="UTF-8">
 <meta name="description" content="">
@@ -30,21 +27,83 @@
 	href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
 	integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
 	crossorigin="anonymous">
-<style>
-.contrast, .contrast nav, .contrast div, .contrast li, .contrast ol,
-	.contrast header, .contrast footer, .contrast section, .contrast main,
-	.contrast aside, .contrast article {
-	background: black !important;
-	color: white !important;
-}
-</style>
 </head>
 
 <body>
-	<c:import url="nav.jsp" />
+<c:import url="nav.jsp" />
+	
+	<!-- ##### Header Area End ##### -->
 
-	<script type="text/javascript"
-		src="<%=request.getContextPath()%>/resources/bootstrap/js/bootstrap/autoContraste.js"></script>
+	<!-- ##### Login Area ##### -->
+
+	<!-- ##### Fim da area de login ##### -->
+
+	<!-- ##### Breadcumb Area Start ##### -->
+	<section
+		class="breadcumb-area bg-img d-flex align-items-center justify-content-center">
+		
+		<div class="bradcumbContent">
+			<h2>Smart Club</h2>
+		</div>
+
+	</section>
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content"
+				style="background-color: rgba(0, 0, 0, 0.5) !important;">
+				<div class="card" style="width: 498px">
+					<div class="card-header">
+						<!--  aqui está a parte do header do moldal de login  -->
+						<button type="button" class="close" style="color:#b3b3b3" data-dismiss="modal"
+							aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<!--  fim do header -->
+						<!--  aqui está todo o corpo -->
+					<div class="card-body">
+						<form action="autenticar" method="post">
+							<div class="input-group form-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="fas fa-user"></i></span>
+								</div>
+								<input name="email" type="text" class="form-control"
+									placeholder="Email">
+							</div>
+							<div class="input-group form-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="fas fa-key"></i></span>
+								</div>
+								<input name="senha" type="password" class="form-control"
+									placeholder="Senha">
+							</div>
+							<div class="form-group">
+								<input type="submit" value="Login"
+									class="btn float-right login_btn">
+							</div>
+							<input type="checkbox" value="lembrar-me"><p style="color:white">Lembrar-me?</p>
+						</form>
+
+					</div>
+					<!--  fim do body do moldal -->
+					<!--  inicio do footer -->
+					<div class="card-footer">
+						<div class="d-flex justify-content-center links" style="">
+							Ainda não é cadastrado?<a href="beneficio">Cadastre-se</a>
+						</div>
+						<div class="d-flex justify-content-center">
+							<a style="color: white;" href="#">Recuperar Conta?</a>
+						</div>
+					</div>
+					<!-- fim do footer do moldal -->
+				</div>
+			</div>
+		</div>
+
+		
+
 	<script type="text/javascript"
 		src="<%=request.getContextPath()%>/resources/bootstrap/js/jquery/jquery-2.2.4.min.js"></script>
 
@@ -61,5 +120,9 @@
 	<!-- Active js -->
 	<script type="text/javascript"
 		src="<%=request.getContextPath()%>/resources/bootstrap/js/active.js"></script>
+<script type="text/javascript"
+			src="<%=request.getContextPath()%>/resources/bootstrap/js/bootstrap/autoContraste.js"></script>
+	
 </body>
+
 </html>
