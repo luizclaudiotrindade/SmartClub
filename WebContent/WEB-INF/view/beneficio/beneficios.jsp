@@ -10,7 +10,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+<link rel="stylesheet" type="text/css"
+	href="<%=request.getContextPath()%>/resources/bootstrap/login.css" />
 <!-- Favicon -->
 <link rel="icon" href="img/core-img/favicon.ico">
 <!-- Core Stylesheet -->
@@ -43,6 +44,7 @@
 
 </head>
 <body>
+
 	<!-- Preloader -->
 	<div class="preloader d-flex align-items-center justify-content-center">
 		<div class="cssload-container">
@@ -54,6 +56,7 @@
 
 	<!-- ##### Header Area Start ##### -->
 	<header class="header-area"> <!-- Navbar Area -->
+	
 	<div class="palatin-main-menu">
 		<div class="classy-nav-container breakpoint-off">
 			<div class="container">
@@ -80,14 +83,14 @@
 					<div class="classynav">
 						<ul>
 							<li><a href="home">Home</a></li>
-							<li><a href="quemSomos">Quem Somos</a></li>
-							<li class=""><a href="contato">Contato</a></li>
+							<li><a href="QuemSomos">Quem Somos</a></li>
 							<li class=""><a href="beneficio">Beneficios</a></li>
 							<li><a href="#altocontraste" id="altocontraste"
 								accesskey="3" onclick="window.toggleContrast()"
 								onkeydown="window.toggleContrast()">Alto contraste [Alt + 3]</a></li>
 
 						</ul>
+						
 					</div>
 					<!-- Nav End -->
 				</div>
@@ -194,7 +197,7 @@
 							<li>Translado</li>
 							<li>Refeições</li>
 						</ul>
-						<a type="submit" value="Aderir" class="btn btn-dark"
+						<a type="submit" value="Aderir" name="planoAnual" class="btn btn-dark"
 							href="cadastro">Aderir</a>
 
 					</div>
@@ -319,7 +322,6 @@
 	</div>
 	</section>
 
-
 	<!-- ##### Footer Area Start ##### -->
 	<footer class="footer-area">
 	<div class="container">
@@ -329,7 +331,8 @@
 			<div class="col-12 col-lg-5">
 				<div class="footer-widget-area mt-50">
 					<a href="#" class="d-block mb-5"><img
-						src="img/core-img/logo.png" alt=""></a>
+						style="max-width:45% ;" src="<%=request.getContextPath()%>/resources/bootstrap/img/core-img/logoooo.png" alt=""></a>
+						
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 						Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla
 						dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.
@@ -341,21 +344,12 @@
 			<div class="col-12 col-md-6 col-lg-4">
 				<div class="footer-widget-area mt-50">
 					<h6 class="widget-title mb-5">Find us on the map</h6>
-					<img src="img/bg-img/footer-map.png" alt="">
+					<img src="<%=request.getContextPath()%>/resources/bootstrap/img/bg-img/footer-map.png" alt="">
+					
 				</div>
 			</div>
 
-			<!-- Footer Widget Area -->
-			<div class="col-12 col-md-6 col-lg-3">
-				<div class="footer-widget-area mt-50">
-					<h6 class="widget-title mb-5">Subscribe to our newsletter</h6>
-					<form action="#" method="post" class="subscribe-form">
-						<input type="email" name="subscribe-email" id="subscribeemail"
-							placeholder="Your E-mail">
-						<button type="submit">Subscribe</button>
-					</form>
-				</div>
-			</div>
+			
 
 			<!-- Copywrite Text -->
 			<div class="col-12">
@@ -372,8 +366,10 @@
 			</div>
 		</div>
 	</div>
+	
 
 	</footer>
+	
 
 	<script type="text/javascript"
 		src="<%=request.getContextPath()%>/resources/bootstrap/js/jquery/jquery-2.2.4.min.js"></script>

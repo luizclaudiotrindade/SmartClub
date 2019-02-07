@@ -87,11 +87,7 @@ CadastroUsuarioDao dao = new CadastroUsuarioDao();
 		return "home/quemSomos";
 	}
 
-	@RequestMapping("/contato")
-	public String contato() {
-		System.out.println("Iniciando a tela Contato");
-		return "home/contato";
-	}
+	
 	
 	@RequestMapping("/admin")
 	public String efetuarLogin(LoginAdm loginAdm, HttpSession session, Model	model) {

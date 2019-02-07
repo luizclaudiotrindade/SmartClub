@@ -43,6 +43,17 @@ public class CadastroUsuario {
 	
 	@Column
 	private String rg;
+	
+	@Column 
+	private String plano;
+
+	public String getPlano() {
+		return plano;
+	}
+
+	public void setPlano(String plano) {
+		this.plano = plano;
+	}
 
 	public String getRg() {
 		return rg;
