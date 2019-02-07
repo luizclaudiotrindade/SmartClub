@@ -66,7 +66,7 @@
 		<br>
 		<div class="row">
 			<div class="col" style="">
-				<h5>O Hotel Smart Club está localizado em Boa Viagem - Recife (PE). Fundado no mês de agosto de 1884, o Hotel Caxambu é um dos hotéis mais antigos da cidade. Ainda hoje conserva sua fachada colonial, porém possui as mais modernas instalações hoteleiras.
+				<h5>O Hotel Smart Club está localizado em Boa Viagem - Recife (PE). Fundado no mês de agosto de 1884, o Hotel Smart Club é um dos hotéis mais antigos da cidade. Ainda hoje conserva sua fachada colonial, porém possui as mais modernas instalações hoteleiras.
 
 Investindo sempre em melhorias, o Hotel Smart Club vem inovando ao longo dos anos, fazendo com que o hotel seja conhecido internacionalmente.
 
