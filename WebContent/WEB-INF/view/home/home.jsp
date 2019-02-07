@@ -43,7 +43,7 @@
 		class="breadcumb-area bg-img d-flex align-items-center justify-content-center">
 		
 		<div class="bradcumbContent">
-			<h2>Smart Cluvb</h2>
+			<h2>Smart Club</h2>
 		</div>
 
 	</section>

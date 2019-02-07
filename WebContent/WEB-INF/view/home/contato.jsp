@@ -4,8 +4,35 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<style type="text/css">
+
+#tudo{
+	margin-top: 40%;
+	text-align: center;
+	opacity: 0.5;
+
+}
+
+
+
+.form-control {
+    display: block;
+    width: 10%;
+    height: calc(2.25rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;  
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+</style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Smart Club</title>
 <meta charset="utf-8">
 <meta charset="UTF-8">
 <meta name="description" content="">
@@ -33,7 +60,48 @@
 </head>
 <body>
 <c:import url="nav.jsp" />
+<div class="container">
+	<div class="row">
+		<div class="col"></div>
+		<div class="col">
+		
+		<div id="tudo">
+<h2>Fale com o nosso consultor!</h2></br>
 
+				<div class="col">
+				<p>
+				
+					<input type="text"  class="form-control" 
+						placeholder="Nome" name="nome" required>
+				</p>
+				
+				
+				<p>
+					<input type="text" class="form-control"
+						placeholder="E-mail" name="email" required>
+				</p>
+
+				<p>
+					<input cols="32" type="text" class="form-control"
+						placeholder="Telefone" name="telefone" required>
+				</p>
+				
+				Mensagem<br>
+				<textarea rows="4" cols="50"></textarea><br><br>
+				
+				
+			<a type="submit" value="Enviar" class="btn btn-dark"
+							href="home">Enviar</a></br>
+				</div>
+				</br>
+				Telefone: (81)3434-0099</br>
+				Email: smartclub2000@gmail.com</br>
+				Whatsapp: (81)98888-0000</div>
+		
+		</div>
+		<div class="col"></div>
+	</div>
+</div>
 
 <script type="text/javascript"
 		src="<%=request.getContextPath()%>/resources/bootstrap/js/jquery/jquery-2.2.4.min.js"></script>
@@ -51,5 +119,7 @@
 	<!-- Active js -->
 	<script type="text/javascript"
 		src="<%=request.getContextPath()%>/resources/bootstrap/js/active.js"></script>
+		
+	
 </body>
 </html>
