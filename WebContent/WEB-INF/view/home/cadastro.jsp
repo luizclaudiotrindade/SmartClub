@@ -17,6 +17,8 @@
 <!-- Core Stylesheet -->
 <link rel="stylesheet" type="text/css"
 	href="<%=request.getContextPath()%>/resources/bootstrap/style.css" />
+	<link rel="stylesheet" type="text/css"
+	href="<%=request.getContextPath()%>/resources/bootstrap/login.css" />
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
@@ -36,6 +38,7 @@ width: 20%;
 
 	<!--  navegação -->
 	<c:import url="nav.jsp" />
+	
 
 
 
@@ -148,6 +151,63 @@ width: 20%;
 		</div>
 	</div>
 	</footer>
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content"
+				style="background-color: rgba(0, 0, 0, 0.5) !important;">
+				<div class="card" style="width: 498px">
+					<div class="card-header">
+						<!--  aqui está a parte do header do moldal de login  -->
+						<button type="button" class="close" style="color:#b3b3b3" data-dismiss="modal"
+							aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<!--  fim do header -->
+						<!--  aqui está todo o corpo -->
+					<div class="card-body">
+						<form action="autenticar" method="post">
+							<div class="input-group form-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="fas fa-user"></i></span>
+								</div>
+								<input name="email" type="text" class="form-control"
+									placeholder="Email">
+							</div>
+							<div class="input-group form-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="fas fa-key"></i></span>
+								</div>
+								<input name="senha" type="password" class="form-control"
+									placeholder="Senha">
+							</div>
+							<div class="form-group">
+								<input type="submit" value="Login"
+									class="btn float-right login_btn">
+							</div>
+							<input type="checkbox" value="lembrar-me"><p style="color:white">Lembrar-me?</p>
+						</form>
+
+					</div>
+					<!--  fim do body do moldal -->
+					<!--  inicio do footer -->
+					<div class="card-footer">
+						<div class="d-flex justify-content-center links" style="">
+							Ainda não é cadastrado?<a href="beneficio">Cadastre-se</a>
+						</div>
+						<div class="d-flex justify-content-center">
+							<a style="color: white;" href="#">Recuperar Conta?</a>
+						</div>
+					</div>
+					<!-- fim do footer do moldal -->
+				</div>
+			</div>
+		</div>
+	
+	
+	
 	<script type="text/javascript"
 		src="<%=request.getContextPath()%>/resources/bootstrap/js/bootstrap/autoContraste.js"></script>
 

@@ -9,7 +9,7 @@
 #tudo{
 	margin-top: 40%;
 	text-align: center;
-	opacity: 0.5;
+	
 
 }
 
@@ -65,7 +65,7 @@
 		<div class="col"></div>
 		<div class="col">
 		
-		<div id="tudo">
+		<div id="tudo"> 
 <h2>Fale com o nosso consultor!</h2></br>
 
 				<div class="col">
