@@ -86,6 +86,12 @@ CadastroUsuarioDao dao = new CadastroUsuarioDao();
 		System.out.println("Iniciando a Pagina Quem Somos");
 		return "home/quemSomos";
 	}
+	
+	@RequestMapping("/contato")
+	public String contato() {
+		System.out.println("Iniciando a Pagina Contato");
+		return "home/contato";
+	}
 
 	
 	
@@ -97,7 +103,7 @@ CadastroUsuarioDao dao = new CadastroUsuarioDao();
 	session.setAttribute("loginAdmLogado", loginAdmLogado);
 	return "home";
 	}
-	model.addAttribute("msg", "Não foi encontrado um usuário com o login e senha informados.");
+	model.addAttribute("msg", "Nï¿½o foi encontrado um usuï¿½rio com o login e senha informados.");
 	return "index";
 	}
 	

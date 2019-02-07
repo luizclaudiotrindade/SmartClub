@@ -65,6 +65,7 @@
 							<ul>
 								<li><a href="home">Home</a></li>
 								<li><a href="QuemSomos">Quem Somos</a></li>
+								<li><a href="contato">Contato</a></li>
 								<!-- mega menu desativado  e services desativados
                                     <li><a href="#">Pages</a>
                                         <ul class="dropdown">
