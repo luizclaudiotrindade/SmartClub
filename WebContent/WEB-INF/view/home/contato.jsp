@@ -1,38 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<style type="text/css">
-
-#tudo{
-	margin-top: 40%;
-	text-align: center;
-	
-
-}
-
-
-
-.form-control {
-    display: block;
-    width: 10%;
-    height: calc(2.25rem + 2px);
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;  
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-
-</style>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Smart Club</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <meta charset="utf-8">
 <meta charset="UTF-8">
 <meta name="description" content="">
@@ -45,65 +20,73 @@
 <!-- Core Stylesheet -->
 <link rel="stylesheet" type="text/css"
 	href="<%=request.getContextPath()%>/resources/bootstrap/style.css" />
-<link rel="stylesheet" type="text/css"
-	href="<%=request.getContextPath()%>/resources/bootstrap/login.css" />
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-	crossorigin="anonymous">
 
-<!--Fontawesome CDN-->
-<link rel="stylesheet"
-	href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-	integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-	crossorigin="anonymous">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Contato</title>
+<style>
+form {
+	/* Apenas para centralizar o form na página */
+	margin: 0 auto;
+	width: 500px;
+	/* Para ver as bordas do formulário */
+	padding: 1em;
+	border: 1px solid #CCC;
+	border-radius: 1em;
+}
+</style>
 </head>
 <body>
-<c:import url="nav.jsp" />
-<div class="container">
-	<div class="row">
-		<div class="col"></div>
-		<div class="col">
-		
-		<div id="tudo"> 
-<h2>Fale com o nosso consultor!</h2></br>
 
-				<div class="col">
-				<p>
-				
-					<input type="text"  class="form-control" 
-						placeholder="Nome" name="nome" required>
-				</p>
-				
-				
-				<p>
-					<input type="text" class="form-control"
-						placeholder="E-mail" name="email" required>
-				</p>
 
-				<p>
-					<input cols="32" type="text" class="form-control"
-						placeholder="Telefone" name="telefone" required>
-				</p>
-				
-				Mensagem<br>
-				<textarea rows="4" cols="50"></textarea><br><br>
-				
-				
-			<a type="submit" value="Enviar" class="btn btn-dark"
-							href="home">Enviar</a></br>
-				</div>
-				</br>
-				Telefone: (81)3434-0099</br>
-				Email: smartclub2000@gmail.com</br>
-				Whatsapp: (81)98888-0000</div>
+
+	<!--  navegação -->
+	<c:import url="nav.jsp"/>
+
+
+
+
+	<form  action="contato" method="POST">
+<h1>Contato</h1>
+		<h4>Preencha o Formulário !</h4>
+
+		<label>Nome Completo:</label> <input type="text" class="form-control"name="nome" required> 
 		
+		<label>E-mail:</label> <input type="email" class="form-control" name="mail" required> 
+			
+			
+		<label>Assunto:</label>	<input type="text" class="form-control" name="assunto" required>
+
+
+		<label>Mensagem:</label><textarea rows="10" cols="100" class="form-control" name="mensagem" maxlength="999" style="resize: none" required></textarea>
+
+
+
+		<button type="submit" class="btn btn-primary">Enviar</button>
+	</form>
+
+
+
+	<footer class="footer-area">
+	<div class="container">
+
+		<!-- Footer Widget Area -->
+		<!-- Copywrite Text -->
+		<div class="col-12">
+			<div class="copywrite-text mt-30">
+				<p class=" m-0 text-center text-white">
+					<a href="home">Copyright &copy; <script>
+						document.write(new Date().getFullYear());
+					</script> Projeto SmartClub. Todos os direitos reservados.
+					</a>
+				</p>
+			</div>
 		</div>
-		<div class="col"></div>
 	</div>
-</div>
 
-<script type="text/javascript"
+	</footer>
+
+
+	<script type="text/javascript"
 		src="<%=request.getContextPath()%>/resources/bootstrap/js/jquery/jquery-2.2.4.min.js"></script>
 
 	<!-- Popper js -->
@@ -119,7 +102,5 @@
 	<!-- Active js -->
 	<script type="text/javascript"
 		src="<%=request.getContextPath()%>/resources/bootstrap/js/active.js"></script>
-		
-	
 </body>
 </html>
