@@ -5,12 +5,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "usuario")
 
-public class CadastroUsuario {
+public class Usuario {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,35 +34,16 @@ public class CadastroUsuario {
 	@Column
 	private String telefone;
 
-	@Column
-	private String sexo;
+	@JoinColumn(name="idPlano")
+	@ManyToOne
+	private Plano plano;
 
-	@Column
-	private String idade;
-
-	@Column
-	private String endereco;
-	
-	@Column
-	private String rg;
-	
-	@Column 
-	private String plano;
-
-	public String getPlano() {
+	public Plano getPlano() {
 		return plano;
 	}
 
-	public void setPlano(String plano) {
+	public void setPlano(Plano plano) {
 		this.plano = plano;
-	}
-
-	public String getRg() {
-		return rg;
-	}
-
-	public void setRg(String rg) {
-		this.rg = rg;
 	}
 
 	public int getIdusuario() {
@@ -109,30 +92,6 @@ public class CadastroUsuario {
 
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
-	}
-
-	public String getSexo() {
-		return sexo;
-	}
-
-	public void setSexo(String sexo) {
-		this.sexo = sexo;
-	}
-
-	public String getIdade() {
-		return idade;
-	}
-
-	public void setIdade(String idade) {
-		this.idade = idade;
-	}
-
-	public String getEndereco() {
-		return endereco;
-	}
-
-	public void setEndereco(String endereco) {
-		this.endereco = endereco;
 	}
 
 }

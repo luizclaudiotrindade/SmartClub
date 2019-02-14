@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import br.com.ifpe.smartClub.model.Beneficios;
 import br.com.ifpe.smartClub.model.BeneficiosDao;
-import br.com.ifpe.smartClub.model.CadastroUsuario;
+import br.com.ifpe.smartClub.model.Usuario;
 import br.com.ifpe.smartClub.model.CadastroUsuarioDao;
 import br.com.ifpe.smartClub.model.Hotel;
 import br.com.ifpe.smartClub.model.HotelDao;
@@ -39,9 +39,9 @@ public class SistemaController {
 	}
 
 	@RequestMapping("save")
-	public String save(CadastroUsuario cadastroUsuario) {
+	public String save(Usuario usuario) {
 CadastroUsuarioDao dao = new CadastroUsuarioDao();
-		dao.salvar(cadastroUsuario);
+		dao.salvar(usuario);
 		return "usuario/cadastradoSucesso";
 	}
 
@@ -64,7 +64,7 @@ CadastroUsuarioDao dao = new CadastroUsuarioDao();
 	}
 
 	@RequestMapping("/autenticar")
-	public String autenticar(CadastroUsuario usuario) {
+	public String autenticar(Usuario usuario) {
 		UsuarioDao dao = new UsuarioDao();
 		if (dao.verificarExistencia(usuario) == true) {
 			System.out.println("O usuario foi logado com sucesso!");
