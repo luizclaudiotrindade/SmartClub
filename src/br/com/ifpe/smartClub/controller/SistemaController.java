@@ -52,7 +52,6 @@ CadastroUsuarioDao dao = new CadastroUsuarioDao();
 	}
 	
 
-	
 
 	@RequestMapping("/telaUsuario")
 	public String telaUsuario(Model model) {

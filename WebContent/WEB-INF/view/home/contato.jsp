@@ -24,6 +24,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Contato</title>
 <style>
+body{ background-image: url('https://images5.alphacoders.com/372/372649.jpg');}
+
 form {
 	/* Apenas para centralizar o form na página */
 	margin: 0 auto;

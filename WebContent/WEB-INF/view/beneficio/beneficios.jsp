@@ -4,7 +4,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta charset="utf-8">
 <meta charset="UTF-8">
 <meta name="description" content="">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -63,8 +62,8 @@
 				<!-- Menu -->
 				<nav class="classy-navbar justify-content-between" id="palatinNav">
 
-				<!-- Nav brand --> <img
-					src="<%=request.getContextPath()%>/resources/bootstrap/img/core-img/logoooo.png"
+				<!-- Nav brand --> 
+				<img src="<%=request.getContextPath()%>/resources/bootstrap/img/core-img/logoooo.png"
 					style="max-width: 19%" alt="Logo tipo Smart Club"> <!-- Navbar Toggler -->
 				<div class="classy-navbar-toggler">
 					<span class="navbarToggler"><span></span><span></span><span></span></span>

@@ -1,160 +1,130 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-
 <head>
-
-<style>
-#tudo{
-	margin-top: 14%;
-	
-}
-
-</style>
-
-
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="description" content="">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 <!-- Favicon -->
 <link rel="icon" href="img/core-img/favicon.ico">
 <!-- Core Stylesheet -->
 <link rel="stylesheet" type="text/css"
 	href="<%=request.getContextPath()%>/resources/bootstrap/style.css" />
-<link rel="stylesheet" type="text/css"
-	href="<%=request.getContextPath()%>/resources/bootstrap/login.css" />
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-	crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	
 
-<!--Fontawesome CDN-->
-<link rel="stylesheet"
-	href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-	integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-	crossorigin="anonymous">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Smart Club</title>
+<style>
+.single-cool-fact {
+	position: relative;
+	z-index: 1;
+	width: 88px;
+	padding: 0px 12px;
+	border: 2px solid #cb8670;
+	text-align: center;
+	background-color: #363636;
+	margin: 0 auto;
+	-webkit-transition-duration: 500ms;
+	transition-duration: 500ms;
+}
+
+.single-cool-fact .scf-text p {
+	font-size: 9px;
+	margin-bottom: 0;
+	color: #ffffff;
+	line-height: 1;
+}
+
+.col-sm-4 {
+position: relative;
+min-height: 1px;
+padding-right: 6px;
+padding-left: 6px;
+}
+
+.breakpoint-off .classynav ul li .dropdown {
+    width: 190px;
+    position: absolute;
+    background-color: #29211a8c;
+    top: 120%;
+    left: 0;
+    z-index: 100;
+    height: auto;
+    box-shadow: 0 1px 5px rgba\(0, 0, 0, 0.1;
+    -webkit-transition-duration: 300ms;
+    transition-duration: 300ms;
+    opacity: 0;
+    visibility: hidden;
+    padding: 10px 0;
+}
+
+</style>
 </head>
-
 <body>
-<c:import url="nav.jsp" />
-	
-	
-	<!-- ##### Header Area End ##### -->
 
-	<!-- ##### Login Area ##### -->
-
-	<!-- ##### Fim da area de login ##### -->
-
-	<!-- ##### Breadcumb Area Start ##### -->
-	
-	
-	
-	 
-	<section class="breadcumb-area bg-img d-flex align-items-center justify-content-center" style="margin-top: 10%;">
-	<div class="container">
-		<div class="row">
-			<div class="col"></div>
-			<div class="col-sm-4 ">
-				<div class="bradcumbContent" style="text-align: center;">
-					<h2>Smart Club</h2>
-				</div>
-			</div>
-			<div class="col"></div>
+	<!-- Preloader -->
+	<div class="preloader d-flex align-items-center justify-content-center">
+		<div class="cssload-container">
+			<div class="cssload-loading"></div>
 		</div>
-		<br>
-		<div class="row">
-			<div class="col">
-				<h5>O Hotel Smart Club est√° localizado em Boa Viagem - Recife (PE). Fundado no m√™s de agosto de 1884, o Hotel Caxambu √© um dos hot√©is mais antigos da cidade. Ainda hoje conserva sua fachada colonial, por√©m possui as mais modernas instala√ß√µes hoteleiras.
+	</div>
 
-Investindo sempre em melhorias, o Hotel Smart Club vem inovando ao longo dos anos, fazendo com que o hotel seja conhecido internacionalmente.
 
-Com profissionais altamente qualificado, o Hotel Smart Club possui como um dos principais diferenciais a cordialidade e o bom atendimento aos frequentadores do Hotel.
 
-Nosso Restaurante ‚ÄúLe Jardin‚Äù, parte fundamental do Hotel Smart Club, √© famoso pela qualidade de sua comida e seu servi√ßo, e ainda √© refer√™ncia gastron√¥mica Pernambucana.
+	<!-- ##### Header Area Start ##### -->
+	<header class="header-area"> <!-- Navbar Area -->
+	
+	<div class="palatin-main-menu">
+		<div class="classy-nav-container breakpoint-off">
+			<div class="container">
+				<!-- Menu -->
+				<nav class="classy-navbar justify-content-between" id="palatinNav">
 
-O Hotel Smart Club combina os valores tradicionais da cortesia, atendimento, conforto e sofistica√ß√£o de Smart Club.Quer sua visita √† Smart Club seja para uma reuni√£o importante ou fim de semana relaxante, o Hotel Smart Club oferece uma gama de servi√ßos de qualidade que tornar√£o sua estadia memor√°vel.</h5>
+				<!-- Nav brand --> 
+				<img src="<%=request.getContextPath()%>/resources/bootstrap/img/core-img/logoooo.png"
+					style="max-width: 19%" alt="Logo tipo Smart Club"> <!-- Navbar Toggler -->
+				<div class="classy-navbar-toggler">
+					<span class="navbarToggler"><span></span><span></span><span></span></span>
+				</div>
+
+				<!-- Menu -->
+				<div class="classy-menu">
+
+					<!-- close btn -->
+					<div class="classycloseIcon">
+						<div class="cross-wrap">
+							<span class="top"></span><span class="bottom"></span>
+						</div>
+					</div>
+					<!-- Nav Start -->
+					<div class="classynav">
+						<ul>
+							<li><a href="home">Home</a></li>
+							<li><a href="QuemSomos">Quem Somos</a></li>
+							<li class=""><a href="beneficio">Beneficios</a></li>
+							<li><a href="#altocontraste" id="altocontraste"
+								accesskey="3" onclick="window.toggleContrast()"
+								onkeydown="window.toggleContrast()">Alto contraste [Alt + 3]</a></li>
+
+						</ul>
+						
+					</div>
+					<!-- Nav End -->
+				</div>
+				</nav>
 			</div>
 		</div>
 	</div>
-			
-		
-		
-		
-	
-		
-		
-			
-				
-		
-		
+	</header>
 
-	</section>
-	<!-- Modal -->
-	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-		aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content"
-				style="background-color: rgba(0, 0, 0, 0.5) !important;">
-				<div class="card" style="width: 498px">
-					<div class="card-header">
-						<!--  aqui est√° a parte do header do moldal de login  -->
-						<button type="button" class="close" style="color:#b3b3b3" data-dismiss="modal"
-							aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<!--  fim do header -->
-						<!--  aqui est√° todo o corpo -->
-					<div class="card-body">
-						<form action="autenticar" method="post">
-							<div class="input-group form-group">
-								<div class="input-group-prepend">
-									<span class="input-group-text"><i class="fas fa-user"></i></span>
-								</div>
-								<input name="email" type="text" class="form-control"
-									placeholder="Email">
-							</div>
-							<div class="input-group form-group">
-								<div class="input-group-prepend">
-									<span class="input-group-text"><i class="fas fa-key"></i></span>
-								</div>
-								<input name="senha" type="password" class="form-control"
-									placeholder="Senha">
-							</div>
-							<div class="form-group">
-								<input type="submit" value="Login"
-									class="btn float-right login_btn">
-							</div>
-							<input type="checkbox" value="lembrar-me"><p style="color:white">Lembrar-me?</p>
-						</form>
 
-					</div>
-					<!--  fim do body do moldal -->
-					<!--  inicio do footer -->
-					<div class="card-footer">
-						<div class="d-flex justify-content-center links" style="">
-							Ainda n√£o √© cadastrado?<a href="beneficio">Cadastre-se</a>
-						</div>
-						<div class="d-flex justify-content-center">
-							<a style="color: white;" href="#">Recuperar Conta?</a>
-						</div>
-					</div>
-					<!-- fim do footer do moldal -->
-				</div>
-			</div>
-		</div>
-
-<p></p>
-		
-		
-		
-	
-	
-	
-
-	<script type="text/javascript"
+<script type="text/javascript"
 		src="<%=request.getContextPath()%>/resources/bootstrap/js/jquery/jquery-2.2.4.min.js"></script>
 
 	<!-- Popper js -->
@@ -170,9 +140,204 @@ O Hotel Smart Club combina os valores tradicionais da cortesia, atendimento, con
 	<!-- Active js -->
 	<script type="text/javascript"
 		src="<%=request.getContextPath()%>/resources/bootstrap/js/active.js"></script>
-<script type="text/javascript"
-			src="<%=request.getContextPath()%>/resources/bootstrap/js/bootstrap/autoContraste.js"></script>
-	
-</body>
 
+	</header>
+	<!-- ##### Breadcumb Area Start ##### -->
+	<section
+		class="breadcumb-area bg-img d-flex align-items-center justify-content-center"
+		style="background-image: url(<%=request.getContextPath()%>/resources/bootstrap/img/bg-img/bg-5.jpg);">
+	<div class="bradcumbContent">
+		<h2>Smart Club</h2>
+	</div>
+	</section>
+	<!-- ##### Breadcumb Area End ##### -->
+	</section>
+	<!-- ##### Breadcumb Area End ##### -->
+	<!-- ##### Service Intro Area Start ##### -->
+	<section class="services-intro">
+	<div class="container">
+
+		<div class="row align-items-center">
+			<!-- Service Intro Text -->
+			<div class="col-12 col-lg-6">
+				<div class="service-intro-text mb-100">
+					<div class="section-heading">
+						<div class="line-"></div>
+						<h2>Quem Somos nÛs?</h2>
+					</div>
+		<p>O hotel Smart Club est· localizado em Boa Viagem - Recife (PE). Fundado em Agosto de 2000, o hotel Smart Club È um dos mais badalados
+		da cidade. Ainda hoje conserva a sua fachada colonial, porÈm possui as mais modernas instalaÁıes hoteleiras. Investindo sempre em melhorias,
+		o hotel Smart Club vem inovando ao longo dos anos, fazendo com o que o hotel seja conhecido internacionalmente. Venha fazer a sua visita!			 
+		</p>
+
+				</div>
+			</div>
+			</div>
+			</div>
+			</section>
+			<section class="services-intro">
+	<div class="container">
+
+		<div class="row align-items-center">
+			<!-- Service Intro Text -->
+			<div class="col-12 col-lg-6">
+				<div class="service-intro-text mb-100">
+					<div class="section-heading">
+						<div class="line-"></div>
+						<h2>Miss„o, Vis„o e Valores</h2>
+					</div>
+					</div>
+					</div>
+					</div>
+					</div>
+					</section>
+					
+					<section class="services-intro">
+	<div class="container">
+					<!-- Single Service Area -->
+			<div class="col-12 col-sm-6 col-lg-4">
+				<div class="single-service-area mb-100 wow fadeInUp"
+					data-wow-delay="100ms">
+					<h4>Miss„o:</h4>
+					<p>Garantir conforto e agilidade para sua estadia, oferecendo serviÁo de hospedagem de excelÍncia em qualidade,
+					visando a satisfaÁ„o dos clientes, a valorizaÁ„o dos nossos colaboradores, melhorias a sociedade e resultado 
+					para a nossa empresa.</p>
+				</div>
+			</div>
+			
+			
+					
+			<!-- Single Service Area -->
+			<div class="col-12 col-sm-6 col-lg-4">
+				<div class="single-service-area mb-100 wow fadeInUp"
+					data-wow-delay="100ms">
+					<h4>Vis„o:</h4>
+					<p>Cultivar e passar a diante a essÍncia do "bem servir". Impulsionados pela satisfaÁ„o de nossos hospedes
+					e colaboradores, contribuir para uma relaÁ„o harmoniosa e feliz entre os indivÌduos.</p>
+				</div>
+			</div>
+	
+	
+			<!-- Single Service Area -->
+			<div class="col-12 col-sm-6 col-lg-4">
+				<div class="single-service-area mb-100 wow fadeInUp"
+					data-wow-delay="100ms">
+					<h4>Valores</h4>
+					<p>Acreditamos que a qualidade dos serviÁos est· diretamente relacionada ao compromisso com a verdade,
+					transparÍncia e empenho em equipe. Agir com profissionalismo, bom humor e otimismo a fim de alcanÁar a alegria
+					na hotelaria.</p>
+				</div>
+			</div>
+	</div>
+					</section>
+			
+
+<section class="services-intro">
+	<div class="container">
+
+		<div class="row align-items-center">
+			<!-- Service Intro Text -->
+			<div class="col-12 col-lg-6">
+				<div class="service-intro-text mb-100">
+					<div class="section-heading">
+						<div class="line-"></div>
+						<h2>Nossa Equipe</h2>
+					</div>
+					</div>
+					</div>
+					</div>
+					</div>
+					</section>
+			
+
+	<!-- ##### Services Area Start ##### -->
+	<section class="services-area">
+	<div class="container">
+		<div class="row">
+
+			<!-- Single Service Area -->
+			<div class="col-12 col-sm-6 col-lg-4">
+				<div class="single-service-area mb-100 wow fadeInUp"
+					data-wow-delay="100ms">
+					<i class="glyphicon glyphicon-user"></i>
+					<h4>Ellem Diana</h4>
+					<p>Gerente de vendas do hotel. Seu objetivo: trabalhar para a empresa crescer cada dia mais.<br>
+					Email: ellemdianasilva.1994@gmail.com</p>
+				</div>
+			</div>
+
+			<!-- Single Service Area -->
+			<div class="col-12 col-sm-6 col-lg-4">
+				<div class="single-service-area mb-100 wow fadeInUp"
+					data-wow-delay="200ms">
+					<i class="glyphicon glyphicon-user"></i>
+					<h4>Luiz Claudio</h4>
+					<p>Fundador do hotel. Acredita no potencial transformador das novas mÌdias e nos impactos positivos gerados. <br>
+					Email:luizclaudiotrindadee@gmail.com</p>
+				</div>
+			</div>
+
+			<!-- Single Service Area -->
+			<div class="col-12 col-sm-6 col-lg-4">
+				<div class="single-service-area mb-100 wow fadeInUp"
+					data-wow-delay="300ms">
+					<i class="glyphicon glyphicon-user"></i>
+					<h4>Gustavo Macedo</h4>
+					<p>Gerente de Reservas, tem como miss„o ser um profissional exemplar para ajudar a empresa ser reconhecida nacionalmente e internacionalmente.<br>
+					Email:macedogustavo17@gmail.com</p>
+				</div>
+			</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ##### Footer Area Start ##### -->
+	<footer class="footer-area">
+	<div class="container" style="width: 100%;">
+		<div class="row">
+
+			<!-- Footer Widget Area -->
+			<div class="col-12 col-lg-5">
+				<div class="footer-widget-area mt-50">
+					<a href="#" class="d-block mb-5">
+					<img
+						style="max-width:45% ;" src="<%=request.getContextPath()%>/resources/bootstrap/img/core-img/logoooo.png" alt=""></a>
+						
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla
+						dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.
+					</p>
+				</div>
+			</div>
+
+			<!-- Footer Widget Area -->
+			<div class="col-12 col-md-6 col-lg-3">
+				<div class="footer-widget-area mt-50">
+					<h6 class="widget-title mb-5">Find us on the map</h6>
+					<img src="<%=request.getContextPath()%>/resources/bootstrap/img/bg-img/footer-map.png" alt="">
+					
+				</div>
+			</div>
+
+			
+
+			<!-- Copywrite Text -->
+			<div class="col-12">
+				<div class="copywrite-text mt-30">
+					<p>
+						<a href="https://colorlib.com" target="_blank"> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+							Copyright &copy;<script>
+								document.write(new Date().getFullYear());
+							</script> All rights reserved | This template is made with <i
+							class="fa fa-heart-o" aria-hidden="true"></i> by Colorlib</a> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	</footer>
+
+</body>
 </html>

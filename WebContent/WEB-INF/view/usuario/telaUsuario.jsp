@@ -5,7 +5,6 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta charset="UTF-8">
 <meta name="description" content="">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport"
@@ -341,14 +340,15 @@ padding-left: 6px;
 
 
 
-					<footer class="footer-area">
+	<footer class="footer-area">
 	<div class="container">
 		<div class="row">
 
 			<!-- Footer Widget Area -->
 			<div class="col-12 col-lg-5">
 				<div class="footer-widget-area mt-50">
-					<a href="#" class="d-block mb-5"><img
+					<a href="#" class="d-block mb-5">
+					<img
 						src="img/core-img/logo.png" alt=""></a>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 						Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla
@@ -381,12 +381,11 @@ padding-left: 6px;
 			<div class="col-12">
 				<div class="copywrite-text mt-30">
 					<p>
-						<a href="#"> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						<a href="https://colorlib.com" target="_blank"> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 							Copyright &copy;<script>
 								document.write(new Date().getFullYear());
 							</script> All rights reserved | This template is made with <i
-							class="fa fa-heart-o" aria-hidden="true"></i> by <a
-							href="https://colorlib.com" target="_blank">Colorlib</a> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+							class="fa fa-heart-o" aria-hidden="true"></i> by Colorlib</a> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 					</p>
 				</div>
 			</div>
