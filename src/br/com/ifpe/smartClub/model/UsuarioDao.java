@@ -13,7 +13,7 @@ public class UsuarioDao {
 	
 	
 	
-	public boolean verificarExistencia(CadastroUsuario usuario) {
+	public boolean verificarExistencia(Usuario usuario) {
 		boolean retorno= false;
 		if (usuario.getEmail().equals("") || usuario.getSenha().equals("")) {
 			return false;
@@ -29,12 +29,12 @@ public class UsuarioDao {
 		query.setParameter("paramEmail",  usuario.getEmail() );
 		query.setParameter("paramSenha", usuario.getSenha() );
 		
-		List<CadastroUsuario> lista = query.getResultList();
+		List<Usuario> lista = query.getResultList();
 		if (lista.size() > 0) {
 			System.out.println("Encontrou");	
 			return retorno=true;
 			}
-		else {System.out.println("Não encontrou");
+		else {System.out.println("Nï¿½o encontrou");
 			 retorno= false;
 			}
 		

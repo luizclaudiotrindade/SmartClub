@@ -186,7 +186,7 @@
 					<!-- Content -->
 					<div class="feature-content">
 						<i class="icon-credit-card"></i>
-						<h3>Plano Anual</h3>
+						<h3 id="planoAnual" name="idPlano">Plano Anual</h3>
 						<ul>
 							<li>Diaria +1</li>
 							<li>Diaria +1</li>
