@@ -23,18 +23,21 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Contato</title>
+<br>
+<br>
 <style>
-body{ background-image: url('https://images5.alphacoders.com/372/372649.jpg');}
-
 form {
 	/* Apenas para centralizar o form na página */
 	margin: 0 auto;
-	width: 500px;
+	width: 600px;
 	/* Para ver as bordas do formulário */
 	padding: 1em;
 	border: 1px solid #CCC;
 	border-radius: 1em;
+	border-color: orange;
+	
 }
+
 </style>
 </head>
 <body>
@@ -42,24 +45,54 @@ form {
 
 
 	<!--  navegação -->
-	<c:import url="nav.jsp"/>
+	<c:import url="nav.jsp" />
+
+	<section
+		class="breadcumb-area bg-img d-flex align-items-center justify-content-center"></section>
 
 
 
+	<div class="row">
+		<div class="col-lg-8 mb-4">
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.881289757805!2d-35.0178574471217!3d-8.113568118415719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1d161a9c33d1%3A0x72dbe24edf957fff!2sSesi+Jaboat%C3%A3o!5e0!3m2!1sen!2sbr!4v1530762074043"
+				width="100%" height="400px" frameborder="0" scrolling="no"
+				marginheight="0" marginwidth="0"></iframe>
+		</div>
+		<div class="col-lg-4 mb-4">
+			<h3>Detalhes</h3>
+			<p>
+				Av. Barão de Lucena, 251 <br>Centro, Jaboatão dos Guararapes <br>PE,
+				54110-051 <br>
+			</p>
+			<p>
+				<abbr title="Phone">Telefone</abbr>: (81) 4002-8922
+			</p>
+			<p>
+				<abbr title="Email">E-mail</abbr>: <a href="mailto:name@example.com">jaboatao.ifpe@jaboatao.ifpe.edu.br
+				</a>
+			</p>
+			<p>
+				<abbr title="Hours">Horário</abbr>: Segunda - Sábado: 13:30 às 22h
+			</p>
+		</div>
+	</div>
 
-	<form  action="contato" method="POST">
-<h1>Contato</h1>
+
+
+	<form action="contato" method="POST">
+		<h1>Contato</h1>
 		<h4>Preencha o Formulário !</h4>
 
-		<label>Nome Completo:</label> <input type="text" class="form-control"name="nome" required> 
-		
-		<label>E-mail:</label> <input type="email" class="form-control" name="mail" required> 
-			
-			
-		<label>Assunto:</label>	<input type="text" class="form-control" name="assunto" required>
+		<label>Nome Completo:</label> <input type="text" class="form-control"
+			name="nome" required> <label>E-mail:</label> <input
+			type="email" class="form-control" name="mail" required> <label>Assunto:</label>
+		<input type="text" class="form-control" name="assunto" required>
 
 
-		<label>Mensagem:</label><textarea rows="10" cols="100" class="form-control" name="mensagem" maxlength="999" style="resize: none" required></textarea>
+		<label>Mensagem:</label>
+		<textarea rows="10" cols="100" class="form-control" name="mensagem"
+			maxlength="999" style="resize: none" required></textarea>
 
 
 
@@ -67,25 +100,39 @@ form {
 	</form>
 
 
-
+	<!-- ##### Footer Area Start ##### -->
 	<footer class="footer-area">
-	<div class="container">
+	<div class="container" style="width: 100%;">
+		<div class="row">
 
-		<!-- Footer Widget Area -->
-		<!-- Copywrite Text -->
-		<div class="col-12">
-			<div class="copywrite-text mt-30">
-				<p class=" m-0 text-center text-white">
-					<a href="home">Copyright &copy; <script>
-						document.write(new Date().getFullYear());
-					</script> Projeto SmartClub. Todos os direitos reservados.
-					</a>
-				</p>
+			<!-- Footer Widget Area -->
+			<div class="col-12 col-lg-5">
+				<div class="footer-widget-area mt-50">
+					<a href="home" class="d-block mb-5"> <img
+						style="max-width: 45%;"
+						src="<%=request.getContextPath()%>/resources/bootstrap/img/core-img/logoooo.png"
+						alt=""></a>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla
+						dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.
+					</p>
+					<br>
+				</div>
 			</div>
+
+			<div class="container">
+
+				<p class="m-0 text-center text-white">Copyright &copy; Projeto
+					SmartClub 2019. Todos os direitos reservados.</p>
+
+			</div>
+
 		</div>
 	</div>
 
 	</footer>
+
 
 
 	<script type="text/javascript"
