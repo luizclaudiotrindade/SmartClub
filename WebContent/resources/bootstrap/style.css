@@ -382,7 +382,7 @@ img {
   border-radius: 0;
   padding: 0 30px;
   font-size: 16px;
-  line-height: 53px;
+  line-height: 44px;
   text-transform: capitalize; }
   .palatin-btn:hover, .palatin-btn:focus {
     font-size: 16px;
@@ -420,12 +420,11 @@ img {
     background-color: rgba(0, 0, 0, 0.63);
     border-bottom: 2px solid rgba(203, 134, 112, 0.63); }
     .header-area .palatin-main-menu .classy-nav-container {
-      background-color: transparent; }
+      background-color: black; }
     .header-area .palatin-main-menu .classy-navbar {
       -webkit-transition-duration: 300ms;
       transition-duration: 300ms;
-      background-color: transparent;
-      height: 150px;
+      background-color: black;
       padding: 0; }
       @media only screen and (max-width: 767px) {
         .header-area .palatin-main-menu .classy-navbar {
