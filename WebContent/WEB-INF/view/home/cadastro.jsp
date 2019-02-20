@@ -63,6 +63,11 @@ width: 20%;
 		
 	</table>
 			<div class="col">
+				<select>
+				<option>
+				teste
+				</option>
+				</select>
 
 				<p>
 					<input maxlength="32" type="text" class="form-control"
