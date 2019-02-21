@@ -21,20 +21,17 @@ public class Usuario {
 
 	@Column
 	private String nome;
-
-	@Column
-	private String cpf;
-
 	@Column
 	private String email;
-
 	@Column
 	private String senha;
 
 	@Column
 	private String telefone;
+	@Column
+	private String cpf;
 
-	@JoinColumn(name="idPlano")
+	@JoinColumn(name = "plano_idPlano")
 	@ManyToOne
 	private Plano plano;
 

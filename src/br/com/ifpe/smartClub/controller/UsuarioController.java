@@ -5,12 +5,15 @@ import java.util.List;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import br.com.ifpe.smartClub.model.Beneficios;
 import br.com.ifpe.smartClub.model.BeneficiosDao;
 import br.com.ifpe.smartClub.model.CadastroUsuarioDao;
 import br.com.ifpe.smartClub.model.Hotel;
 import br.com.ifpe.smartClub.model.HotelDao;
+import br.com.ifpe.smartClub.model.Plano;
+import br.com.ifpe.smartClub.model.PlanoDao;
 import br.com.ifpe.smartClub.model.Usuario;
 import br.com.ifpe.smartClub.model.UsuarioDao;
 
@@ -18,11 +21,12 @@ import br.com.ifpe.smartClub.model.UsuarioDao;
 public class UsuarioController {
 	@RequestMapping("/cadastro")
 	public String cadastro(Model model) {
-		System.out.println("Executando cadastro usuario");
-		BeneficiosDao dao = new BeneficiosDao();
-		List<Beneficios> listaBeneficios = dao.listar();
-		model.addAttribute("listaBeneficio", listaBeneficios);
+		// Código para popular o combo de categoria de produto
+		PlanoDao dao = new PlanoDao();
+		List<Plano> listaPlano = dao.listarPlano();
+		model.addAttribute("listaPlano", listaPlano);
 		return "home/cadastro";
+
 	}
 
 	@RequestMapping("save")
@@ -53,10 +57,10 @@ public class UsuarioController {
 		model.addAttribute("listaHoteis", listaHoteis);
 		return "usuario/telaUsuario";
 	}
+
 	@RequestMapping("/usuarioCompra")
-		public String usuarioCompra(){
+	public String usuarioCompra() {
 		return "usuario/usuarioCompra";
-		}
-	
-	
+	}
+
 }

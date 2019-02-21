@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
@@ -17,7 +17,7 @@
 <!-- Core Stylesheet -->
 <link rel="stylesheet" type="text/css"
 	href="<%=request.getContextPath()%>/resources/bootstrap/style.css" />
-	<link rel="stylesheet" type="text/css"
+<link rel="stylesheet" type="text/css"
 	href="<%=request.getContextPath()%>/resources/bootstrap/login.css" />
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -29,8 +29,13 @@
 	width: 100%;
 	height: auto;
 }
-.table{
-width: 20%;
+
+.table {
+	width: 20%;
+}
+
+.col {
+	padding-top: 10%;
 }
 </style>
 </head>
@@ -38,77 +43,47 @@ width: 20%;
 
 	<!--  navegação -->
 	<c:import url="nav.jsp" />
-	
 
 
 
-	<form action="save" method="post"
-		class="breadcumb-area bg-img d-flex align-items-center justify-content-center">
-		
-		<div style="margin-left: 3%; margin-top: 12% ;" class="row">
-			<!-- Form Name -->
-			<legend>Você escolheu o plano Anual com os seguintes beneficios</legend>
-			<table id="tabelaListaProduto" class="table table-striped table-bordered">
-		<thead>
-			<tr>
-				<th >Descrição</th> 
-			</tr>
-		</thead>
-		<c:forEach var="beneficio" items="${listaBeneficio}">
-			<tr>
 
-				<td style="vertical-align: middle;">${beneficio.descricao}</td>
-			</tr>
-		</c:forEach>
-		
+
+
 	</table>
-			<div class="col">
-				<select>
-				<option>
-				teste
-				</option>
-				</select>
+	<div class="col">
+		<label for="Plano">Categoria</label> <br /> <select id="Plano"
+			name="plano">
+			<option value="">Selecione</option>
+			<c:forEach items="${listaPlano}" var="obj">
+				<option value="${obj.idPlano}">${obj.descricao}</option>
+			</c:forEach>
+		</select>
 
-				<p>
-					<input maxlength="32" type="text" class="form-control"
-						placeholder="Nome" name="nome" required>
-				</p>
-				<input maxlength="32" type="text" class="form-control"
-					placeholder="E-mail" name="email" required><br>
-					
-					 <input
-					maxlength="32" type="password" class="form-control"
-					placeholder="Senha" name="senha" required><br> 
-					
-					<input
-					maxlength="9" type="text" class="form-control"
-					placeholder="Telefone" name="telefone" required><br>
-					
-					 <input
-					maxlength="11" type="text" class="form-control" placeholder="Cpf"
-					name="cpf" required><br>
-					
-					 <input maxlength="8"
-					type="text" class="form-control" placeholder="Rg" name="rg"
-					required><br>
-					
-					 <input maxlength="60" type="text"
-					class="form-control" placeholder="Endereco" name="endereco"
-					required><br>
-					
-					 <input maxlength="1" type="text"
-					class="form-control" placeholder="Sexo" name="sexo" required><br>
+		<p>
+			<input maxlength="32" type="text" class="form-control"
+				placeholder="Nome" name="nome" required>
+		</p>
+		<input maxlength="32" type="text" class="form-control"
+			placeholder="E-mail" name="email" required><br> <input
+			maxlength="32" type="password" class="form-control"
+			placeholder="Senha" name="senha" required><br> <input
+			maxlength="9" type="text" class="form-control" placeholder="Telefone"
+			name="telefone" required><br> <input maxlength="11"
+			type="text" class="form-control" placeholder="Cpf" name="cpf"
+			required><br> <input maxlength="8" type="text"
+			class="form-control" placeholder="Rg" name="rg" required><br>
 
-				<input maxlength="2" type="text" class="form-control"
-					placeholder="Idade" name="idade" required><br> 
-					
-					<input
-					type="submit" class="btn btn-dark" value="cadastrar"> <a
-					class="btn btn-dark" href="home">Inicio</a>
+		<input maxlength="60" type="text" class="form-control"
+			placeholder="Endereco" name="endereco" required><br> <input
+			maxlength="1" type="text" class="form-control" placeholder="Sexo"
+			name="sexo" required><br> <input maxlength="2"
+			type="text" class="form-control" placeholder="Idade" name="idade"
+			required><br> <input type="submit" class="btn btn-dark"
+			value="cadastrar"> <a class="btn btn-dark" href="home">Inicio</a>
 
 
-			</div>
-		</div>
+	</div>
+	</div>
 	</form>
 	</header>
 	<br>
@@ -165,13 +140,13 @@ width: 20%;
 				<div class="card" style="width: 498px">
 					<div class="card-header">
 						<!--  aqui está a parte do header do moldal de login  -->
-						<button type="button" class="close" style="color:#b3b3b3" data-dismiss="modal"
-							aria-label="Close">
+						<button type="button" class="close" style="color: #b3b3b3"
+							data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
 					</div>
 					<!--  fim do header -->
-						<!--  aqui está todo o corpo -->
+					<!--  aqui está todo o corpo -->
 					<div class="card-body">
 						<form action="autenticar" method="post">
 							<div class="input-group form-group">
@@ -192,7 +167,8 @@ width: 20%;
 								<input type="submit" value="Login"
 									class="btn float-right login_btn">
 							</div>
-							<input type="checkbox" value="lembrar-me"><p style="color:white">Lembrar-me?</p>
+							<input type="checkbox" value="lembrar-me">
+							<p style="color: white">Lembrar-me?</p>
 						</form>
 
 					</div>
@@ -210,27 +186,27 @@ width: 20%;
 				</div>
 			</div>
 		</div>
-	
-	
-	
-	<script type="text/javascript"
-		src="<%=request.getContextPath()%>/resources/bootstrap/js/bootstrap/autoContraste.js"></script>
 
-	<script type="text/javascript"
-		src="<%=request.getContextPath()%>/resources/bootstrap/js/jquery/jquery-2.2.4.min.js"></script>
 
-	<!-- Popper js -->
-	<script type="text/javascript"
-		src="<%=request.getContextPath()%>/resources/bootstrap/js/bootstrap/popper.min.js"></script>
 
-	<!-- Bootstrap js -->
-	<script type="text/javascript"
-		src="<%=request.getContextPath()%>/resources/bootstrap/js/bootstrap/bootstrap.min.js"></script>
-	<!-- All Plugins js -->
-	<script type="text/javascript"
-		src="<%=request.getContextPath()%>/resources/bootstrap/js/plugins/plugins.js"></script>
-	<!-- Active js -->
-	<script type="text/javascript"
-		src="<%=request.getContextPath()%>/resources/bootstrap/js/active.js"></script>
+		<script type="text/javascript"
+			src="<%=request.getContextPath()%>/resources/bootstrap/js/bootstrap/autoContraste.js"></script>
+
+		<script type="text/javascript"
+			src="<%=request.getContextPath()%>/resources/bootstrap/js/jquery/jquery-2.2.4.min.js"></script>
+
+		<!-- Popper js -->
+		<script type="text/javascript"
+			src="<%=request.getContextPath()%>/resources/bootstrap/js/bootstrap/popper.min.js"></script>
+
+		<!-- Bootstrap js -->
+		<script type="text/javascript"
+			src="<%=request.getContextPath()%>/resources/bootstrap/js/bootstrap/bootstrap.min.js"></script>
+		<!-- All Plugins js -->
+		<script type="text/javascript"
+			src="<%=request.getContextPath()%>/resources/bootstrap/js/plugins/plugins.js"></script>
+		<!-- Active js -->
+		<script type="text/javascript"
+			src="<%=request.getContextPath()%>/resources/bootstrap/js/active.js"></script>
 </body>
 </html>
