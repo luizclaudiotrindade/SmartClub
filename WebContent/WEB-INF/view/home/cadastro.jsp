@@ -50,6 +50,7 @@
 
 
 	</table>
+	<form action="save" method="post">
 	<div class="col">
 		<label for="Plano">Categoria</label> <br /> <select id="Plano"
 			name="plano">
@@ -70,14 +71,6 @@
 			maxlength="9" type="text" class="form-control" placeholder="Telefone"
 			name="telefone" required><br> <input maxlength="11"
 			type="text" class="form-control" placeholder="Cpf" name="cpf"
-			required><br> <input maxlength="8" type="text"
-			class="form-control" placeholder="Rg" name="rg" required><br>
-
-		<input maxlength="60" type="text" class="form-control"
-			placeholder="Endereco" name="endereco" required><br> <input
-			maxlength="1" type="text" class="form-control" placeholder="Sexo"
-			name="sexo" required><br> <input maxlength="2"
-			type="text" class="form-control" placeholder="Idade" name="idade"
 			required><br> <input type="submit" class="btn btn-dark"
 			value="cadastrar"> <a class="btn btn-dark" href="home">Inicio</a>
 

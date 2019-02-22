@@ -22,6 +22,12 @@ public class PlanoDao {
 		return lista;
 	}
 
-	
+	public Plano buscarPorId(int id) {
+		Plano obj = null;EntityManagerFactory factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT);
+		EntityManager manager = factory.createEntityManager();
+		obj = manager.find(Plano.class, id);manager.close();
+		factory.close();
+		return obj;
+		}
 
 }

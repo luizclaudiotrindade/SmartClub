@@ -13,6 +13,7 @@ import br.com.ifpe.smartClub.model.CadastroUsuarioDao;
 import br.com.ifpe.smartClub.model.Hotel;
 import br.com.ifpe.smartClub.model.HotelDao;
 import br.com.ifpe.smartClub.model.Plano;
+import br.com.ifpe.smartClub.model.PlanoBeneficio;
 import br.com.ifpe.smartClub.model.PlanoDao;
 import br.com.ifpe.smartClub.model.Usuario;
 import br.com.ifpe.smartClub.model.UsuarioDao;
@@ -24,16 +25,26 @@ public class UsuarioController {
 		// Código para popular o combo de categoria de produto
 		PlanoDao dao = new PlanoDao();
 		List<Plano> listaPlano = dao.listarPlano();
+
 		model.addAttribute("listaPlano", listaPlano);
+
 		return "home/cadastro";
 
 	}
 
 	@RequestMapping("save")
-	public String save(Usuario usuario) {
+	public String save(Usuario usuario, PlanoBeneficio planoBeneficio) {
 		CadastroUsuarioDao dao = new CadastroUsuarioDao();
-		dao.salvar(usuario);
+		dao.salvar(usuario, planoBeneficio);
 		return "usuario/cadastradoSucesso";
+	}
+
+	@RequestMapping("/produto/edit")
+	public String edit(@RequestParam("id") Integer id, Model model) {
+		PlanoDao dao = new PlanoDao();
+		Plano plano = dao.buscarPorId(id);
+		model.addAttribute("plano", plano);
+		return "produto/alterarProduto";
 	}
 
 	@RequestMapping("/autenticar")

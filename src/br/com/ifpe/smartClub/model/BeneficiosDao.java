@@ -18,4 +18,15 @@ public class BeneficiosDao {
 		factory.close();
 		return lista;
 		}
+
+
+	public Beneficios buscarPorId(int id) {
+		Beneficios obj = null;
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT);
+		EntityManager manager = factory.createEntityManager();
+		obj = manager.find(Beneficios.class, id);
+		manager.close();
+		factory.close();
+		return obj;
+	}
 }
