@@ -40,43 +40,40 @@
 </style>
 </head>
 <body>
-
 	<!--  navegação -->
 	<c:import url="nav.jsp" />
 
-
-
-
-
-
 	</table>
 	<form action="save" method="post">
-	<div class="col">
-		<label for="Plano">Categoria</label> <br /> <select id="Plano"
-			name="plano">
-			<option value="">Selecione</option>
-			<c:forEach items="${listaPlano}" var="obj">
-				<option value="${obj.idPlano}">${obj.descricao}</option>
-			</c:forEach>
-		</select>
+		<div class="col">
+			<label for="Plano">Categoria</label> <br /> <select id="Plano"
+				name="plano">
+				<option value="">Selecione</option>
+				<c:forEach items="${listaPlano}" var="obj">
+					<option value="${obj.idPlano}">${obj.descricao}</option>
+				</c:forEach>
+			</select>
 
-		<p>
+
+
+			<p>
+				<input maxlength="32" type="text" class="form-control"
+					placeholder="Nome" name="nome" required>
+			</p>
 			<input maxlength="32" type="text" class="form-control"
-				placeholder="Nome" name="nome" required>
-		</p>
-		<input maxlength="32" type="text" class="form-control"
-			placeholder="E-mail" name="email" required><br> <input
-			maxlength="32" type="password" class="form-control"
-			placeholder="Senha" name="senha" required><br> <input
-			maxlength="9" type="text" class="form-control" placeholder="Telefone"
-			name="telefone" required><br> <input maxlength="11"
-			type="text" class="form-control" placeholder="Cpf" name="cpf"
-			required><br> <input type="submit" class="btn btn-dark"
-			value="cadastrar"> <a class="btn btn-dark" href="home">Inicio</a>
+				placeholder="E-mail" name="email" required><br> <input
+				maxlength="32" type="password" class="form-control"
+				placeholder="Senha" name="senha" required><br> <input
+				maxlength="9" type="text" class="form-control"
+				placeholder="Telefone" name="telefone" required><br> <input
+				maxlength="11" type="text" class="form-control" placeholder="Cpf"
+				name="cpf" required><br> <input type="submit"
+				class="btn btn-dark" value="cadastrar"> <a
+				class="btn btn-dark" href="home">Inicio</a>
 
 
-	</div>
-	</div>
+		</div>
+		</div>
 	</form>
 	</header>
 	<br>

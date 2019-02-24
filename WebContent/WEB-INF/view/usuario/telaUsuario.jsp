@@ -9,6 +9,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+	rel="stylesheet"
+	integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1"
+	crossorigin="anonymous">
 
 <!-- Favicon -->
 <link rel="icon" href="img/core-img/favicon.ico">
@@ -23,71 +28,7 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Smart Club</title>
-<style>
-.single-cool-fact {
-	position: relative;
-	z-index: 1;
-	width: 88px;
-	padding: 0px 12px;
-	border: 2px solid #cb8670;
-	text-align: center;
-	background-color: #363636;
-	margin: 0 auto;
-	-webkit-transition-duration: 500ms;
-	transition-duration: 500ms;
-}
 
-.single-cool-fact .scf-text i {
-	-webkit-transition-duration: 500ms;
-	transition-duration: 500ms;
-	display: block;
-	font-size: 24px;
-	margin-bottom: 10px;
-	color: #cb8674;
-}
-
-[class^="icon-"], [class*=" icon-"] {
-	font-family: 'icomoon' !important;
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-.single-cool-fact .scf-text p {
-	font-size: 9px;
-	margin-bottom: 0;
-	color: #ffffff;
-	line-height: 1;
-}
-
-.col-sm-4 {
-	position: relative;
-	min-height: 1px;
-	padding-right: 6px;
-	padding-left: 6px;
-}
-
-.breakpoint-off .classynav ul li .dropdown {
-	width: 190px;
-	position: absolute;
-	background-color: #29211a8c;
-	top: 120%;
-	left: 0;
-	z-index: 100;
-	height: auto;
-	box-shadow: 0 1px 5px rgba\(0, 0, 0, 0.1;
-	-webkit-transition-duration: 300ms;
-	transition-duration: 300ms;
-	opacity: 0;
-	visibility: hidden;
-	padding: 10px 0;
-}
-</style>
 </head>
 <body>
 
@@ -105,27 +46,24 @@
 			<div class="container">
 				<!-- Menu -->
 				<nav class="classy-navbar justify-content-between" id="palatinNav">
-
+				
 				<!-- Nav brand --> <img
 					src="<%=request.getContextPath()%>/resources/bootstrap/img/core-img/logoooo.png"
 					style="max-width: 19%" alt="Logo tipo Smart Club"> <!-- Navbar Toggler -->
 				<div class="classy-navbar-toggler">
 					<span class="navbarToggler"><span></span><span></span><span></span></span>
 				</div>
-
+				
 				<!-- Menu -->
 				<div class="classy-menu">
-
 					<!-- close btn -->
 					<div class="classycloseIcon">
 						<div class="cross-wrap">
 							<span class="top"></span><span class="bottom"></span>
 						</div>
 					</div>
-
-
+					
 					<!-- Nav Start -->
-
 					<div class="classynav">
 						<ul>
 							<c:forEach var="beneficio" items="${listaBeneficio}">
@@ -135,6 +73,7 @@
 										<div class="single-cool-fact">
 											<div class="scf-text">
 												<i class="icon-calendar"></i>
+
 												<p>${beneficio.descricao}</p>
 											</div>
 										</div>
@@ -147,14 +86,14 @@
 									<div class="single-cool-fact">
 										<div class="scf-text">
 											<i class="glyphicon glyphicon-user"></i>
-											<p>Usuário</p>
+											<p>UsuÃ¡rio</p>
 										</div>
 
 
 										<div class="dropdown">
 											<div id="myDropdown" class="dropdown-content">
 												<a href="#">Alterar Dados</a> <a href="#">Excluir Conta</a>
-												<a href="#">Histórico de Compras</a> <a href="#">Sair</a>
+												<a href="#">HistÃ³rico de Compras</a> <a href="#">Sair</a>
 											</div>
 										</div>
 
@@ -178,145 +117,217 @@
 
 	<!-- ******************************************************   CORPO     ***************************************************** -->
 
-	<div class="container ">
+	<!-- ******************************************************   CORPO     ***************************************************** -->
 
-		<section
-			class="breadcumb-area bg-img d-flex align-items-center justify-content-center">
-		<div class="container">
-			<h2 class="text-center">
-				<span>Pesquise por seu Hotel</span>
-				<div class="row d-flex justify-content-center">
-					<form
-						class=" navbar-form align-items-center justify-content-center">
-						<div class="form-group">
-							<input type="text" class="form-control"
-								placeholder="Digite o nome do hotel:" name="nomehotel"><br>
-						</div>
-						<button class="btn btn-default glyphicon glyphicon-search"
-							align="center">Buscar</button>
-		</section>
-		<div class="clearfix"></div>
-		<section class="search-box" style="margin:-92px auto 40px;">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-12 listing-block">
-					<c:forEach var="hotel" items="${listaHoteis}">
-						<div class="media">
-							<div class="fav-box">
-								<i class="fa fa-heart-o" aria-hidden="true"></i>
+	<section class="listings">
+	<div class="container" style="margin-top: 6%;">
+		<div class="row">
 
-
-							</div>
-
-							<img class="d-flex align-self-start"
-								src="https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?h=350&auto=compress&cs=tinysrgb"
-								alt="Generic placeholder image">
-
-							<div class="media-body pl-3">
-								<div class="price">
-									$799,000<small>${hotel.nome}</small> 
-									<form action="usuarioCompra" method="post" ><input type="submit"
-										style="position: absolute; right: 10px; width: 14%; font-size: 53%; color: #c1856d;" value="Comprar Diaria">
-									</form>
-						
-									
+			<div class="col-md-3">
+				<div class="row mb-3">
+					<div class="col-md-12">
+						<div class="card" style="background-color: rgb(200, 135, 114); margin-top: 41%;">
+							<div class="card-body">
+								<div class="row">
+									<div class="col-md-12" >
+										<h4>Pesquisar por:</h4>
+									</div>
 								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<form>
+											<div class="form-group">
+												<select class="form-control" id="conditionsselect1">
+													<option>Estado</option>
+													<option>Pernambuco</option>
+													<option>Alagoas</option>
+													<option>Bahia</option>
+												</select>
+											</div>
+											<div class="form-group">
+												<select class="form-control" id="conditionsselect2">
+													<option>Cidade</option>
+													<option>Recife</option>
+													<option>Porto de Galinhas</option>
+													<option>Sergipe</option>
+													<option>Ceara</option>
+													<option>Santa Catarina</option>
+												</select>
+											</div>
 
-								<div class="stats">
-									<span><i class="fa fa-arrows-alt"></i>Comporta x: Pessoas</span> <span><i
-										class="fa fa-bath"></i>2 Quartos</span>
 
+											<div class="form-group">
+												<select class="form-control" id="mileage1">
+													<option>Valores De ate :</option>
+													<option>150$</option>
+													<option>150$-300$</option>
+													<option>300$-600$</option>
+													<option>600$-900$</option>
+													<option>900$-1200$</option>
+													<option>1600$</option>
+												</select>
+											</div>
+
+											<hr>
+											<button type="btn" class="btn btn-primary btn-lg btn-block">Pesquisar</button>
+											<div class="pb-3"></div>
+										</form>
+									</div>
 								</div>
-
-								<div class="address">${hotel.descricao}${hotel.bairro}
-									${hotel.cidade} Contato: ${hotel.endereco}</div>
-
 							</div>
-
 						</div>
-
-					</c:forEach>
-
-					<div class="col-md-7 map-box mx-0 px-0"></div>
+					</div>
+				</div>
+				<div class="row ">
+					<div class="col-md-12"></div>
 				</div>
 			</div>
-		</section>
+			<div class="col-md-9">
+				<div class="row" style="background-color: rgb(200, 135, 114);margin-right: 1px; margin-left: 0px;">
+						<div class="row" >
+							<div class="col-md-12" style="text-align: center;margin-left:181px;">
+								<h2>Resultado da pesquisa:</h2>
+								<p>Foram encontrados Estes Hoteis:</p>
+							</div>
+						</div>
+					
+					
 
-		<!-- ##### Footer Area Start ##### -->
-		<footer class="footer-area">
-		<div>
-			<div class="row">
 
-				<!-- Footer Widget Area -->
-				<div class="col-12 col-lg-5">
-					<div class="footer-widget-area mt-50">
-						<a href="#" class="d-block mb-5"><img
-							src="img/core-img/logo.png" alt=""></a>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-							Donec malesuada lorem maximus mauris sceleri sque, at rutrum
-							nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus
-							finibus.</p>
+				</div>
+				<div class="row">
+
+					<div class="col-md-12">
+						<ul class="nav nav-justified nav-pills">
+							<li class="nav-item"><a class="nav-link active" href="#">Active</a>
+							</li>
+							<li class="nav-item"><a class="nav-link bg-light" href="#">Active</a>
+							</li>
+							<li class="nav-item"><a class="nav-link bg-light" href="#">Active</a>
+							</li>
+							<li class="nav-item"><a class="nav-link bg-light" href="#">Active</a>
+							</li>
+							<li class="nav-item"><a class="nav-link bg-light" href="#">Active</a>
+							</li>
+
+						</ul>
 					</div>
 				</div>
+				<div class="row mb-3">
 
-				<!-- Footer Widget Area -->
-				<div class="col-12 col-md-6 col-lg-4">
-					<div class="footer-widget-area mt-50">
-						<h6 class="widget-title mb-5">Find us on the map</h6>
-						<img src="img/bg-img/footer-map.png" alt="">
+					<div class="col-md-12" style="margin-top: 17px; margin-left: -1px;">
+					<c:forEach var="hoteis" items="${listahotel}">
+					
+						<div class="card">
+							<div class="card-body">
+								<div class="row">
+									<div class="col-md-3">
+										<img
+											src="https://dynamic.realestateindia.com/proj_images/project14122/proj_img-14122_1-small.jpg">
+									</div>
+									<div class="col-md-6  card-body">
+										<div class="list-title">
+											<ul class="list-inline list-unstyled">
+												<li class="list-inline-item"><a href="#"><h4>${hoteis.nomeHotel}</h4></a></li>
+												<li class="list-inline-item text-warning"><i
+													class="fa fa-star"></i><i class="fa fa-star"></i><i
+													class="fa fa-star"></i><i class="fa fa-star"></i><i
+													class="fa fa-star-half"></i></li>
+												<li class="list-inline-item text-success"><i
+													class="fa fa-thumbs-up"></i></li>
+											</ul>
+										</div>
+										<div class="list-location">
+											<a href="#"><i class="fa fa-map-marker"></i><small>
+													Sparks, Reno â€“ Show on map (4.7 km from center)</small> </a>
+										</div>
+										<div class="list-descrip">
+											<small>This Sparks casino hotel is located in the
+												Sierra Nevada Mountains. This resort features free airport
+												shuttle services, a casino, a nightclub and 8 restaurants
+												and bars. </small>
+										</div>
+
+
+
+									</div>
+									<div class="col-md-3 border-left card-body">
+										<ul class="list-unstyled">
+											<li><h3>Muito Bom</h3></li>
+											<li class="text-secondary"><small>8067 Reviews </small></li>
+										</ul>
+										<button type="button" class="btn btn-outline-primary">Comprar
+											Diaria</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						</c:forEach>
 					</div>
 				</div>
-
-				<!-- Footer Widget Area -->
-				<!-- Copywrite Text -->
-				<div class="col-12">
-					<div class="copywrite-text mt-30">
-						<p>
-							<a href="#"> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-								Copyright &copy;<script>
-									document.write(new Date().getFullYear());
-								</script> All rights reserved | This template is made with <i
-								class="fa fa-heart-o" aria-hidden="true"></i> by <a
-								href="https://colorlib.com" target="_blank">Colorlib</a> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						</p>
+				<div class="row">
+					<div class="col-md-12">
+						<ul class="pagination">
+							<li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+							<li class="page-item"><a class="page-link" href="#">1</a></li>
+							<li class="page-item"><a class="page-link" href="#">2</a></li>
+							<li class="page-item"><a class="page-link" href="#">3</a></li>
+							<li class="page-item"><a class="page-link" href="#">Next</a></li>
+						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
-		</footer>
+	</div>
+	</section>
 
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"></script>
-		<script>
-			$(function() {
-				$('.listing-block').slimScroll({
-					height : '500px'
-				});
-			});
+	<!-- ##### Footer Area Start ##### -->
+	<footer> <section class="cta py-5 bg-dark text-white">
+	<div class="container">
+		<div class="row text-center">
+			<div class="col-md-12">
+				<a href="#" style="color: #fff"> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					Copyright &copy;<script>
+						document.write(new Date().getFullYear());
+					</script>Todos os Direitos Reservados | SmartClub Company.
+				</a>
 			</div>
-		</script>
+		</div>
+	</div>
+	</section> <!-- Footer Widget Area --> <!-- Copywrite Text --> </footer>
+
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"></script>
+	<script>
+		$(function() {
+			$('.listing-block').slimScroll({
+				height : '500px'
+			});
+		});
+		</div>
+	</script>
 
 
 
-		<!-- ******************************************************  FIM DO CORPO     ***************************************************** -->
+	<!-- ******************************************************  FIM DO CORPO     ***************************************************** -->
 
 
 
-		<script type="text/javascript"
-			src="<%=request.getContextPath()%>/resources/bootstrap/js/jquery/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript"
+		src="<%=request.getContextPath()%>/resources/bootstrap/js/jquery/jquery-2.2.4.min.js"></script>
 
-		<!-- Popper js -->
-		<script type="text/javascript"
-			src="<%=request.getContextPath()%>/resources/bootstrap/js/bootstrap/popper.min.js"></script>
+	<!-- Popper js -->
+	<script type="text/javascript"
+		src="<%=request.getContextPath()%>/resources/bootstrap/js/bootstrap/popper.min.js"></script>
 
-		<!-- Bootstrap js -->
-		<script type="text/javascript"
-			src="<%=request.getContextPath()%>/resources/bootstrap/js/bootstrap/bootstrap.min.js"></script>
-		<!-- All Plugins js -->
-		<script type="text/javascript"
-			src="<%=request.getContextPath()%>/resources/bootstrap/js/plugins/plugins.js"></script>
-		<!-- Active js -->
-		<script type="text/javascript"
-			src="<%=request.getContextPath()%>/resources/bootstrap/js/active.js"></script>
+	<!-- Bootstrap js -->
+	<script type="text/javascript"
+		src="<%=request.getContextPath()%>/resources/bootstrap/js/bootstrap/bootstrap.min.js"></script>
+	<!-- All Plugins js -->
+	<script type="text/javascript"
+		src="<%=request.getContextPath()%>/resources/bootstrap/js/plugins/plugins.js"></script>
+	<!-- Active js -->
+	<script type="text/javascript"
+		src="<%=request.getContextPath()%>/resources/bootstrap/js/active.js"></script>
 </body>
 </html>

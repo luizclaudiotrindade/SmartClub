@@ -26,185 +26,211 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
-<style>
-#form{
-margin-top:5%;
-}
-</style>
 </head>
 <body>
 
 	<!--  navegação -->
 	<c:import url="navHotel.jsp" />
 
+	<style>
+h1 {
+	font-size: 12px;
+}
 
+h2 {
+	font-size: 22px;
+	font-weight: bold;
+}
 
+h3 {
+	font-size: 20px;
+	font-weight: bold;
+}
 
-	<section
-		class="breadcumb-area bg-img d-flex align-items-center justify-content-center">
-	<div class="container">
-		<table class="table table-striped" id="form">
-			<tbody>
-				<tr>
-					<td colspan="1">
-						<form method="post" action="saveHotel" class="well form-horizontal">
-							<fieldset>
-								<div class="form-group">
-									<label class="col-md-4 control-label">Nome</label>
-									<div class="col-md-8 inputGroupContainer">
-										<div class="input-group">
-											<span class="input-group-addon"><i
-												class="glyphicon glyphicon-user"></i></span>
-												<input id="fullName" name="nome"
-												 placeholder="Digite o CNPJ do Hotel" class="form-control"
-												required="true" value="" type="text">
-										</div>
-									</div>
-								</div>
-								<div class="form-group">
-									<label class="col-md-4 control-label">Email</label>
-									<div class="col-md-8 inputGroupContainer">
-										<div class="input-group">
-											<span class="input-group-addon"><i
-												class="glyphicon glyphicon-home"></i></span><input name="email" id="city"
-												 placeholder="Uma breve Descrição do Hotel" class="form-control"
-												required="true" value="" type="text-box">
-										</div>
-									</div>
-								</div>
-								
-								<div class="form-group">
-									<label class="col-md-4 control-label">senha</label>
-									<div class="col-md-8 inputGroupContainer">
-										<div class="input-group">
-											<span class="input-group-addon"><i
-												class="glyphicon glyphicon-home"></i></span><input name="senha"
-												id="addressLine1" 
-												placeholder="Digite Seu Email" class="form-control"
-												required="true" value="" type="text">
-										</div>
-									</div>
-								</div>
-								<div class="form-group">
-									<label class="col-md-4 control-label">Descrição</label>
-									<div class="col-md-8 inputGroupContainer">
-										<div class="input-group">
-											<span class="input-group-addon"><i
-												class="glyphicon glyphicon-user"></i></span><input name="descricao" id="fullName"
-												 placeholder="Full" class="form-control"
-												required="true" value="" type="text">
-										</div>
-									</div>
-								</div>
-								
-								
+h4 {
+	font-size: 18px;
+	font-weight: bold;
+}
 
-							</fieldset>
-						
-					</td>
-					<td colspan="1">
-						
-							<fieldset>
-							<div class="form-group">
-									<label class="col-md-4 control-label">cnpj</label>
-									<div class="col-md-8 inputGroupContainer">
-										<div class="input-group">
-											<span class="input-group-addon"><i
-												class="glyphicon glyphicon-home"></i></span><input name="cnpj"
-												 
-												placeholder="Digite uma senha" class="form-control"
-												required="true" value="" type="Password">
-										</div>
-									</div>
-								</div>
-								
-								
-								<div class="form-group">
-									<label class="col-md-4 control-label">endereço</label>
-									<div class="col-md-8 inputGroupContainer">
-										<div class="input-group">
-											<span class="input-group-addon"><i
-												class="glyphicon glyphicon-user"></i></span><input name="endereco"
-												 placeholder="Telefone" class="form-control"
-												required="true" value="" type="text">
-										</div>
-									</div>
-								</div>
-								<div class="form-group">
-									<label class="col-md-4 control-label">bairro</label>
-									<div class="col-md-8 inputGroupContainer">
-										<div class="input-group">
-											<span class="input-group-addon"><i
-												class="glyphicon glyphicon-user"></i></span><input  name="bairro"
-												 placeholder="Telefone" class="form-control"
-												required="true" value="" type="text">
-										</div>
-									</div>
-								</div>
-								<div class="form-group">
-									<label class="col-md-4 control-label">cidade</label>
-									<div class="col-md-8 inputGroupContainer">
-										<div class="input-group">
-											<span class="input-group-addon"><i
-												class="glyphicon glyphicon-user"></i></span><input  name="cidade"
-												 placeholder="Telefone" class="form-control"
-												required="true" value="" type="text">
-										</div>
-									</div>
-								</div>
-								<input class="btn btn-primary" type="submit" value="enviar">
-							</fieldset>
-						</form>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
+h5 {
+	font-size: 12px;
+}
 
-	</section>
+h6 {
+	font-size: 12px;
+}
 
-	<!-- ##### Footer Area Start ##### -->
-	<footer class="footer-area">
-	<div class="container">
+p {
+	font-size: 14px;
+}
+
+img {
+	width: 100%;
+}
+
+body {
+	background-image:
+		url("https://irp-cdn.multiscreensite.com/cf0e971b/dms3rep/multi/desktop/slideshow-capas+_1920x1080pxl-3.jpg");
+}
+</style>
+	<div class="row"
+		style="background-color: rgba(203, 134, 112, 0.65); margin-right: 1px; margin-left: 0px; margin-top: 72px;"">
 		<div class="row">
-
-			<!-- Footer Widget Area -->
-			<div class="col-12 col-lg-5">
-				<div class="footer-widget-area mt-50">
-					<a href="#" class="d-block mb-5"><img
-						src="img/core-img/logo.png" alt=""></a>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla
-						dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.
-					</p>
-				</div>
-			</div>
-
-			<!-- Footer Widget Area -->
-			<div class="col-12 col-md-6 col-lg-4">
-				<div class="footer-widget-area mt-50">
-					<h6 class="widget-title mb-5">Find us on the map</h6>
-					<img src="img/bg-img/footer-map.png" alt="">
-				</div>
-			</div>
-
-			<!-- Footer Widget Area -->
-			<!-- Copywrite Text -->
-			<div class="col-12">
-				<div class="copywrite-text mt-30">
-					<p>
-						<a href="#"> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-							Copyright &copy;<script>
-								document.write(new Date().getFullYear());
-							</script> All rights reserved | This template is made with <i
-							class="fa fa-heart-o" aria-hidden="true"></i> by <a
-							href="https://colorlib.com" target="_blank">Colorlib</a> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-					</p>
-				</div>
+			<div class="col-md-12"
+				style="text-align: center; margin-left: 338px;">
+				<h2 style="color: white">Bem vindo a tela de cadastro:</h2>
+				<p style="color: white">Preencha todos os camopos com seus
+					dados.:</p>
 			</div>
 		</div>
 	</div>
+	<section class="listings">
+		<div class="container">
+			<form action="salvar" method="post">
+			<table class="table table-striped" id="form">
+			<tbody>
+				<tr>
+					<td colspan="1">
+
+						<fieldset>
+							<div class="form-group">
+								<label style="color: white" ; class="col-md-4 control-label">Nome
+									do Hotel</label>
+								<div class="col-md-8 inputGroupContainer">
+									<div class="input-group">
+										<span class="input-group-addon"><i
+											class="glyphicon glyphicon-user"></i></span> <input id="fullName"
+											name="nomeHotel" placeholder="Digite o nome  do Hotel"
+											class="form-control" required="true" value="" type="text">
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label style="color: white" ; class="col-md-4 control-label">Email
+									do Hotel</label>
+								<div class="col-md-8 inputGroupContainer">
+									<div class="input-group">
+										<span class="input-group-addon"><i
+											class="glyphicon glyphicon-home"></i></span><input name="email"
+											id="city" placeholder="Email do hotel" class="form-control"
+											required="true" value="" type="text">
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label style="color: white" ; class="col-md-4 control-label">Descrição</label>
+								<div class="col-md-8 inputGroupContainer">
+									<div class="input-group">
+										<span class="input-group-addon"><i
+											class="glyphicon glyphicon-user"></i></span>
+										<textarea name="descricao" id="fullName"
+											placeholder="Uma breve Descrição do Hotel informando alguns detalhes"
+											class="form-control" required="true" value=""
+											type="text-area"></textarea>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label style="color: white" ; class="col-md-4 control-label">CNPsJ</label>
+								<div class="col-md-8 inputGroupContainer">
+									<div class="input-group">
+										<span class="input-group-addon"><i
+											class="glyphicon glyphicon-home"></i></span><input name="cnpj"
+											placeholder="Por favor informe seu CNPJ" class="form-control"
+											required="true" value="" type="text">
+									</div>
+								</div>
+							</div>
+						</fieldset>
+					</td>
+					<td colspan="1">
+						<fieldset>
+							<div class="form-group">
+								<label style="color: white" ; class="col-md-4 control-label">Endereço</label>
+								<div class="col-md-8 inputGroupContainer">
+									<div class="input-group">
+										<span class="input-group-addon"><i
+											class="glyphicon glyphicon-user"></i></span><input name="endereco"
+											placeholder="Informe Seu Endereço" class="form-control"
+											required="true" value="" type="text">
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label style="color: white" ; class="col-md-4 control-label">Bairro</label>
+								<div class="col-md-8 inputGroupContainer">
+									<div class="input-group">
+										<span class="input-group-addon"><i
+											class="glyphicon glyphicon-user"></i></span><input name="bairro"
+											placeholder="Informe sueu bairro" class="form-control"
+											required="true" value="" type="text">
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label style="color: white" ; class="col-md-4 control-label">bairro</label>
+								<div class="col-md-8 inputGroupContainer">
+									<div class="input-group">
+										<span class="input-group-addon"><i
+											class="glyphicon glyphicon-user"></i></span><input name="bairro"
+											placeholder="Informe sua Cidade" class="form-control"
+											required="true" value="" type="text">
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label style="color: white" ; class="col-md-4 control-label">Nome
+									Do Usuario</label>
+								<div class="col-md-8 inputGroupContainer">
+									<div class="input-group">
+										<span class="input-group-addon"><i
+											class="glyphicon glyphicon-user"></i></span><input name="cidade"
+											placeholder="Informe sua Cidade" class="form-control"
+											required="true" value="" type="text">
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label style="color: white" ; class="col-md-4 control-label">Senha</label>
+								<div class="col-md-8 inputGroupContainer">
+									<div class="input-group">
+										<span class="input-group-addon"><i
+											class="glyphicon glyphicon-home"></i></span><input name="senha"
+											id="addressLine1" placeholder="Digite uma Senha de acesso"
+											class="form-control" required="true" value="" type="password">
+									</div>
+								</div>
+							</div>
+
+						</fieldset>
+
+		<input class="btn btn-primary" style="margin-left: 112px;" type="submit" value="enviar">
+					</td>
+				</tr>
+				
+			</tbody>
+		</table>
+			</form>
+		</div>
+	</section>
+	<footer> 
+		<section class="cta py-5 bg-dark text-white">
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-md-12">
+						<a href="#" style="color: #fff"> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+							Copyrssight &copy;<script>
+								document.write(new Date().getFullYear());
+							</script>Todos os Direitos Reservados | SmartClub Company.
+						</a>
+					</div>
+				</div>
+			</div>
+		</section> 
 	</footer>
+	<!-- Footer Widget Area -->
+	<!-- Copywrite Text -->
 	<!-- Modal -->
 	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
 		aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -260,30 +286,30 @@ margin-top:5%;
 				</div>
 			</div>
 		</div>
+	</div>
 
 
+	<script type="text/javascript"
+		src="<%=request.getContextPath()%>/resources/bootstrap/js/bootstrap/autoContraste.js"></script>
 
-		<script type="text/javascript"
-			src="<%=request.getContextPath()%>/resources/bootstrap/js/bootstrap/autoContraste.js"></script>
+	<script type="text/javascript"
+		src="<%=request.getContextPath()%>/resources/bootstrap/js/jquery/jquery-2.2.4.min.js"></script>
 
-		<script type="text/javascript"
-			src="<%=request.getContextPath()%>/resources/bootstrap/js/jquery/jquery-2.2.4.min.js"></script>
+	<!-- Popper js -->
+	<script type="text/javascript"
+		src="<%=request.getContextPath()%>/resources/bootstrap/js/bootstrap/popper.min.js"></script>
 
-		<!-- Popper js -->
-		<script type="text/javascript"
-			src="<%=request.getContextPath()%>/resources/bootstrap/js/bootstrap/popper.min.js"></script>
-
-		<!-- Bootstrap js -->
-		<script type="text/javascript"
-			src="<%=request.getContextPath()%>/resources/bootstrap/js/bootstrap/bootstrap.min.js"></script>
-		<!-- All Plugins js -->
-		<script type="text/javascript"
-			src="<%=request.getContextPath()%>/resources/bootstrap/js/plugins/plugins.js"></script>
-		<!-- Hotel js -->
-		<script type="text/javascript"
-			src="<%=request.getContextPath()%>/resources/bootstrap/js/hotel.js"></script>
-		<!-- Active js -->
-		<script type="text/javascript"
-			src="<%=request.getContextPath()%>/resources/bootstrap/js/active.js"></script>
+	<!-- Bootstrap js -->
+	<script type="text/javascript"
+		src="<%=request.getContextPath()%>/resources/bootstrap/js/bootstrap/bootstrap.min.js"></script>
+	<!-- All Plugins js -->
+	<script type="text/javascript"
+		src="<%=request.getContextPath()%>/resources/bootstrap/js/plugins/plugins.js"></script>
+	<!-- Hotel js -->
+	<script type="text/javascript"
+		src="<%=request.getContextPath()%>/resources/bootstrap/js/hotel.js"></script>
+	<!-- Active js -->
+	<script type="text/javascript"
+		src="<%=request.getContextPath()%>/resources/bootstrap/js/active.js"></script>
 </body>
 </html>

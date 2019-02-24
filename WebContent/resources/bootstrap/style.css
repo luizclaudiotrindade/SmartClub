@@ -320,7 +320,7 @@ img {
   background-color: #ffffff !important; }
 
 .bg-dark {
-  background-color: #000000 !important; }
+  background-color: #0000009e !important; }
 
 .bg-transparent {
   background-color: transparent !important; }
@@ -424,7 +424,7 @@ img {
     .header-area .palatin-main-menu .classy-navbar {
       -webkit-transition-duration: 300ms;
       transition-duration: 300ms;
-      background-color: black;
+      background-color: #0000009e !important;
       padding: 0; }
       @media only screen and (max-width: 767px) {
         .header-area .palatin-main-menu .classy-navbar {
@@ -442,7 +442,7 @@ img {
         background-color: transparent; }
         .header-area .palatin-main-menu .classy-navbar .classynav ul li a:hover, .header-area .palatin-main-menu .classy-navbar .classynav ul li a:focus {
           color: #ffffff;
-          background-color: #cb8670; }
+          background-color: #0000009e !important; }
         @media only screen and (min-width: 992px) and (max-width: 1199px) {
           .header-area .palatin-main-menu .classy-navbar .classynav ul li a {
             font-size: 14px; } }

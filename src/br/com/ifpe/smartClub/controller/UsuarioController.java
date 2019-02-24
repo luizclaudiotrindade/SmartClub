@@ -9,11 +9,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import br.com.ifpe.smartClub.model.Beneficios;
 import br.com.ifpe.smartClub.model.BeneficiosDao;
-import br.com.ifpe.smartClub.model.CadastroUsuarioDao;
 import br.com.ifpe.smartClub.model.Hotel;
 import br.com.ifpe.smartClub.model.HotelDao;
 import br.com.ifpe.smartClub.model.Plano;
-import br.com.ifpe.smartClub.model.PlanoBeneficio;
 import br.com.ifpe.smartClub.model.PlanoDao;
 import br.com.ifpe.smartClub.model.Usuario;
 import br.com.ifpe.smartClub.model.UsuarioDao;
@@ -22,20 +20,17 @@ import br.com.ifpe.smartClub.model.UsuarioDao;
 public class UsuarioController {
 	@RequestMapping("/cadastro")
 	public String cadastro(Model model) {
-		// Código para popular o combo de categoria de produto
+		// Codigo para popular o combo de categoria de produto
 		PlanoDao dao = new PlanoDao();
 		List<Plano> listaPlano = dao.listarPlano();
-
 		model.addAttribute("listaPlano", listaPlano);
-
 		return "home/cadastro";
-
 	}
 
 	@RequestMapping("save")
-	public String save(Usuario usuario, PlanoBeneficio planoBeneficio) {
-		CadastroUsuarioDao dao = new CadastroUsuarioDao();
-		dao.salvar(usuario, planoBeneficio);
+	public String save(Usuario usuario) {
+		UsuarioDao dao = new UsuarioDao();
+		dao.salvar(usuario);
 		return "usuario/cadastradoSucesso";
 	}
 
@@ -44,6 +39,13 @@ public class UsuarioController {
 		PlanoDao dao = new PlanoDao();
 		Plano plano = dao.buscarPorId(id);
 		model.addAttribute("plano", plano);
+		return "produto/alterarProduto";
+	}
+	@RequestMapping("idUsuario")
+	public String usuario(@RequestParam("id") Integer id, Model model) {
+		UsuarioDao dao = new UsuarioDao();
+		Usuario usuario = dao.buscarPorId(id);
+		model.addAttribute("usuario", usuario);
 		return "produto/alterarProduto";
 	}
 
@@ -61,11 +63,9 @@ public class UsuarioController {
 	public String telaUsuario(Model model) {
 		System.out.println("Iniciando a tela usuario");
 		BeneficiosDao dao = new BeneficiosDao();
-		List<Beneficios> listaBeneficio = dao.listar();
+		List<Beneficios> listaBeneficio = dao.listarBeneficio();
 		model.addAttribute("listaBeneficio", listaBeneficio);
-		HotelDao daoHotel = new HotelDao();
-		List<Hotel> listaHoteis = daoHotel.listar();
-		model.addAttribute("listaHoteis", listaHoteis);
+		
 		return "usuario/telaUsuario";
 	}
 

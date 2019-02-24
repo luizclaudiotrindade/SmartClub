@@ -9,50 +9,89 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "hotel")
-public class Hotel {
 
+public class Hotel {
+	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int idhotel;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int idhotel;
+	
+	@Column(name="nome_hotel")
+	private String nomeHotel;
+	
 	@Column
-	private String nome;
+	private int email;
+	
 	@Column
-	private String email;
+	private int senha;
+	
 	@Column
-	private String senha;
+	private int descricao;
+	
 	@Column
-	private String descricao;
+	private int cnpj;	
+	
 	@Column
-	private String cnpj;
-	@Column 
 	private String endereco;
-	@Column 
+	
+	@Column
 	private String bairro;
+	
 	@Column
 	private String cidade;
 	
-	public String getCidade() {
-		return cidade;
+	@Column(name="nome_usuario")
+	private String nomeUsuario;
+	
+	@Column
+	private String cpf;
+
+	public int getIdhotel() {
+		return idhotel;
 	}
 
-	public void setCidade(String cidade) {
-		this.cidade = cidade;
+	public void setIdhotel(int idhotel) {
+		this.idhotel = idhotel;
 	}
 
-	public String getEmail() {
+	public String getNomeHotel() {
+		return nomeHotel;
+	}
+
+	public void setNomeHotel(String nomeHotel) {
+		this.nomeHotel = nomeHotel;
+	}
+
+	public int getEmail() {
 		return email;
 	}
 
-	public void setEmail(String email) {
+	public void setEmail(int email) {
 		this.email = email;
 	}
 
-	public String getSenha() {
+	public int getSenha() {
 		return senha;
 	}
 
-	public void setSenha(String senha) {
+	public void setSenha(int senha) {
 		this.senha = senha;
+	}
+
+	public int getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(int descricao) {
+		this.descricao = descricao;
+	}
+
+	public int getCnpj() {
+		return cnpj;
+	}
+
+	public void setCnpj(int cnpj) {
+		this.cnpj = cnpj;
 	}
 
 	public String getEndereco() {
@@ -71,46 +110,29 @@ public class Hotel {
 		this.bairro = bairro;
 	}
 
-	@Column
-	private String telefone;
-
-	public int getIdhotel() {
-		return idhotel;
+	public String getCidade() {
+		return cidade;
 	}
 
-	public void setIdhotel(int idhotel) {
-		this.idhotel = idhotel;
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getNomeUsuario() {
+		return nomeUsuario;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setNomeUsuario(String nomeUsuario) {
+		this.nomeUsuario = nomeUsuario;
 	}
 
-	public String getDescricao() {
-		return descricao;
+	public String getCpf() {
+		return cpf;
 	}
 
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
 	}
 
-	public String getCnpj() {
-		return cnpj;
-	}
 
-	public void setCnpj(String cnpj) {
-		this.cnpj = cnpj;
-	}
-
-	public String getTelefone() {
-		return telefone;
-	}
-
-	public void setTelefone(String telefone) {
-		this.telefone = telefone;
-	}
 }
