@@ -19,7 +19,7 @@ public class HotelController {
 		return "hotel/cadastroHotel";
 	}
 
-	@RequestMapping("salvar")
+	@RequestMapping("salvarHotel")
 	public String save(Hotel hotel) {
 		HotelDao dao = new HotelDao();
 		dao.salvar(hotel);

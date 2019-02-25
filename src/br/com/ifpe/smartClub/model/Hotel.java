@@ -20,16 +20,16 @@ public class Hotel {
 	private String nomeHotel;
 	
 	@Column
-	private int email;
+	private String email;
 	
 	@Column
-	private int senha;
+	private String senha;
 	
 	@Column
-	private int descricao;
+	private String descricao;
 	
 	@Column
-	private int cnpj;	
+	private String cnpj;	
 	
 	@Column
 	private String endereco;
@@ -62,35 +62,35 @@ public class Hotel {
 		this.nomeHotel = nomeHotel;
 	}
 
-	public int getEmail() {
+	public String getEmail() {
 		return email;
 	}
 
-	public void setEmail(int email) {
+	public void setEmail(String email) {
 		this.email = email;
 	}
 
-	public int getSenha() {
+	public String getSenha() {
 		return senha;
 	}
 
-	public void setSenha(int senha) {
+	public void setSenha(String senha) {
 		this.senha = senha;
 	}
 
-	public int getDescricao() {
+	public String getDescricao() {
 		return descricao;
 	}
 
-	public void setDescricao(int descricao) {
+	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
 
-	public int getCnpj() {
+	public String getCnpj() {
 		return cnpj;
 	}
 
-	public void setCnpj(int cnpj) {
+	public void setCnpj(String cnpj) {
 		this.cnpj = cnpj;
 	}
 
@@ -134,5 +134,6 @@ public class Hotel {
 		this.cpf = cpf;
 	}
 
+	
 
 }

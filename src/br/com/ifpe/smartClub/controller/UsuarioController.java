@@ -66,6 +66,10 @@ public class UsuarioController {
 		List<Beneficios> listaBeneficio = dao.listarBeneficio();
 		model.addAttribute("listaBeneficio", listaBeneficio);
 		
+		HotelDao daoHotel = new HotelDao();
+		List<Hotel> listaHotel = daoHotel.listarHotel();
+		model.addAttribute("listaHotel", listaHotel);
+		
 		return "usuario/telaUsuario";
 	}
 

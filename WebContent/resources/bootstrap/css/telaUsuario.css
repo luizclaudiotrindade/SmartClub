@@ -68,7 +68,7 @@ img {
 .single-cool-fact {
 	position: relative;
 	z-index: 1;
-	width: 88px;
+	width: 76px;
 	padding: 0px 12px;
 	border: 2px solid #cb8670;
 	text-align: center;
@@ -100,7 +100,7 @@ img {
 }
 
 .single-cool-fact .scf-text p {
-	font-size: 9px;
+	font-size: 8px;
 	margin-bottom: 0;
 	color: #ffffff;
 	line-height: 1;

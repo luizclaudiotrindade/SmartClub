@@ -26,12 +26,6 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
-</head>
-<body>
-
-	<!--  navegação -->
-	<c:import url="navHotel.jsp" />
-
 	<style>
 h1 {
 	font-size: 12px;
@@ -72,9 +66,16 @@ body {
 	background-image:
 		url("https://irp-cdn.multiscreensite.com/cf0e971b/dms3rep/multi/desktop/slideshow-capas+_1920x1080pxl-3.jpg");
 }
+
 </style>
-	<div class="row"
-		style="background-color: rgba(203, 134, 112, 0.65); margin-right: 1px; margin-left: 0px; margin-top: 72px;"">
+</head>
+<body>
+
+	<!--  navegação -->
+	<c:import url="navHotel.jsp" />
+
+
+	<div class="row" style="background-color: rgba(203, 134, 112, 0.65); margin-right: 1px; margin-left: 0px; margin-top: 72px;">
 		<div class="row">
 			<div class="col-md-12"
 				style="text-align: center; margin-left: 338px;">
@@ -84,42 +85,49 @@ body {
 			</div>
 		</div>
 	</div>
+	<style>
+	td{
+		background-color:#0a0a0a96;
+	}
+	label{
+		color:white;
+	}
+	</style>
 	<section class="listings">
 		<div class="container">
-			<form action="salvar" method="post">
+			<form action="salvarHotel">
 			<table class="table table-striped" id="form">
 			<tbody>
 				<tr>
 					<td colspan="1">
-
 						<fieldset>
 							<div class="form-group">
-								<label style="color: white" ; class="col-md-4 control-label">Nome
+								<label style="" class="col-md-4 control-label">Nome
 									do Hotel</label>
 								<div class="col-md-8 inputGroupContainer">
 									<div class="input-group">
 										<span class="input-group-addon"><i
-											class="glyphicon glyphicon-user"></i></span> <input id="fullName"
+											class="glyphicon glyphicon-user"></i></span> <input 
 											name="nomeHotel" placeholder="Digite o nome  do Hotel"
 											class="form-control" required="true" value="" type="text">
 									</div>
 								</div>
 							</div>
 							<div class="form-group">
-								<label style="color: white" ; class="col-md-4 control-label">Email
+								<label style="color: white;" class="col-md-4 control-label">Email
 									do Hotel</label>
 								<div class="col-md-8 inputGroupContainer">
 									<div class="input-group">
 										<span class="input-group-addon"><i
 											class="glyphicon glyphicon-home"></i></span><input name="email"
-											id="city" placeholder="Email do hotel" class="form-control"
+											placeholder="Email do hotel" class="form-control"
 											required="true" value="" type="text">
 									</div>
 								</div>
 							</div>
 
 							<div class="form-group">
-								<label style="color: white" ; class="col-md-4 control-label">Descrição</label>
+								<label style="color: white;" class="col-md-4 control-label">Descrição</label>
 								<div class="col-md-8 inputGroupContainer">
 									<div class="input-group">
 										<span class="input-group-addon"><i
@@ -132,7 +140,7 @@ body {
 								</div>
 							</div>
 							<div class="form-group">
-								<label style="color: white" ; class="col-md-4 control-label">CNPsJ</label>
+								<label style="color: white;" class="col-md-4 control-label">CNPJ</label>
 								<div class="col-md-8 inputGroupContainer">
 									<div class="input-group">
 										<span class="input-group-addon"><i
@@ -142,12 +150,24 @@ body {
 									</div>
 								</div>
 							</div>
+							<div class="form-group">
+								<label style="color: white;" class="col-md-4 control-label">CPF</label>
+								<div class="col-md-8 inputGroupContainer">
+									<div class="input-group">
+										<span class="input-group-addon"><i
+											class="glyphicon glyphicon-home"></i></span><input name="cpf"
+											placeholder="Digite uma Senha de acesso"
+											class="form-control" required="true" value="" type="text">
+									</div>
+								</div>
+							</div>
 						</fieldset>
 					</td>
+					
 					<td colspan="1">
 						<fieldset>
 							<div class="form-group">
-								<label style="color: white" ; class="col-md-4 control-label">Endereço</label>
+								<label style="color: white;" class="col-md-4 control-label">Endereço</label>
 								<div class="col-md-8 inputGroupContainer">
 									<div class="input-group">
 										<span class="input-group-addon"><i
@@ -158,7 +178,7 @@ body {
 								</div>
 							</div>
 							<div class="form-group">
-								<label style="color: white" ; class="col-md-4 control-label">Bairro</label>
+								<label style="color: white;" class="col-md-4 control-label">Bairro</label>
 								<div class="col-md-8 inputGroupContainer">
 									<div class="input-group">
 										<span class="input-group-addon"><i
@@ -169,19 +189,7 @@ body {
 								</div>
 							</div>
 							<div class="form-group">
-								<label style="color: white" ; class="col-md-4 control-label">bairro</label>
-								<div class="col-md-8 inputGroupContainer">
-									<div class="input-group">
-										<span class="input-group-addon"><i
-											class="glyphicon glyphicon-user"></i></span><input name="bairro"
-											placeholder="Informe sua Cidade" class="form-control"
-											required="true" value="" type="text">
-									</div>
-								</div>
-							</div>
-							<div class="form-group">
-								<label style="color: white" ; class="col-md-4 control-label">Nome
-									Do Usuario</label>
+								<label style="color: white;" class="col-md-4 control-label">Cidade</label>
 								<div class="col-md-8 inputGroupContainer">
 									<div class="input-group">
 										<span class="input-group-addon"><i
@@ -192,12 +200,26 @@ body {
 								</div>
 							</div>
 							<div class="form-group">
-								<label style="color: white" ; class="col-md-4 control-label">Senha</label>
+								<label style="color: white;" class="col-md-4 control-label">Nome
+									Do Usuario</label>
+								<div class="col-md-8 inputGroupContainer">
+									<div class="input-group">
+										<span class="input-group-addon"><i
+											class="glyphicon glyphicon-user"></i></span><input name="nomeUsuario"
+											placeholder="Informe sua Cidade" class="form-control"
+											required="true" value="" type="text">
+									</div>
+								</div>
+							</div>
+							
+							
+							<div class="form-group">
+								<label style="color: white;" class="col-md-4 control-label">Senha</label>
 								<div class="col-md-8 inputGroupContainer">
 									<div class="input-group">
 										<span class="input-group-addon"><i
 											class="glyphicon glyphicon-home"></i></span><input name="senha"
-											id="addressLine1" placeholder="Digite uma Senha de acesso"
+											placeholder="Digite uma Senha de acesso"
 											class="form-control" required="true" value="" type="password">
 									</div>
 								</div>

@@ -67,18 +67,118 @@
 					<div class="classynav">
 						<ul>
 							<c:forEach var="beneficio" items="${listaBeneficio}">
+							<c:if test="${beneficio.idbeneficio==1}">
 								<li>
 									<!-- Single Cool Facts -->
 									<div class="col-12 col-sm-4">
 										<div class="single-cool-fact">
 											<div class="scf-text">
 												<i class="icon-calendar"></i>
-
-												<p>${beneficio.descricao}</p>
+													<p>${beneficio.descricao}</p>
+											
+												
+												
 											</div>
 										</div>
 									</div>
 								</li>
+							</c:if>
+							<c:if test="${beneficio.idbeneficio==2}">
+								<li>
+									<!-- Single Cool Facts -->
+									<div class="col-12 col-sm-4">
+										<div class="single-cool-fact">
+											<div class="scf-text">
+												<i class="icon-calendar"></i>
+													<p>${beneficio.descricao}</p>
+											
+												
+												
+											</div>
+										</div>
+									</div>
+								</li>
+							</c:if>
+							<c:if test="${beneficio.idbeneficio==3}">
+								<li>
+									<!-- Single Cool Facts -->
+									<div class="col-12 col-sm-4">
+										<div class="single-cool-fact">
+											<div class="scf-text">
+												<i class="glyphicon glyphicon-bed"></i>
+													<p>${beneficio.descricao}</p>
+											
+												
+												
+											</div>
+										</div>
+									</div>
+								</li>
+							</c:if>
+							<c:if test="${beneficio.idbeneficio==4}">
+								<li>
+									<!-- Single Cool Facts -->
+									<div class="col-12 col-sm-4">
+										<div class="single-cool-fact">
+											<div class="scf-text">
+												<i class="icon-limousine"></i>
+													<p>${beneficio.descricao}</p>
+											
+												
+												
+											</div>
+										</div>
+									</div>
+								</li>
+							</c:if>
+							<c:if test="${beneficio.idbeneficio==5}">
+								<li>
+									<!-- Single Cool Facts -->
+									<div class="col-12 col-sm-4">
+										<div class="single-cool-fact">
+											<div class="scf-text">
+												<i class="icon-cocktail-1"></i>
+													<p>${beneficio.descricao}</p>
+											
+												
+												
+											</div>
+										</div>
+									</div>
+								</li>
+							</c:if>
+							<c:if test="${beneficio.idbeneficio==6}">
+								<li>
+									<!-- Single Cool Facts -->
+									<div class="col-12 col-sm-4">
+										<div class="single-cool-fact">
+											<div class="scf-text">
+												<i class="icon-limousine"></i>
+													<p>${beneficio.descricao}</p>
+											
+												
+												
+											</div>
+										</div>
+									</div>
+								</li>
+							</c:if>
+							<c:if test="${beneficio.idbeneficio==7}">
+								<li>
+									<!-- Single Cool Facts -->
+									<div class="col-12 col-sm-4">
+										<div class="single-cool-fact">
+											<div class="scf-text">
+												<i class="glyphicon glyphicon-cutlery"></i>
+													<p>${beneficio.descricao}</p>
+											
+												
+												
+											</div>
+										</div>
+									</div>
+								</li>
+							</c:if>
 							</c:forEach>
 							<li>
 								<!-- Single Cool Facts -->
@@ -216,7 +316,7 @@
 				<div class="row mb-3">
 
 					<div class="col-md-12" style="margin-top: 17px; margin-left: -1px;">
-					<c:forEach var="hoteis" items="${listahotel}">
+					<c:forEach var="hoteis" items="${listaHotel}">
 					
 						<div class="card">
 							<div class="card-body">
@@ -239,13 +339,10 @@
 										</div>
 										<div class="list-location">
 											<a href="#"><i class="fa fa-map-marker"></i><small>
-													Sparks, Reno – Show on map (4.7 km from center)</small> </a>
+													${hoteis.endereco}– Show on map (4.7 km from center)</small> </a>
 										</div>
 										<div class="list-descrip">
-											<small>This Sparks casino hotel is located in the
-												Sierra Nevada Mountains. This resort features free airport
-												shuttle services, a casino, a nightclub and 8 restaurants
-												and bars. </small>
+											<small>${hoteis.descricao} </small>
 										</div>
 
 
