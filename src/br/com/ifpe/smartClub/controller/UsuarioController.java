@@ -75,7 +75,7 @@ public class UsuarioController {
 
 	@RequestMapping("/usuarioCompra")
 	public String usuarioCompra() {
-		return "usuario/usuarioCompra";
+		return "usuario/UsuarioCompra";
 	}
 
 }

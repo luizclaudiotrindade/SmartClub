@@ -7,19 +7,19 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 
-public class LoginAdmDao {
+public class AdmDao {
 	private static final String PERSISTENCE_UNIT = "smartClub";
 
-	public LoginAdm buscarLoginAdm(LoginAdm loginAdm) {
+	public Adm buscarLoginAdm(Adm adm) {
 		EntityManagerFactory factory =	Persistence.createEntityManagerFactory(PERSISTENCE_UNIT);
 		EntityManager manager = factory.createEntityManager();
 		Query query = manager.createQuery("FROM LoginAdm WHERE nome LIKE :paramNome AND senha LIKE :paramSenha");
-		query.setParameter("paramNome", loginAdm.getNome());
-		query.setParameter("paramSenha", loginAdm.getSenha());
-		List<LoginAdm> registros = query.getResultList();
-		LoginAdm obj = null;
+		query.setParameter("paramNome", adm.getNome());
+		query.setParameter("paramSenha",adm.getSenha());
+		List<Adm> registros = query.getResultList();
+		Adm obj = null;
 		if (!registros.isEmpty()) {
-		obj = (LoginAdm) registros.get(0);
+		obj = (Adm) registros.get(0);
 		}
 		manager.close();
 		factory.close();

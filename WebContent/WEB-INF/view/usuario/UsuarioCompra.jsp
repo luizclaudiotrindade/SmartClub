@@ -19,6 +19,16 @@
 	href="<%=request.getContextPath()%>/resources/bootstrap/css/telaUsuario.css" />
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css"
+	href="<%=request.getContextPath()%>/resources/bootstrap/carousel.css" />
+
+<link
+	href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+<script
+	src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
 
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -87,9 +97,48 @@
 	visibility: hidden;
 	padding: 10px 0;
 }
+
+h1 {
+	text-align: center
+}
+
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 50%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+td, th {
+	border: 2px solid #808080;
+	text-align: left;
+	padding: 8px;
+	background-color: #FFA07A;
+}
+
+tr:nth-child(even) {
+	background-color: #FFA07A;
+}
+
+p {
+	color: black; 
+	margin-right : auto;
+	margin-left: auto;
+	max-width: 75%;
+	margin-right: auto;
+}
+
+div#bar{
+width: 100%;
+ text-align: center;
+
+}
 </style>
 </head>
 <body>
+
+
 
 	<!-- Preloader -->
 	<div class="preloader d-flex align-items-center justify-content-center">
@@ -173,23 +222,211 @@
 			</nav>
 		</div>
 	</div>
+
+	<h1>Compras de Diária</h1>
+	<h2 style="margin-top: 10px; margin-left: 100px; margin-right: 50px;">Hotel
+		1</h2>
+
+	<div class="container">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner">
+
+				<div class="item active">
+					<img src="http://placehold.it/1200x400/cccccc/ffffff">
+					<div class="carousel-caption">
+						<h3>Headline</h3>
+						<p>
+							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+							nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+							erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur
+							sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+							labore et dolore magna aliquyam erat, sed diam voluptua. <a
+								href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank"
+								class="label label-danger">Bootstrap 3 - Carousel Collection</a>
+						</p>
+					</div>
+				</div>
+				<!-- End Item -->
+
+				<div class="item">
+					<img src="http://placehold.it/1200x400/999999/cccccc">
+					<div class="carousel-caption">
+						<h3>Headline</h3>
+						<p>
+							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+							nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+							erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur
+							sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+							labore et dolore magna aliquyam erat, sed diam voluptua. <a
+								href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank"
+								class="label label-danger">Bootstrap 3 - Carousel Collection</a>
+						</p>
+					</div>
+				</div>
+				<!-- End Item -->
+
+				<div class="item">
+					<img src="http://placehold.it/1200x400/dddddd/333333">
+					<div class="carousel-caption">
+						<h3>Headline</h3>
+						<p>
+							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+							nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+							erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur
+							sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+							labore et dolore magna aliquyam erat, sed diam voluptua. <a
+								href="http://sevenx.de/demo/bootstrap-carousel/" target="_blank"
+								class="label label-danger">Bootstrap 3 - Carousel Collection</a>
+						</p>
+					</div>
+				</div>
+				<!-- End Item -->
+
+				<div class="item">
+					<img src="http://placehold.it/1200x400/999999/cccccc">
+					<div class="carousel-caption">
+						<h3>Headline</h3>
+						<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+							sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+							aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet,
+							consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+							invidunt ut labore et dolore magna aliquyam erat, sed diam
+							voluptua.</p>
+					</div>
+				</div>
+				<!-- End Item -->
+
+			</div>
+			<!-- End Carousel Inner -->
+
+
+			<ul class="nav nav-pills nav-justified">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"><a href="#">About<small>Lorem ipsum dolor sit</small></a></li>
+				<li data-target="#myCarousel" data-slide-to="1"><a href="#">Projects<small>Lorem ipsum dolor sit</small></a></li>
+				<li data-target="#myCarousel" data-slide-to="2"><a href="#">Portfolio<small>Lorem ipsum dolor sit</small></a></li>
+				<li data-target="#myCarousel" data-slide-to="3"><a href="#">Services<small>Lorem ipsum dolor sit</small></a></li>
+			</ul>
+
+
+		</div>
+		<!-- End Carousel -->
+	</div><br><br>
+
+	<p>O hotel Precise Resort El Rompido situa-se a 16 km da cidade de
+		Huelva. Os Aeroportos mais perto é o de Faro-Portugal e o de sevilha
+		que ficam a cerca de 1h do complexo. O Hotel é para não fumadores.O
+		complexo hoteleiro tem acesso Wi-Fi disponível gratuitamente, dispõe
+		ainda de restaurante de buffet e à carta, snack-bar de apoio à piscina
+		e bar. Os quartos oferecem varanda, aquecimento e ar condicionado, TV
+		satélite, telefone direto, cofre e a cozinha encontra-se totalmente
+		equipada. As casa de banho estão bem equipadas e existem comodidades
+		para pessoas de mobilidade reduzida. Para atividades de lazer ainda
+		encontra parque Infantil, bilhar, ténis de Mesa,biblioteca, percursos
+		para caminhadas, andar de bicicleta ou praticar Equitação.</p>
+	<br>
+	<br>
+
+
+<div id="bar">
+ <label>Quantidade de Quartos</label><input type="number" name="quantidadeQuartos" min="1" max="10">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+ <label>Quantidade de Pessoas</label><input type="number" name="quantidadePessoas" min="1" max="10">
+</div>
+
+<br>
+<br>
+<br>
+	<table>
+		<tr>
+			<th>Acômoda</th>
+			<th>Tipo de Quarto</th>
+			<th>Preço</th>
+		</tr>
+		<tr>
+			<td></td>
+			<td>Quarto Duplo Standard - 1 Cama de casal</td>
+			<td>R$ 170,00 <button type="submit" class="btn btn-terciary">Comprar</button></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>Quarto Duplo Deluxe - 1 Cama de Casal</td>
+			<td>R$ 200,00 <button type="submit" class="btn btn-terciary">Comprar</button></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>Quarto Standard com 2 Camas de Solteiro</td>
+			<td>R$ 220,00 <button type="submit" class="btn btn-terciary">Comprar</button></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>Quarto Deluxe com 2 Camas de Solteiro</td>
+			<td>R$ 240,00 <button type="submit" class="btn btn-terciary">Comprar</button></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>Quarto Triplo Deluxe(1 Cama de Casal + 2 Camas de Solteiro)</td>
+			<td>R$ 270,00 <button type="submit" class="btn btn-terciary">Comprar</button></td>
+		</tr>
+
+	</table><br><br>
+
+
+
+<!-- ##### Footer Area Start ##### -->
+	<footer class="footer-area">
+	<div class="container" style="width: 100%;">
+		<div class="row">
+
+			<!-- Footer Widget Area -->
+			<div class="col-12 col-lg-5">
+				<div class="footer-widget-area mt-50">
+					<a href="home" class="d-block mb-5"> <img
+						style="max-width: 45%;"
+						src="<%=request.getContextPath()%>/resources/bootstrap/img/core-img/logoooo.png"
+						alt=""></a>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla
+						dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.
+					</p>
+					<br>
+				</div>
+			</div>
+
+			<div class="container">
+
+				<p class="m-0 text-center text-white">Copyright &copy; Projeto
+					SmartClub 2019. Todos os direitos reservados.</p>
+
+			</div>
+
+		</div>
 	</div>
+
+	</footer>
 	</header>
+
+
+
 	<script type="text/javascript"
-			src="<%=request.getContextPath()%>/resources/bootstrap/js/jquery/jquery-2.2.4.min.js"></script>
+		src="<%=request.getContextPath()%>/resources/bootstrap/js/carousel.js"></script>
 
-		<!-- Popper js -->
-		<script type="text/javascript"
-			src="<%=request.getContextPath()%>/resources/bootstrap/js/bootstrap/popper.min.js"></script>
+	<script type="text/javascript"
+		src="<%=request.getContextPath()%>/resources/bootstrap/js/jquery/jquery-2.2.4.min.js"></script>
 
-		<!-- Bootstrap js -->
-		<script type="text/javascript"
-			src="<%=request.getContextPath()%>/resources/bootstrap/js/bootstrap/bootstrap.min.js"></script>
-		<!-- All Plugins js -->
-		<script type="text/javascript"
-			src="<%=request.getContextPath()%>/resources/bootstrap/js/plugins/plugins.js"></script>
-		<!-- Active js -->
-		<script type="text/javascript"
-			src="<%=request.getContextPath()%>/resources/bootstrap/js/active.js"></script>
+	<!-- Popper js -->
+	<script type="text/javascript"
+		src="<%=request.getContextPath()%>/resources/bootstrap/js/bootstrap/popper.min.js"></script>
+
+	<!-- Bootstrap js -->
+	<script type="text/javascript"
+		src="<%=request.getContextPath()%>/resources/bootstrap/js/bootstrap/bootstrap.min.js"></script>
+	<!-- All Plugins js -->
+	<script type="text/javascript"
+		src="<%=request.getContextPath()%>/resources/bootstrap/js/plugins/plugins.js"></script>
+	<!-- Active js -->
+	<script type="text/javascript"
+		src="<%=request.getContextPath()%>/resources/bootstrap/js/active.js"></script>
 </body>
 </html>
