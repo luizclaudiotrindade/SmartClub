@@ -75,9 +75,6 @@
 											<div class="scf-text">
 												<i class="icon-calendar"></i>
 													<p>${beneficio.descricao}</p>
-											
-												
-												
 											</div>
 										</div>
 									</div>
@@ -193,7 +190,7 @@
 										<div class="dropdown">
 											<div id="myDropdown" class="dropdown-content">
 												<a href="#">Alterar Dados</a> <a href="#">Excluir Conta</a>
-												<a href="#">Histórico de Compras</a> <a href="#">Sair</a>
+												<a href="#">Histórico de Compras</a><br> <a href="home">Sair</a>
 											</div>
 										</div>
 
@@ -214,15 +211,10 @@
 	</div>
 	</div>
 	</header>
-
 	<!-- ******************************************************   CORPO     ***************************************************** -->
-
-	<!-- ******************************************************   CORPO     ***************************************************** -->
-
-	<section class="listings">
+<section class="listings">
 	<div class="container" style="margin-top: 6%;">
 		<div class="row">
-
 			<div class="col-md-3">
 				<div class="row mb-3">
 					<div class="col-md-12">

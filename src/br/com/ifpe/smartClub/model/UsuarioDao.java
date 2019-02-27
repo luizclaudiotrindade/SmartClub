@@ -23,7 +23,7 @@ public class UsuarioDao {
 		EntityManager manager = factory.createEntityManager();
 		Query query = null;
 		query = manager
-				.createQuery("FROM CadastroUsuario WHERE email = :paramEmail AND senha = :paramSenha ORDER BY id");
+				.createQuery("FROM Usuario WHERE email = :paramEmail AND senha = :paramSenha ORDER BY id");
 		query.setParameter("paramEmail", usuario.getEmail());
 		query.setParameter("paramSenha", usuario.getSenha());
 
@@ -32,7 +32,7 @@ public class UsuarioDao {
 			System.out.println("Encontrou");
 			return retorno = true;
 		} else {
-			System.out.println("Nï¿½o encontrou");
+			System.out.println("Não encontrou");
 			retorno = false;
 		}
 

@@ -50,31 +50,32 @@ public class UsuarioController {
 	}
 
 	@RequestMapping("/autenticar")
-	public String autenticar(Usuario usuario) {
+	public String autenticar(Usuario usuario, Model model) {
 		UsuarioDao dao = new UsuarioDao();
 		if (dao.verificarExistencia(usuario) == true) {
 			System.out.println("O usuario foi logado com sucesso!");
-			return "usuario/usuarioLogadoSucesso";
+			System.out.println("Iniciando a tela usuario");
+			BeneficiosDao daoBeneficio = new BeneficiosDao();
+			List<Beneficios> listaBeneficio = daoBeneficio.listarBeneficio();
+			model.addAttribute("listaBeneficio", listaBeneficio);
+			
+			HotelDao daoHotel = new HotelDao();
+			List<Hotel> listaHotel = daoHotel.listarHotel();
+			model.addAttribute("listaHotel", listaHotel);
+			return "usuario/telaUsuario";
 		}
 		return "forward:home";
 	}
-
-	@RequestMapping("/telaUsuario")
-	public String telaUsuario(Model model) {
-		System.out.println("Iniciando a tela usuario");
-		BeneficiosDao dao = new BeneficiosDao();
-		List<Beneficios> listaBeneficio = dao.listarBeneficio();
+	
+	@RequestMapping("/usuarioCompra")
+	public String usuarioCompra(Model model) {
+		BeneficiosDao daoBeneficio = new BeneficiosDao();
+		List<Beneficios> listaBeneficio = daoBeneficio.listarBeneficio();
 		model.addAttribute("listaBeneficio", listaBeneficio);
 		
 		HotelDao daoHotel = new HotelDao();
 		List<Hotel> listaHotel = daoHotel.listarHotel();
 		model.addAttribute("listaHotel", listaHotel);
-		
-		return "usuario/telaUsuario";
-	}
-
-	@RequestMapping("/usuarioCompra")
-	public String usuarioCompra() {
 		return "usuario/UsuarioCompra";
 	}
 
