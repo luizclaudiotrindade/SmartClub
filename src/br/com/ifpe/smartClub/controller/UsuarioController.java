@@ -68,7 +68,7 @@ public class UsuarioController {
 	}
 	
 	@RequestMapping("/usuarioCompra")
-	public String usuarioCompra(Model model) {
+	public String usuarioCompra(@RequestParam("id") Integer id, Model model) {
 		BeneficiosDao daoBeneficio = new BeneficiosDao();
 		List<Beneficios> listaBeneficio = daoBeneficio.listarBeneficio();
 		model.addAttribute("listaBeneficio", listaBeneficio);
@@ -76,7 +76,13 @@ public class UsuarioController {
 		HotelDao daoHotel = new HotelDao();
 		List<Hotel> listaHotel = daoHotel.listarHotel();
 		model.addAttribute("listaHotel", listaHotel);
+		
+		Hotel hotel = daoHotel.buscarPorId(id);
+		model.addAttribute("hotelId", hotel);
+		
 		return "usuario/UsuarioCompra";
 	}
+	
+	
 
 }

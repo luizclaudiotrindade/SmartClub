@@ -28,7 +28,11 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Smart Club</title>
-
+<style>
+.pb-5, .py-5 {
+    padding-bottom: 8rem!important;
+}
+</style>
 </head>
 <body>
 
@@ -308,6 +312,7 @@
 				<div class="row mb-3">
 
 					<div class="col-md-12" style="margin-top: 17px; margin-left: -1px;">
+					
 					<c:forEach var="hoteis" items="${listaHotel}">
 					
 						<div class="card">
@@ -320,7 +325,7 @@
 									<div class="col-md-6  card-body">
 										<div class="list-title">
 											<ul class="list-inline list-unstyled">
-												<li class="list-inline-item"><a href="#"><h4>${hoteis.nomeHotel}</h4></a></li>
+												<li class="list-inline-item" ><a href="#"><h4>${hoteis.nomeHotel}</h4></a></li>
 												<li class="list-inline-item text-warning"><i
 													class="fa fa-star"></i><i class="fa fa-star"></i><i
 													class="fa fa-star"></i><i class="fa fa-star"></i><i
@@ -331,10 +336,10 @@
 										</div>
 										<div class="list-location">
 											<a href="#"><i class="fa fa-map-marker"></i><small>
-													${hoteis.endereco}– Show on map (4.7 km from center)</small> </a>
+													${hoteis.endereco}– Shsow on map (4.7 km from center)</small> </a>
 										</div>
 										<div class="list-descrip">
-											<small>${hoteis.descricao} </small>
+											<small>${hoteis.descricao} </small> 
 										</div>
 
 
@@ -345,24 +350,24 @@
 											<li><h3>Muito Bom</h3></li>
 											<li class="text-secondary"><small>8067 Reviews </small></li>
 										</ul>
-										<button type="button" class="btn btn-outline-primary">Comprar
-											Diaria</button>
+											<a class="btn btn-outline-primary" href="usuarioCompra?id=${hoteis.idhotel}">Alterar</a> &nbsp; &nbsp;
 									</div>
 								</div>
 							</div>
 						</div>
+						
 						</c:forEach>
-					</div>
-				</div>
-				<div class="row">
+						
 					<div class="col-md-12">
 						<ul class="pagination">
-							<li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+							<li class="page-item enable"><a class="page-link" href="#">Previous</a></li>
 							<li class="page-item"><a class="page-link" href="#">1</a></li>
 							<li class="page-item"><a class="page-link" href="#">2</a></li>
 							<li class="page-item"><a class="page-link" href="#">3</a></li>
 							<li class="page-item"><a class="page-link" href="#">Next</a></li>
 						</ul>
+					</div>
+				</div>
 					</div>
 				</div>
 			</div>

@@ -214,10 +214,11 @@
 	</div>
 	</div>
 	</header>
-
-
+	<form action="update" method="post">
+		<input type="hidden" name="id" value="${hotelId.idhotel}">
 	<h1>Compras de Diária</h1>
-	<h2 style="text-align: center;">Hotel 21</h2>
+	<h2 style="text-align: center;">${hotelId.nomeHotel}</h2>
+	
 	<div class="container">
 	<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
@@ -380,16 +381,7 @@
 
 <!--/.Carousel Wrapper-->
 <div style="text-align:center ; margin-left: 240px;">
-	<p>O hoteeseel Precise Resort El Rompido situa-se a 16 km da cidade de
-		Huelva. Os Aeroportos mais perto é o de Faro-Portugal e o de sevilha
-		que ficam a cerca de 1h do complexo. O Hotel é para não fumadores.O
-		complexo hoteleiro tem acesso Wi-Fi disponível gratuitamente, dispõe
-		ainda de restaurante de buffet e à carta, snack-bar de apoio à piscina
-		e bar. Os quartos oferecem varanda, aquecimento e ar condicionado, TV
-		satélite, telefone direto, cofre e a cozinha encontra-se totalmente
-		equipada. As casa de banho estão bem equipadas e existem comodidades
-		para pessoas de mobilidade reduzida. Para atividades de lazer ainda
-		encontra parque Infantil, bilhar, ténis de Mesa,biblioteca, percursos
+	<p>${hotelId.descricao }</p>
 	</div>
 
 	<div id="bar">
@@ -445,6 +437,8 @@
 		</tr>
 
 	</table>
+	</div>
+	</form>
 	<footer> <section class="cta py-5 bg-dark text-white" style="    margin-left: -121px;
     margin-right: -119px; margin-top: 2%">
 	<div class="container">

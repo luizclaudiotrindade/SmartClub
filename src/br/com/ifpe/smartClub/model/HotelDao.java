@@ -31,4 +31,14 @@ public class HotelDao {
 		factory.close();
 		return lista;
 	}
+	
+	public Hotel buscarPorId(int id) {
+		Hotel obj = null;
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT);
+		EntityManager manager = factory.createEntityManager();
+		obj = manager.find(Hotel.class, id);
+		manager.close();
+		factory.close();
+		return obj;
+	}
 }
