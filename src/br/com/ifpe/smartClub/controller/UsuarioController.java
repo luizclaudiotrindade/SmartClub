@@ -83,6 +83,13 @@ public class UsuarioController {
 		return "usuario/UsuarioCompra";
 	}
 	
+	@RequestMapping("alterarDados")
+	public String alterarDados(Usuario usuario) {
+		return "usuario/alterarDados";
+	}
 	
-
+	@RequestMapping("trocarSenha")
+	public String trocarSenha(Usuario usuario) {
+		return "usuario/trocarSenha";
+	}
 }

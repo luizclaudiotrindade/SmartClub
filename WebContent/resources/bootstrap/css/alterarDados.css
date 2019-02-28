@@ -1,0 +1,184 @@
+.single-cool-fact {
+	position: relative;
+	z-index: 1;
+	width: 88px;
+	padding: 0px 12px;
+	border: 2px solid #cb8670;
+	text-align: center;
+	background-color: #363636;
+	margin: 0 auto;
+	-webkit-transition-duration: 500ms;
+	transition-duration: 500ms;
+}
+
+.single-cool-fact .scf-text i {
+	-webkit-transition-duration: 500ms;
+	transition-duration: 500ms;
+	display: block;
+	font-size: 24px;
+	margin-bottom: 10px;
+	color: #cb8674;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.single-cool-fact .scf-text p {
+	font-size: 9px;
+	margin-bottom: 0;
+	color: #ffffff;
+	line-height: 1;
+}
+
+.col-sm-4 {
+	position: relative;
+	min-height: 1px;
+	padding-right: 6px;
+	padding-left: 6px;
+}
+
+.breakpoint-off .classynav ul li .dropdown {
+	width: 190px;
+	position: absolute;
+	background-color: #29211a8c;
+	top: 120%;
+	left: 0;
+	z-index: 100;
+	height: auto;
+	box-shadow: 0 1px 5px rgba\(0, 0, 0, 0.1;
+	-webkit-transition-duration: 300ms;
+	transition-duration: 300ms;
+	opacity: 0;
+	visibility: hidden;
+	padding: 10px 0;
+}
+
+h1 {
+	text-align: center
+}
+
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 50%;
+	margin-right: auto;@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700');
+
+h2{float:left; width:100%; color:#fff; margin-bottom:40px; font-size: 14px; position:relartive; z-index:3; margin-top:30px}
+h2 span{font-family: 'Libre Baskerville', serif; display:block; font-size:45px; text-transform:none; margin-bottom:20px; margin-top:30px; font-weight:700}
+h2 a{color:#fff; font-weight:bold;}
+
+body{background: #24C6DC;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #514A9D, #24C6DC);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #ffffff, #d4d4d4) !important /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.single-cool-fact .scf-text i {
+	-webkit-transition-duration: 500ms;
+	transition-duration: 500ms;
+	display: block;
+	font-size: 24px;
+	margin-bottom: 10px;
+	color: #cb8674;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.single-cool-fact .scf-text p {
+	font-size: 8px;
+	margin-bottom: 0;
+	color: #ffffff;
+	line-height: 1;
+}
+
+.col-sm-4 {
+	position: relative;
+	min-height: 1px;
+	padding-right: 6px;
+	padding-left: 6px;
+}
+
+.breakpoint-off .classynav ul li .dropdown {
+	width: 190px;
+	position: absolute;
+	background-color: #29211a8c;
+	top: 120%;
+	left: 0;
+	z-index: 100;
+	height: auto;
+	box-shadow: 0 1px 5px rgba\(0, 0, 0, 0.1;
+	-webkit-transition-duration: 300ms;
+	transition-duration: 300ms;
+	opacity: 0;
+	visibility: hidden;
+	padding: 10px 0;
+}
+	margin-left: auto;
+}
+
+td, th {
+	border: 2px solid #808080;
+	text-align: left;
+	padding: 8px;
+	background-color: #FFA07A;
+}
+
+tr:nth-child(even) {
+	background-color: #FFA07A;
+}
+
+p {
+	color: black;
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 75%;
+	margin-right: auto;
+}
+
+div#bar {
+	width: 100%;
+	text-align: center;
+}
+.carousel-control-prev {
+    left: 129px;
+}
+.carousel-control-next {
+    right: 108px;
+} 
+.carousel{
+    margin-top: 3%;
+}
+.carousel-innerr {
+    position: relative;
+    width: 62%;
+    overflow: hidden;
+    margin-left: 20%;
+}
+
+@media (min-width: 768px) {
+.carousel-multi-item-2 .col-md-3 {
+float: left;
+width: 25%;
+max-width: 100%; } }
+
+.carousel-multi-item-2 .card img {
+border-radius: 2px; }
