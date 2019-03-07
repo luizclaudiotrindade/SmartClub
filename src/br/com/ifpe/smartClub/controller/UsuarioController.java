@@ -92,4 +92,5 @@ public class UsuarioController {
 	public String trocarSenha(Usuario usuario) {
 		return "usuario/trocarSenha";
 	}
+	
 }
