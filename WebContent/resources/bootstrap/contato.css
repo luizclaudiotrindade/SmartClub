@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+@import
+	url('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css')
+	;
+
+.bg-dark {
+	background-color: #000000 !important;
+}
+
+.bg-primary {
+	background-color: #000000!important;
+}
+.border-primary {
+    border-color: #000000!important;
+}
+
+
+body {
+	color: #000000;
+	
+	background-image: url('http://n19.costeiro.com.br/novo/wp-content/uploads/2018/12/0004_HotelCosteiro_fotoHome1.jpg');
+
+}
+.h1,h2{
+	color : #ffffff;
+
+}
+.text-primary {
+    color: #7c7c7c!important;
+    margin-top: 10px;
+}
+
+h3{
+	
+	color: #ffffff;
+	
+}
+p {
+    color: #ffffff;
+}
+element.style {
+    width: 20px;
+    height: 20px;
+}

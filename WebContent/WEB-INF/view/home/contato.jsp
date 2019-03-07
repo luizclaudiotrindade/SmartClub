@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -12,31 +12,26 @@
 <meta charset="UTF-8">
 <meta name="description" content="">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
 <!-- Favicon -->
 <link rel="icon" href="img/core-img/favicon.ico">
 <!-- Core Stylesheet -->
 <link rel="stylesheet" type="text/css"
-	href="<%=request.getContextPath()%>/resources/bootstrap/style.css" />
+	href="<%=request.getContextPath()%>/resources/bootstrap/style.css" />	
+	
+<link rel="stylesheet" type="text/css"
+	href="<%=request.getContextPath()%>/resources/bootstrap/contato.css" />	
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Contato</title>
-<br>
-<br>
+
 <style>
-form {
-	/* Apenas para centralizar o form na página */
-	margin: 0 auto;
-	width: 600px;
-	/* Para ver as bordas do formulário */
-	padding: 1em;
-	border: 1px solid #CCC;
-	border-radius: 1em;
-	border-color: orange;
-	
-}
+
 
 </style>
 </head>
@@ -47,91 +42,118 @@ form {
 	<!--  navegação -->
 	<c:import url="nav.jsp" />
 
-	<section
-		class="breadcumb-area bg-img d-flex align-items-center justify-content-center"></section>
+	
+	
+<h1 class="mt-4 mb-3">Contato</h1>
+      		<ol class="breadcrumb">
+		    	<li class="breadcrumb-item">
+		    		<a href="home">Home</a>
+			    </li>
+			    <li class="breadcrumb-item active">Contatos</li>
+		  	</ol>
+
+	
+	<div class="my-5"></div>
+<!-- Contact -->
+<section class="container">
+
+    <!--Contact heading-->
+    <h2 class="h1 m-0">Contato</h2>
+    <!--Contact description-->
+    <p class="pb-4">Entre em Contato conosco preenchendo o Formulário abaixo!</p>
+
+    <div class="row">
+
+        <!--Grid column-->
+        <div class="col-lg-5 mb-4">
+
+            <!--Form with header-->
+            <div class="card border-primary rounded-0">
+
+                <div class="card-header p-0">
+                    <div class="bg-primary text-white text-center py-2">
+                        <h3><i class="fa fa-envelope"></i> Entre em Contato</h3>
+                        <p class="m-0">Mande sua Mensagem</p>
+                    </div>
+                </div>
+                <div class="card-body p-3">
+
+                    <!--Body-->
+                    <div class="form-group">
+                        <label>Nome Completo</label>
+                        <div class="input-group">
+                            <div class="input-group-addon bg-light" style=" width: 20px; height: 20px;">
+                            <i class="fa fa-user text-primary"></i></div>
+                            <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="nome">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>E-mail</label>
+                        <div class="input-group mb-2 mb-sm-0">
+                            <div class="input-group-addon bg-light" style=" width: 20px; height: 20px;"><i class="fa fa-envelope text-primary"></i></div>
+                            <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Assunto</label>
+                        <div class="input-group mb-2 mb-sm-0">
+                            <div class="input-group-addon bg-light" style=" width: 20px; height: 20px;"><i class="fa fa-tag prefix text-primary"></i></div>
+                            <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="assunto">
+                        </div>
+                    </div>
+                    
+                    
+                    
+           <div class="form-group">
+                        <label>Mensagem</label>
+                        <div class="input-group mb-2 mb-sm-0">
+                            <div class="input-group-addon bg-light" style=" width: 20px; height: 20px;"><i class="fa fa-pencil text-primary"></i></div>
+                            <textarea class="form-control" rows="10" cols="100"  class="form-control" name="mensagem"	maxlength="999" style="resize: none" required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <button class="btn btn-dark btn-block rounded-0 py-2">Enviar Mensagem</button>
+                    </div>
+
+                </div>
+
+            </div>
+            <!--Form with header-->
+
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-7">
+
+            <!--Google map-->
+            <div class="mb-4">
+               
+            </div>
+
+            
+    </div>
+</div>
+
+</section>
 
 
-
-	<div class="row">
-		<div class="col-lg-8 mb-4">
-			<iframe
-				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.881289757805!2d-35.0178574471217!3d-8.113568118415719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1d161a9c33d1%3A0x72dbe24edf957fff!2sSesi+Jaboat%C3%A3o!5e0!3m2!1sen!2sbr!4v1530762074043"
-				width="100%" height="400px" frameborder="0" scrolling="no"
-				marginheight="0" marginwidth="0"></iframe>
-		</div>
-		<div class="col-lg-4 mb-4">
-			<h3>Detalhes</h3>
-			<p>
-				Av. Barão de Lucena, 251 <br>Centro, Jaboatão dos Guararapes <br>PE,
-				54110-051 <br>
-			</p>
-			<p>
-				<abbr title="Phone">Telefone</abbr>: (81) 4002-8922
-			</p>
-			<p>
-				<abbr title="Email">E-mail</abbr>: <a href="mailto:name@example.com">jaboatao.ifpe@jaboatao.ifpe.edu.br
+	
+<footer> <section class="cta py-5 bg-dark text-white" style="    margin-left: -121px;
+    margin-right: -119px; margin-top: 2%">
+	<div class="container">
+		<div class="row text-center">
+			<div class="col-md-12">
+				<a href="#" style="color: #fff"> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					Copyright &copy;<script>
+						document.write(new Date().getFullYear());
+					</script>Todos os Direitos Reservados | SmartClub Company.
 				</a>
-			</p>
-			<p>
-				<abbr title="Hours">Horário</abbr>: Segunda - Sábado: 13:30 às 22h
-			</p>
+			</div>
 		</div>
 	</div>
-
-
-
-	<form action="contato" method="POST">
-		<h1>Contato</h1>
-		<h4>Preencha o Formulário !</h4>
-
-		<label>Nome Completo:</label> <input type="text" class="form-control"
-			name="nome" required> <label>E-mail:</label> <input
-			type="email" class="form-control" name="mail" required> <label>Assunto:</label>
-		<input type="text" class="form-control" name="assunto" required>
-
-
-		<label>Mensagem:</label>
-		<textarea rows="10" cols="100" class="form-control" name="mensagem"
-			maxlength="999" style="resize: none" required></textarea>
-
-
-
-		<button type="submit" class="btn btn-primary">Enviar</button>
-	</form>
-
-
-	<!-- ##### Footer Area Start ##### -->
-	<footer class="footer-area">
-	<div class="container" style="width: 100%;">
-		<div class="row">
-
-			<!-- Footer Widget Area -->
-			<div class="col-12 col-lg-5">
-				<div class="footer-widget-area mt-50">
-					<a href="home" class="d-block mb-5"> <img
-						style="max-width: 45%;"
-						src="<%=request.getContextPath()%>/resources/bootstrap/img/core-img/logoooo.png"
-						alt=""></a>
-
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla
-						dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.
-					</p>
-					<br>
-				</div>
-			</div>
-
-			<div class="container">
-
-				<p class="m-0 text-center text-white">Copyright &copy; Projeto
-					SmartClub 2019. Todos os direitos reservados.</p>
-
-			</div>
-
-		</div>
-	</div>
-
-	</footer>
+	</section> <!-- Footer Widget Area --> <!-- Copywrite Text --> </footer>	
 
 
 
