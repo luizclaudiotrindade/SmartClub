@@ -326,48 +326,21 @@
 	<div class="container">
 		<div class="row">
 
-			<!-- Footer Widget Area -->
-			<div class="col-12 col-lg-5">
-				<div class="footer-widget-area mt-50">
-					<a href="#" class="d-block mb-5"><img
-						style="max-width:45% ;" src="<%=request.getContextPath()%>/resources/bootstrap/img/core-img/logoooo.png" alt=""></a>
-						
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla
-						dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.
-					</p>
-				</div>
-			</div>
-
-			<!-- Footer Widget Area -->
-			<div class="col-12 col-md-6 col-lg-4">
-				<div class="footer-widget-area mt-50">
-					<h6 class="widget-title mb-5">Find us on the map</h6>
-					<img src="<%=request.getContextPath()%>/resources/bootstrap/img/bg-img/footer-map.png" alt="">
-					
-				</div>
-			</div>
-
-			
-
-			<!-- Copywrite Text -->
-			<div class="col-12">
-				<div class="copywrite-text mt-30">
-					<p>
-						<a href="#"> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-							Copyright &copy;<script>
-								document.write(new Date().getFullYear());
-							</script> All rights reserved | This template is made with <i
-							class="fa fa-heart-o" aria-hidden="true"></i> by <a
-							href="https://colorlib.com" target="_blank">Colorlib</a> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-					</p>
-				</div>
+	<!-- ##### Footer Area Start ##### -->
+	<footer> <section class="cta py-5 bg-dark text-white">
+	<div class="container">
+		<div class="row text-center">
+			<div class="col-md-12">
+				<a href="#" style="color: #fff"> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					Copyright &copy;<script>
+						document.write(new Date().getFullYear());
+					</script>Todos os Direitos Reservados | SmartClub Company.
+				</a>
 			</div>
 		</div>
 	</div>
-	
+	</section> <!-- Footer Widget Area --> <!-- Copywrite Text --> </footer>
 
-	</footer>
 	
 
 	<script type="text/javascript"
