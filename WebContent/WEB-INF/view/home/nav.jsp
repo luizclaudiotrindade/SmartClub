@@ -66,7 +66,7 @@ line-heigth:43px;
 						<!-- Nav Start -->
 						<div class="classynav">
 							<ul>
-								<li><a href="home">Home</a></li>
+								<li><a href="/smartClub/">Home</a></li>
 								<li><a href="QuemSomos">Quem Somos</a></li>
 								<li><a href="contato">Contato</a></li>
 								<!-- mega menu desativado  e services desativados

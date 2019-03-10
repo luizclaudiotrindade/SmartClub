@@ -14,7 +14,10 @@ public class AutorizadorInterceptor extends HandlerInterceptorAdapter {
 			throws IOException {
 
 		String uri = request.getRequestURI();
-		if (uri.contains("bootstrap") || uri.contains("css") || uri.contains("img") || uri.contains("js") || uri.endsWith("/smartClub") || uri.endsWith("efetuarLogin")|| uri.endsWith("cadastro") || uri.endsWith("/smartClub/QuemSomos")) {
+		if (uri.contains("bootstrap") || uri.contains("css") || uri.contains("img") || uri.contains("js")
+				|| uri.endsWith("/smartClub") || uri.endsWith("efetuarLogin") || uri.endsWith("cadastro")
+				|| uri.endsWith("/smartClub/QuemSomos") || uri.endsWith("/smartClub/beneficio")
+				|| uri.endsWith("/smartClub/contato") || uri.endsWith("/smartClub/save")|| uri.endsWith("/smartClub/cadastroHotel")|| uri.endsWith("/smartClub/salvarHotel")) {
 			return true;
 		}
 

@@ -72,7 +72,7 @@
 					<!--  fim do header -->
 						<!--  aqui está todo o corpo -->
 					<div class="card-body">
-						<form action="autenticar" method="post">
+						<form action="efetuarLogin" method="post">
 							<div class="input-group form-group">
 								<div class="input-group-prepend">
 									<span class="input-group-text"><i class="fas fa-user"></i></span>

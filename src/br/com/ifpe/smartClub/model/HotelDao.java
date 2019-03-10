@@ -26,7 +26,12 @@ public class HotelDao {
 		EntityManager manager = factory.createEntityManager();
 		Query query = null;
 		String nomeHotel = hotel != null ? hotel.getNomeHotel() : "";
-		query = manager.createQuery("FROM Hotel ORDER BY nomeHotel");
+		if (nomeHotel != null) {
+			 query = manager.createQuery("FROM Hotel WHERE nomeHotel LIKE :paramNomeHotel ORDER BY idHotel");
+			 query.setParameter("paramNomeHotel", "%" + nomeHotel + "%");
+			}else {
+				query = manager.createQuery("FROM Hotel ORDER BY nomeHotel");
+			}
 		List<Hotel> lista = query.getResultList();
 		manager.close();
 		factory.close();

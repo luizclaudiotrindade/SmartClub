@@ -15,7 +15,7 @@
 <!-- Core Stylesheet -->
 <link rel="stylesheet" type="text/css"
 	href="<%=request.getContextPath()%>/resources/bootstrap/style.css" />
-	<link rel="stylesheet" type="text/css"
+<link rel="stylesheet" type="text/css"
 	href="<%=request.getContextPath()%>/resources/bootstrap/css/UsuarioCompra.css" />
 <link rel="stylesheet" type="text/css"
 	href="<%=request.getContextPath()%>/resources/bootstrap/css/telaUsuario.css" />
@@ -32,7 +32,6 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <title>Smart Club</title>
 <style>
-
 </style>
 </head>
 <body>
@@ -216,230 +215,226 @@
 	</header>
 	<form action="update" method="post">
 		<input type="hidden" name="id" value="${hotelId.idhotel}">
-	<h1>Compras de Diária</h1>
-	<h2 style="text-align: center;">${hotelId.nomeHotel}</h2>
-	
-	<div class="container">
-	<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img  style="height: 179px;
-    max-width: 27%; margin-left: 379px;"  class="d-block w-100" src="https://dynamic.realestateindia.com/proj_images/project14122/proj_img-14122_1-small.jpg"
- alt="Second slide">
-    </div>
-    <div class="carousel-item">
-    
-      <img  style="height: 179px;
-    max-width: 27%; margin-left: 379px;" class="d-block w-100" src="https://dynamic.realestateindia.com/proj_images/project14122/proj_img-14122_1-small.jpg"
- alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img  style="height: 179px;
-    max-width: 27%; margin-left: 379px;"  class="d-block w-100" src="https://dynamic.realestateindia.com/proj_images/project14122/proj_img-14122_1-small.jpg"
- alt="Second slide">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span style="background-color: #c0846a;" class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a  class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span style="background-color: #c0846a;" class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
+		<h1>Compras de Diária</h1>
+		<h2 style="text-align: center;">${hotelId.nomeHotel}</h2>
+
+		<div class="container">
+			<div id="carouselExampleControls" class="carousel slide"
+				data-ride="carousel">
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img style="height: 179px; max-width: 27%; margin-left: 379px;"
+							class="d-block w-100"
+							src="https://dynamic.realestateindia.com/proj_images/project14122/proj_img-14122_1-small.jpg"
+							alt="Second slide">
+					</div>
+					<div class="carousel-item">
+
+						<img style="height: 179px; max-width: 27%; margin-left: 379px;"
+							class="d-block w-100"
+							src="https://dynamic.realestateindia.com/proj_images/project14122/proj_img-14122_1-small.jpg"
+							alt="Second slide">
+					</div>
+					<div class="carousel-item">
+						<img style="height: 179px; max-width: 27%; margin-left: 379px;"
+							class="d-block w-100"
+							src="https://dynamic.realestateindia.com/proj_images/project14122/proj_img-14122_1-small.jpg"
+							alt="Second slide">
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#carouselExampleControls"
+					role="button" data-slide="prev"> <span
+					style="background-color: #c0846a;"
+					class="carousel-control-prev-icon" aria-hidden="true"></span> <span
+					class="sr-only">Previous</span>
+				</a> <a class="carousel-control-next" href="#carouselExampleControls"
+					role="button" data-slide="next"> <span
+					style="background-color: #c0846a;"
+					class="carousel-control-next-icon" aria-hidden="true"></span> <span
+					class="sr-only">Next</span>
+				</a>
+			</div>
 
 
-			
-<!--Carousel Wrapper-->
-<div id="multi-item-example" class="carousel slide carousel-multi-item carousel-multi-item-2" data-ride="carousel">
 
-  <!--Controls-->
-  <div class="controls-top">
-  <a class="carousel-control-prev" href="#multi-item-example" role="button" data-slide="prev">
-    <span style="background-color: #c0846a;" class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a  class="carousel-control-next"  href="#multi-item-example" role="button" data-slide="next">
-    <span style="background-color: #c0846a;" class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-    
-  </div>
-  
-  <!--/.Controls-->
+			<!--Carousel Wrapper-->
+			<div id="multi-item-example"
+				class="carousel slide carousel-multi-item carousel-multi-item-2"
+				data-ride="carousel">
 
-  <!--Slides-->
-  <div class="carousel-innerr" role="listbox">
+				<!--Controls-->
+				<div class="controls-top">
+					<a class="carousel-control-prev" href="#multi-item-example"
+						role="button" data-slide="prev"> <span
+						style="background-color: #c0846a;"
+						class="carousel-control-prev-icon" aria-hidden="true"></span> <span
+						class="sr-only">Previous</span>
+					</a> <a class="carousel-control-next" href="#multi-item-example"
+						role="button" data-slide="next"> <span
+						style="background-color: #c0846a;"
+						class="carousel-control-next-icon" aria-hidden="true"></span> <span
+						class="sr-only">Next</span>
+					</a>
 
-    <!--First slide-->
-    <div class="carousel-item active">
+				</div>
 
-      <div class="col-md-3 mb-3">
-        <div class="card">
-          <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(38).jpg"
-            alt="Card image cap">
-        </div>
-      </div>
+				<!--/.Controls-->
 
-      <div class="col-md-3 mb-3">
-        <div class="card">
-          <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(19).jpg"
-            alt="Card image cap">
-        </div>
-      </div>
+				<!--Slides-->
+				<div class="carousel-innerr" role="listbox">
 
-      <div class="col-md-3 mb-3">
-        <div class="card">
-          <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(42).jpg"
-            alt="Card image cap">
-        </div>
-      </div>
+					<!--First slide-->
+					<div class="carousel-item active">
 
-      <div class="col-md-3 mb-3">
-        <div class="card">
-          <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(8).jpg"
-            alt="Card image cap">
-        </div>
-      </div>
+						<div class="col-md-3 mb-3">
+							<div class="card">
+								<img class="img-fluid"
+									src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(38).jpg"
+									alt="Card image cap">
+							</div>
+						</div>
 
-    </div>
-    <!--/.First slide-->
+						<div class="col-md-3 mb-3">
+							<div class="card">
+								<img class="img-fluid"
+									src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(19).jpg"
+									alt="Card image cap">
+							</div>
+						</div>
 
-    <!--Second slide-->
-    <div class="carousel-item">
+						<div class="col-md-3 mb-3">
+							<div class="card">
+								<img class="img-fluid"
+									src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(42).jpg"
+									alt="Card image cap">
+							</div>
+						</div>
 
-      <div class="col-md-3 mb-3">
-        <div class="card">
-          <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(53).jpg"
-            alt="Card image cap">
-        </div>
-      </div>
+						<div class="col-md-3 mb-3">
+							<div class="card">
+								<img class="img-fluid"
+									src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(8).jpg"
+									alt="Card image cap">
+							</div>
+						</div>
 
-      <div class="col-md-3 mb-3">
-        <div class="card">
-          <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(25).jpg"
-            alt="Card image cap">
-        </div>
-      </div>
+					</div>
+					<!--/.First slide-->
 
-      <div class="col-md-3 mb-3">
-        <div class="card">
-          <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(47).jpg"
-            alt="Card image cap">
-        </div>
-      </div>
+					<!--Second slide-->
+					<div class="carousel-item">
 
-      <div class="col-md-3 mb-3">
-        <div class="card">
-          <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(26).jpg"
-            alt="Card image cap">
-        </div>
-      </div>
+						<div class="col-md-3 mb-3">
+							<div class="card">
+								<img class="img-fluid"
+									src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(53).jpg"
+									alt="Card image cap">
+							</div>
+						</div>
 
-    </div>
-    <!--/.Second slide-->
+						<div class="col-md-3 mb-3">
+							<div class="card">
+								<img class="img-fluid"
+									src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(25).jpg"
+									alt="Card image cap">
+							</div>
+						</div>
 
-    <!--Third slide-->
-    <div class="carousel-item">
+						<div class="col-md-3 mb-3">
+							<div class="card">
+								<img class="img-fluid"
+									src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(47).jpg"
+									alt="Card image cap">
+							</div>
+						</div>
 
-      <div class="col-md-3 mb-3">
-        <div class="card">
-          <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(64).jpg"
-            alt="Card image cap">
-        </div>
-      </div>
+						<div class="col-md-3 mb-3">
+							<div class="card">
+								<img class="img-fluid"
+									src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(26).jpg"
+									alt="Card image cap">
+							</div>
+						</div>
 
-      <div class="col-md-3 mb-3">
-        <div class="card">
-          <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(51).jpg"
-            alt="Card image cap">
-        </div>
-      </div>
+					</div>
+					<!--/.Second slide-->
 
-      <div class="col-md-3 mb-3">
-        <div class="card">
-          <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(59).jpg"
-            alt="Card image cap">
-        </div>
-      </div>
+					<!--Third slide-->
+					<div class="carousel-item">
 
-      <div class="col-md-3 mb-3">
-        <div class="card">
-          <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(63).jpg"
-            alt="Card image cap">
-        </div>
-      </div>
+						<div class="col-md-3 mb-3">
+							<div class="card">
+								<img class="img-fluid"
+									src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(64).jpg"
+									alt="Card image cap">
+							</div>
+						</div>
 
-    </div>
-    <!--/.Third slide-->
+						<div class="col-md-3 mb-3">
+							<div class="card">
+								<img class="img-fluid"
+									src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(51).jpg"
+									alt="Card image cap">
+							</div>
+						</div>
 
-  </div>
-  <!--/.Slides-->
+						<div class="col-md-3 mb-3">
+							<div class="card">
+								<img class="img-fluid"
+									src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(59).jpg"
+									alt="Card image cap">
+							</div>
+						</div>
 
-</div>
+						<div class="col-md-3 mb-3">
+							<div class="card">
+								<img class="img-fluid"
+									src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(63).jpg"
+									alt="Card image cap">
+							</div>
+						</div>
 
-<!--/.Carousel Wrapper-->
-<div style="text-align:center ; margin-left: 240px;">
-	<p>${hotelId.descricao }</p>
+					</div>
+					<!--/.Third slide-->
+
+				</div>
+				<!--/.Slides-->
+
+			</div>
+	</form>
+	<!--/.Carousel Wrapper-->
+	<div style="text-align: center; margin-left: 240px;">
+		<p>${hotelId.descricao }</p>
 	</div>
-
 	<div id="bar">
 		<label>Quantidade de Quartos</label><input type="number"
 			name="quantidadeQuartos" min="1" max="10">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 		<label>Quantidade de Pessoas</label><input type="number"
 			name="quantidadePessoas" min="1" max="10">
 	</div>
+<table class="table table-striped table-dark">
+	<thead>
+	    <tr>
+	      <th scope="col">Nome Quarto</th>
+	      <th scope="col">Descricao</th>
+	      <th scope="col">Acomoda</th>
+	      <th scope="col">Quantidade</th>
+	    </tr>
+  </thead>
+  <tbody>
+  <c:forEach var="beneficio" items="${listaBeneficio}">
+  <tr style="color:black">
+  
+      <th scope="row" >1</th>
+      <td>Mark</td>
+    </tr>
+    </c:forEach>
+  </tbody>
+</table>
 
-	<br>
-	<br>
-	<br>
-	<table>
-		<tr>
-			<th>Acômoda</th>
-			<th>Tipo de Quarto</th>
-			<th>Preço</th>
-		</tr>
-		<tr>
-			<td></td>
-			<td>Quarto Duplo Standard - 1 Cama de casal</td>
-			<td>R$ 170,00
-				<button type="submit" class="btn btn-terciary">Comprar</button>
-			</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>Quarto Duplo Deluxe - 1 Cama de Casal</td>
-			<td>R$ 200,00
-				<button type="submit" class="btn btn-terciary">Comprar</button>
-			</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>Quarto Standard com 2 Camas de Solteiro</td>
-			<td>R$ 220,00
-				<button type="submit" class="btn btn-terciary">Comprar</button>
-			</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>Quarto Deluxe com 2 Camas de Solteiro</td>
-			<td>R$ 240,00
-				<button type="submit" class="btn btn-terciary">Comprar</button>
-			</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td>Quarto Triplo Deluxe(1 Cama de Casal + 2 Camas de Solteiro)</td>
-			<td>R$ 270,00
-				<button type="submit" class="btn btn-terciary">Comprar</button>
-			</td>
-		</tr>
 
-	</table>
-	</div>
-	</form>
-	<footer> <section class="cta py-5 bg-dark text-white" style="    margin-left: -121px;
+	<footer> <section class="cta py-5 bg-dark text-white"
+		style="    margin-left: -121px;
     margin-right: -119px; margin-top: 2%">
 	<div class="container">
 		<div class="row text-center">
@@ -452,7 +447,7 @@
 			</div>
 		</div>
 	</div>
-	</section> <!-- Footer Widget Area --> <!-- Copywrite Text --> </footer>	
+	</section> <!-- Footer Widget Area --> <!-- Copywrite Text --> </footer>
 
 
 

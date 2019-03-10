@@ -1,49 +1,48 @@
 package br.com.ifpe.smartClub.model;
 
+import java.util.Date;
+
 import javax.persistence.Column;
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
-@Entity
-@Table(name = "cadastro_quarto")
 public class Quarto {
 
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-	
-	@Column
-	private String nomeHotel;
-	
-	@Column
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int idQuartos;
+	@JoinColumn(name = "id_hotel_quartos")
+	@ManyToOne
+	@Column(name = "id_hotel_quartos")
+	private int idHotelQuarto;
+	@Column(name = "nome_quarto")
 	private String nomeQuarto;
-		
 	@Column
-	private int quantidadePessoa;
-	
+	private String descricao;
 	@Column
-	private String fotoQuarto;
-		
+	private Date disponivel;
 	@Column
-	private double valor;
-	
-	public int getId() {
-		return id;
+	private int acomoda;
+	@Column
+	private String quantidade;
+
+	public int getIdQuartos() {
+		return idQuartos;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setIdQuartos(int idQuartos) {
+		this.idQuartos = idQuartos;
 	}
 
-	public String getNomeHotel() {
-		return nomeHotel;
+	public int getIdHotelQuarto() {
+		return idHotelQuarto;
 	}
 
-	public void setNomeHotel(String nomeHotel) {
-		this.nomeHotel = nomeHotel;
+	public void setIdHotelQuarto(int idHotelQuarto) {
+		this.idHotelQuarto = idHotelQuarto;
 	}
 
 	public String getNomeQuarto() {
@@ -54,29 +53,36 @@ public class Quarto {
 		this.nomeQuarto = nomeQuarto;
 	}
 
-	public int getQuantidadePessoa() {
-		return quantidadePessoa;
+	public String getDescricao() {
+		return descricao;
 	}
 
-	public void setQuantidadePessoa(int quantidadePessoa) {
-		this.quantidadePessoa = quantidadePessoa;
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
 
-	public String getFotoQuarto() {
-		return fotoQuarto;
+	public Date getDisponivel() {
+		return disponivel;
 	}
 
-	public void setFotoQuarto(String fotoQuarto) {
-		this.fotoQuarto = fotoQuarto;
+	public void setDisponivel(Date disponivel) {
+		this.disponivel = disponivel;
 	}
 
-	public double getValor() {
-		return valor;
+	public int getAcomoda() {
+		return acomoda;
 	}
 
-	public void setValor(double valor) {
-		this.valor = valor;
+	public void setAcomoda(int acomoda) {
+		this.acomoda = acomoda;
 	}
 
-	
+	public String getQuantidade() {
+		return quantidade;
+	}
+
+	public void setQuantidade(String quantidade) {
+		this.quantidade = quantidade;
+	}
+
 }

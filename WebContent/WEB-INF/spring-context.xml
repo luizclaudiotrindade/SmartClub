@@ -33,8 +33,9 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 				<bean class="br.com.ifpe.smartClub.converters.PlanoConverter" />
 			</list>
 		</property>
-		<mvc:interceptors>
+		
+	</bean>
+	<mvc:interceptors>
 			<bean class="br.com.ifpe.smartClub.util.AutorizadorInterceptor" />
 		</mvc:interceptors>
-	</bean>
 </beans>

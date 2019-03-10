@@ -1,17 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <meta charset="utf-8">
-<meta charset="UTF-8">
-<meta name="description" content="">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- tempo de espera da tela  -->
+<meta http-equiv="refresh" content="3; url=/smartClub/<c:if test='${not empty link }'>${link}</c:if>">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -20,7 +17,7 @@
 <!-- Core Stylesheet -->
 <link rel="stylesheet" type="text/css"
 	href="<%=request.getContextPath()%>/resources/bootstrap/style.css" />
-	<link rel="stylesheet" type="text/css"
+<link rel="stylesheet" type="text/css"
 	href="<%=request.getContextPath()%>/resources/bootstrap/sucesso.css" />
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -42,14 +39,13 @@
 	color: #ffffff;
 	line-height: 1;
 }
-
-		
-	
 </style>
 </head>
 <body>
 
-<section class="breadcumb-area bg-img d-flex align-items-center justify-content-center">	</section>
+	<section
+		class="breadcumb-area bg-img d-flex align-items-center justify-content-center">
+	</section>
 
 
 
@@ -200,16 +196,19 @@
 						</ul>
 					</div>
 				</div>
-			</nav>
+				</nav>
+			</div>
 		</div>
 	</div>
-</div>
 
-   <h1 style="text-align: center; color: black; margin-top: 200px;background: #000000; color: #ffffff; padding: 10px; border: 5px solid #FA8072; ">Cadastrado com sucesso!</h1>
-  
-   
+	<h1
+		style="text-align: center; color: black; margin-top: 200px; background: #000000; color: #ffffff; padding: 10px; border: 5px solid #FA8072;">Cadastrado
+		com sucesso!</h1>
 
-<footer> <section class="cta py-5 bg-dark text-white" style="    margin-left: -121px;
+
+
+	<footer> <section class="cta py-5 bg-dark text-white"
+		style="    margin-left: -121px;
     margin-right: -119px; margin-top: 11%">
 	<div class="container">
 		<div class="row text-center">
@@ -222,21 +221,23 @@
 			</div>
 		</div>
 	</div>
-	</section> <!-- Footer Widget Area --> <!-- Copywrite Text --> </footer>	
-
-</header>
+	</section> <!-- Footer Widget Area --> <!-- Copywrite Text --> </footer> </header>
 
 	<script type="text/javascript"
 		src="<%=request.getContextPath()%>/resources/bootstrap/js/jquery/jquery-2.2.4.min.js"></script>
 
-	<!-- Popper js --> <script type="text/javascript"
+	<!-- Popper js -->
+	<script type="text/javascript"
 		src="<%=request.getContextPath()%>/resources/bootstrap/js/bootstrap/popper.min.js"></script>
 
-	<!-- Bootstrap js --> <script type="text/javascript"
+	<!-- Bootstrap js -->
+	<script type="text/javascript"
 		src="<%=request.getContextPath()%>/resources/bootstrap/js/bootstrap/bootstrap.min.js"></script>
-	<!-- All Plugins js --> <script type="text/javascript"
+	<!-- All Plugins js -->
+	<script type="text/javascript"
 		src="<%=request.getContextPath()%>/resources/bootstrap/js/plugins/plugins.js"></script>
-	<!-- Active js --> <script type="text/javascript"
+	<!-- Active js -->
+	<script type="text/javascript"
 		src="<%=request.getContextPath()%>/resources/bootstrap/js/active.js"></script>
 </body>
 </html>

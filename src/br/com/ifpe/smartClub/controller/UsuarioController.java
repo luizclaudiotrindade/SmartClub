@@ -17,11 +17,13 @@ import br.com.ifpe.smartClub.model.Plano;
 import br.com.ifpe.smartClub.model.PlanoDao;
 import br.com.ifpe.smartClub.model.Usuario;
 import br.com.ifpe.smartClub.model.UsuarioDao;
+import br.com.ifpe.smartClub.util.Criptografia;
 
 @Controller
 public class UsuarioController {
 	@RequestMapping("/cadastro")
 	public String cadastro(Model model) {
+		
 		PlanoDao dao = new PlanoDao();
 		List<Plano> listaPlano = dao.listarPlano();
 		model.addAttribute("listaPlano", listaPlano);
@@ -34,6 +36,7 @@ public class UsuarioController {
 
 	@RequestMapping("save")
 	public String save(Usuario usuario) {
+		usuario.setSenha(Criptografia.criptografar(usuario.getSenha()));
 		UsuarioDao dao = new UsuarioDao();
 		dao.salvar(usuario);
 		return "usuario/cadastradoSucesso";
@@ -54,49 +57,34 @@ public class UsuarioController {
 		model.addAttribute("usuario", usuario);
 		return "produto/alterarProduto";
 	}
-
-	@RequestMapping("/autenticar")
-	public String autenticar(Usuario usuario, Model model) {
+	
+	@RequestMapping("efetuarLogin")
+	public String efetuarLogin( Usuario usuario, HttpSession session, Model model) {
+		usuario.setSenha(Criptografia.criptografar(usuario.getSenha()));
 		UsuarioDao dao = new UsuarioDao();
-		// verifica a existencia do usuario
-		if (dao.verificarExistencia(usuario) == true) {
-			System.out.println("O usuario foi logado com sucesso!");
-
-			System.out.println("Iniciando a tela usuario");
+		Usuario usuarioLogado = dao.buscarUsuario(usuario);
+		if (usuarioLogado != null) {
+			session.setAttribute("usuarioLogado", usuarioLogado);
 			// lista os beneficios do usuario
 			BeneficiosDao daoBeneficio = new BeneficiosDao();
 			List<Beneficios> listaBeneficio = daoBeneficio.listarBeneficio();
 			model.addAttribute("listaBeneficio", listaBeneficio);
-
 			// lista os hoteis cadastrados no banco de dados
 			HotelDao daoHotel = new HotelDao();
 			List<Hotel> listaHotel = daoHotel.listarHotel(null);
 			model.addAttribute("listaHotel", listaHotel);
 
-			return "usuario/telaUsuario";
+			return "/usuario/telaUsuario";
 		}
-		model.addAttribute("msg", "Não foi encontrado nenhum usuário com o login e senha informados.");
-		return "forward:home";
+		model.addAttribute("msg", "Não foi encontrado um usuário com o login e senha informados.");
+		return "home/home";
 	}
 
-	@RequestMapping("efetuarLogin")
-	public String efetuarLogin(Usuario usuario, HttpSession session, Model model) {
-	UsuarioDao dao = new UsuarioDao();
-	Usuario usuarioLogado = dao.buscarUsuario(usuario);
-	if (usuarioLogado != null) {
-	 session.setAttribute("usuarioLogado", usuarioLogado);
-	 return "/usuario/telaUsuario";
-	}
-	model.addAttribute("msg", "Não foi encontrado um usuário com o login e senha informados.");
-	return "home/home";
-	}
-	
 	@RequestMapping("logout")
 	public String logout(HttpSession session) {
-	session.invalidate();
-	return "home/home";
+		session.invalidate();
+		return "redirect:/";
 	}
-
 
 	@RequestMapping("filter")
 	public String filtrarHotel(Hotel hotel, Model model) {

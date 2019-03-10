@@ -74,54 +74,8 @@ padding-left: 6px;
 			<div class="cssload-loading"></div>
 		</div>
 	</div>
+	<c:import url="nav.jsp" />
 
-
-
-	<!-- ##### Header Area Start ##### -->
-	<header class="header-area"> <!-- Navbar Area -->
-	
-	<div class="palatin-main-menu">
-		<div class="classy-nav-container breakpoint-off">
-			<div class="container">
-				<!-- Menu -->
-				<nav class="classy-navbar justify-content-between" id="palatinNav">
-
-				<!-- Nav brand --> 
-				<img src="<%=request.getContextPath()%>/resources/bootstrap/img/core-img/logoooo.png"
-					style="max-width: 19%" alt="Logo tipo Smart Club"> <!-- Navbar Toggler -->
-				<div class="classy-navbar-toggler">
-					<span class="navbarToggler"><span></span><span></span><span></span></span>
-				</div>
-
-				<!-- Menu -->
-				<div class="classy-menu">
-
-					<!-- close btn -->
-					<div class="classycloseIcon">
-						<div class="cross-wrap">
-							<span class="top"></span><span class="bottom"></span>
-						</div>
-					</div>
-					<!-- Nav Start -->
-					<div class="classynav">
-						<ul>
-							<li><a href="home">Home</a></li>
-							<li><a href="QuemSomos">Quem Somos</a></li>
-							<li class=""><a href="beneficio">Beneficios</a></li>
-							<li><a href="#altocontraste" id="altocontraste"
-								accesskey="3" onclick="window.toggleContrast()"
-								onkeydown="window.toggleContrast()">Alto contraste [Alt + 3]</a></li>
-
-						</ul>
-						
-					</div>
-					<!-- Nav End -->
-				</div>
-				</nav>
-			</div>
-		</div>
-	</div>
-	</header>
 
 
 <script type="text/javascript"

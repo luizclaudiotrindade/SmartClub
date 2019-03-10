@@ -1,15 +1,12 @@
 package br.com.ifpe.smartClub.controller;
 
-import java.util.List;
-
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import br.com.ifpe.smartClub.model.Beneficios;
-import br.com.ifpe.smartClub.model.BeneficiosDao;
 import br.com.ifpe.smartClub.model.Hotel;
 import br.com.ifpe.smartClub.model.HotelDao;
+import br.com.ifpe.smartClub.model.Quarto;
+import br.com.ifpe.smartClub.model.QuartoDao;
 
 @Controller
 public class HotelController {
@@ -24,7 +21,20 @@ public class HotelController {
 		HotelDao dao = new HotelDao();
 		dao.salvar(hotel);
 		return "usuario/cadastradoSucesso";
-		
-	}	
-}
 
+	}
+
+	@RequestMapping("cadastroHotel")
+	public String cadastroQuarto() {
+		return "hotel/cadastroQuarto";
+	}
+	
+	@RequestMapping("salvarQuarto")
+	public String save(Quarto quarto) {
+		QuartoDao dao = new QuartoDao();
+		dao.salvar(quarto);
+		return "usuario/cadastradoSucesso";
+
+	}
+	
+}
