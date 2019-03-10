@@ -34,6 +34,7 @@
 
 <body>
 <c:import url="nav.jsp" />
+
 	
 	<!-- ##### Header Area End ##### -->
 
@@ -41,15 +42,19 @@
 
 	<!-- ##### Fim da area de login ##### -->
 
+
 	<!-- ##### Breadcumb Area Start ##### -->
 	<section
 		class="breadcumb-area bg-img d-flex align-items-center justify-content-center">
 		
 		<div class="bradcumbContent">
+			
 			<h2>Smart Club</h2>
+			<h4 style="color:red;">${msg}</h4>
 		</div>
 
 	</section>
+	
 	<!-- Modal -->
 	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
 		aria-labelledby="exampleModalLabel" aria-hidden="true">

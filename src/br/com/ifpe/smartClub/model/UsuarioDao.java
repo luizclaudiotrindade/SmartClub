@@ -22,8 +22,7 @@ public class UsuarioDao {
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT);
 		EntityManager manager = factory.createEntityManager();
 		Query query = null;
-		query = manager
-				.createQuery("FROM Usuario WHERE email = :paramEmail AND senha = :paramSenha ORDER BY id");
+		query = manager.createQuery("FROM Usuario WHERE email = :paramEmail AND senha = :paramSenha ORDER BY id");
 		query.setParameter("paramEmail", usuario.getEmail());
 		query.setParameter("paramSenha", usuario.getSenha());
 
@@ -42,6 +41,23 @@ public class UsuarioDao {
 		return retorno;
 
 	}
+
+	public Usuario buscarUsuario(Usuario usuario) {
+		EntityManagerFactory factory =
+		Persistence.createEntityManagerFactory(PERSISTENCE_UNIT);
+		EntityManager manager = factory.createEntityManager();
+		Query query = manager.createQuery("FROM Usuario WHERE email LIKE :paramEmail AND senha LIKE :paramSenha");
+		query.setParameter("paramEmail", usuario.getEmail());
+		query.setParameter("paramSenha", usuario.getSenha());
+		List<Usuario> registros = query.getResultList();
+		Usuario obj = null;
+		if (!registros.isEmpty()) {
+		 obj = (Usuario) registros.get(0);
+		}
+		manager.close();
+		factory.close();
+		return obj;
+		}
 
 	public void salvar(Usuario usuario) {
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT);

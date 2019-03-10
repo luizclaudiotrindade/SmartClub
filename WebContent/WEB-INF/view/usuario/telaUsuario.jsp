@@ -28,9 +28,14 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Smart Club</title>
+
+
 <style>
+/* Hiding the checkbox, but allowing it to be focused */
+.badgebox
+
 .pb-5, .py-5 {
-    padding-bottom: 8rem!important;
+	padding-bottom: 8rem !important;
 }
 </style>
 </head>
@@ -50,14 +55,14 @@
 			<div class="container">
 				<!-- Menu -->
 				<nav class="classy-navbar justify-content-between" id="palatinNav">
-				
+
 				<!-- Nav brand --> <img
 					src="<%=request.getContextPath()%>/resources/bootstrap/img/core-img/logoooo.png"
 					style="max-width: 19%" alt="Logo tipo Smart Club"> <!-- Navbar Toggler -->
 				<div class="classy-navbar-toggler">
 					<span class="navbarToggler"><span></span><span></span><span></span></span>
 				</div>
-				
+
 				<!-- Menu -->
 				<div class="classy-menu">
 					<!-- close btn -->
@@ -66,143 +71,162 @@
 							<span class="top"></span><span class="bottom"></span>
 						</div>
 					</div>
-					
+
 					<!-- Nav Start -->
 					<div class="classynav">
-						<ul>
-							<c:forEach var="beneficio" items="${listaBeneficio}">
-							<c:if test="${beneficio.idbeneficio==1}">
-								<li>
-									<!-- Single Cool Facts -->
-									<div class="col-12 col-sm-4">
-										<div class="single-cool-fact">
-											<div class="scf-text">
-												<i class="icon-calendar"></i>
-													<p>${beneficio.descricao}</p>
+						<form>
+							<ul>
+
+								<c:forEach var="beneficio" items="${listaBeneficio}">
+
+									<c:if test="${beneficio.idbeneficio==1}">
+										<li class="checkbox">
+											<!-- Single Cool Facts -->
+											<div class="col-12 col-sm-4">
+												<div class="btn single-cool-fact">
+													<div class="scf-text">
+														<i class="icon-calendar"></i>
+														<p>${beneficio.descricao}
+															<input type="checkbox" value="beneficio.idbeneficio">
+														</p>
+
+													</div>
+												</div>
 											</div>
-										</div>
-									</div>
-								</li>
-							</c:if>
-							<c:if test="${beneficio.idbeneficio==2}">
-								<li>
-									<!-- Single Cool Facts -->
-									<div class="col-12 col-sm-4">
-										<div class="single-cool-fact">
-											<div class="scf-text">
-												<i class="icon-calendar"></i>
-													<p>${beneficio.descricao}</p>
-											
-												
-												
-											</div>
-										</div>
-									</div>
-								</li>
-							</c:if>
-							<c:if test="${beneficio.idbeneficio==3}">
-								<li>
-									<!-- Single Cool Facts -->
-									<div class="col-12 col-sm-4">
-										<div class="single-cool-fact">
-											<div class="scf-text">
-												<i class="glyphicon glyphicon-bed"></i>
-													<p>${beneficio.descricao}</p>
-											
-												
-												
-											</div>
-										</div>
-									</div>
-								</li>
-							</c:if>
-							<c:if test="${beneficio.idbeneficio==4}">
-								<li>
-									<!-- Single Cool Facts -->
-									<div class="col-12 col-sm-4">
-										<div class="single-cool-fact">
-											<div class="scf-text">
-												<i class="icon-limousine"></i>
-													<p>${beneficio.descricao}</p>
-											
-												
-												
-											</div>
-										</div>
-									</div>
-								</li>
-							</c:if>
-							<c:if test="${beneficio.idbeneficio==5}">
-								<li>
-									<!-- Single Cool Facts -->
-									<div class="col-12 col-sm-4">
-										<div class="single-cool-fact">
-											<div class="scf-text">
-												<i class="icon-cocktail-1"></i>
-													<p>${beneficio.descricao}</p>
-											
-												
-												
-											</div>
-										</div>
-									</div>
-								</li>
-							</c:if>
-							<c:if test="${beneficio.idbeneficio==6}">
-								<li>
-									<!-- Single Cool Facts -->
-									<div class="col-12 col-sm-4">
-										<div class="single-cool-fact">
-											<div class="scf-text">
-												<i class="icon-limousine"></i>
-													<p>${beneficio.descricao}</p>
-											
-												
-												
-											</div>
-										</div>
-									</div>
-								</li>
-							</c:if>
-							<c:if test="${beneficio.idbeneficio==7}">
-								<li>
-									<!-- Single Cool Facts -->
-									<div class="col-12 col-sm-4">
-										<div class="single-cool-fact">
-											<div class="scf-text">
-												<i class="glyphicon glyphicon-cutlery"></i>
-													<p>${beneficio.descricao}</p>
-											
-												
-												
-											</div>
-										</div>
-									</div>
-								</li>
-							</c:if>
-							</c:forEach>
-							<li>
-								<!-- Single Cool Facts -->
-								<div class="col-12 col-sm-4">
-									<div class="single-cool-fact">
-										<div class="scf-text">
-											<i class="glyphicon glyphicon-user"></i>
-											<p>Usuário</p>
-										</div>
+										</li>
+									</c:if>
+									<c:if test="${beneficio.idbeneficio==2}">
+										<li>
+											<!-- Single Cool Facts -->
+											<div class="col-12 col-sm-4">
+												<div class="btn single-cool-fact">
+													<div class="scf-text">
+														<i class="icon-calendar"></i>
+														<p>${beneficio.descricao}
+															<input type="checkbox" value="beneficio.idbeneficio">
+														</p>
 
 
-										<div class="dropdown">
-											<div id="myDropdown" class="dropdown-content">
-												<a href="#">Alterar Dados</a> <a href="#">Excluir Conta</a>
-												<a href="#">Histórico de Compras</a><br> <a href="home">Sair</a>
+
+													</div>
+												</div>
 											</div>
+										</li>
+									</c:if>
+									<c:if test="${beneficio.idbeneficio==3}">
+										<li>
+											<!-- Single Cool Facts -->
+											<div class="col-12 col-sm-4">
+												<div class="btn single-cool-fact">
+													<div class="scf-text">
+														<i class="glyphicon glyphicon-bed"></i>
+														<p>${beneficio.descricao}
+															<input type="checkbox" value="beneficio.idbeneficio">
+														</p>
+
+
+
+													</div>
+												</div>
+											</div>
+										</li>
+									</c:if>
+									<c:if test="${beneficio.idbeneficio==4}">
+										<li>
+											<!-- Single Cool Facts -->
+											<div class="col-12 col-sm-4">
+												<div class="btn single-cool-fact">
+													<div class="scf-text">
+														<i class="icon-limousine"></i>
+														<p>${beneficio.descricao}
+															<input type="checkbox" value="beneficio.idbeneficio">
+														</p>
+
+
+
+													</div>
+												</div>
+											</div>
+										</li>
+									</c:if>
+									<c:if test="${beneficio.idbeneficio==5}">
+										<li>
+											<!-- Single Cool Facts -->
+											<div class="col-12 col-sm-4">
+												<div class="btn single-cool-fact">
+													<div class="scf-text">
+														<i class="icon-cocktail-1"></i>
+														<p>${beneficio.descricao}
+															<input type="checkbox" value="beneficio.idbeneficio">
+														</p>
+
+
+
+													</div>
+												</div>
+											</div>
+										</li>
+									</c:if>
+									<c:if test="${beneficio.idbeneficio==6}">
+										<li>
+											<!-- Single Cool Facts -->
+											<div class="col-12 col-sm-4">
+												<div class="btn single-cool-fact">
+													<div class="scf-text">
+														<i class="icon-limousine"></i>
+														<p>${beneficio.descricao}
+															<input type="checkbox" value="beneficio.idbeneficio">
+														</p>
+
+
+
+													</div>
+												</div>
+											</div>
+										</li>
+									</c:if>
+									<c:if test="${beneficio.idbeneficio==7}">
+										<li>
+											<!-- Single Cool Facts -->
+											<div class="col-12 col-sm-4">
+												<div class="btn single-cool-fact">
+													<div class="scf-text">
+														<i class="glyphicon glyphicon-cutlery"></i>
+														<p>${beneficio.descricao}
+															<input type="checkbox" value="beneficio.idbeneficio">
+														</p>
+
+
+
+													</div>
+												</div>
+											</div>
+										</li>
+									</c:if>
+								</c:forEach>
+								<li>
+									<!-- Single Cool Facts -->
+									<div class="col-12 col-sm-4">
+										<div class="btn single-cool-fact">
+											<div class="scf-text">
+												<i class="glyphicon glyphicon-user"></i>
+												<p>Usuário</p>
+											</div>
+
+
+											<div class="dropdown">
+												<div id="myDropdown" class="dropdown-content">
+													<a href="#">Alterar Dados</a> <a href="#">Excluir Conta</a>
+													<a href="#">Histórico de Compras</a><br> <a
+														href="<%=request.getContextPath()%>/logout">Sair</a>
+												</div>
+											</div>
+
 										</div>
-
 									</div>
-								</div>
-							</li>
-						</ul>
-
+								</li>
+							</ul>
+						</form>
 
 
 					</div>
@@ -213,59 +237,33 @@
 			</nav>
 		</div>
 	</div>
-	</div>
-	</header>
+</header>
 	<!-- ******************************************************   CORPO     ***************************************************** -->
-<section class="listings">
-	<div class="container" style="margin-top: 6%;">
-		<div class="row">
-			<div class="col-md-3">
-				<div class="row mb-3">
+	<section class="listings">
+		<div class="container" style="margin-top: 6%;">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="row mb-3">
 					<div class="col-md-12">
-						<div class="card" style="background-color: rgb(200, 135, 114); margin-top: 41%;">
+						<div class="card"
+							style="background-color: rgb(200, 135, 114); margin-top: 41%;">
 							<div class="card-body">
 								<div class="row">
-									<div class="col-md-12" >
+									<div class="col-md-12">
 										<h4>Pesquisar por:</h4>
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-md-12">
-										<form>
+										<form action="filter">
 											<div class="form-group">
-												<select class="form-control" id="conditionsselect1">
-													<option>Estado</option>
-													<option>Pernambuco</option>
-													<option>Alagoas</option>
-													<option>Bahia</option>
-												</select>
+												<div class="form-group">
+													<label for="inputNomeHotel">Hotel</label> <input type="text"
+														id="inputNomeHotel" class="form-control" name="nomeHotel"
+														style="width: 100px;" maxlength="15" />
+												</div>
 											</div>
-											<div class="form-group">
-												<select class="form-control" id="conditionsselect2">
-													<option>Cidade</option>
-													<option>Recife</option>
-													<option>Porto de Galinhas</option>
-													<option>Sergipe</option>
-													<option>Ceara</option>
-													<option>Santa Catarina</option>
-												</select>
-											</div>
-
-
-											<div class="form-group">
-												<select class="form-control" id="mileage1">
-													<option>Valores De ate :</option>
-													<option>150$</option>
-													<option>150$-300$</option>
-													<option>300$-600$</option>
-													<option>600$-900$</option>
-													<option>900$-1200$</option>
-													<option>1600$</option>
-												</select>
-											</div>
-
-											<hr>
-											<button type="btn" class="btn btn-primary btn-lg btn-block">Pesquisar</button>
+											<button type="submit" class="btn btn-primary btn-lg btn-block">Pesquisar</button>
 											<div class="pb-3"></div>
 										</form>
 									</div>
@@ -279,101 +277,80 @@
 				</div>
 			</div>
 			<div class="col-md-9">
-				<div class="row" style="background-color: rgb(200, 135, 114);margin-right: 1px; margin-left: 0px;">
-						<div class="row" >
-							<div class="col-md-12" style="text-align: center;margin-left:181px;">
-								<h2>Resultado da pesquisa:</h2>
-								<p>Foram encontrados Estes Hoteis:</p>
-							</div>
+				<div class="row"
+					style="background-color: rgb(200, 135, 114); margin-right: 1px; margin-left: 0px;">
+					<div class="row">
+						<div class="col-md-12"
+							style="text-align: center; margin-left: 181px;">
+							<h2>Resultado da pesquisa:</h2>
+							<p>Foram encontrados Estes Hoteis:</p>
 						</div>
-					
-					
-
-
+					</div>
 				</div>
 				<div class="row">
 
-					<div class="col-md-12">
-						<ul class="nav nav-justified nav-pills">
-							<li class="nav-item"><a class="nav-link active" href="#">Active</a>
-							</li>
-							<li class="nav-item"><a class="nav-link bg-light" href="#">Active</a>
-							</li>
-							<li class="nav-item"><a class="nav-link bg-light" href="#">Active</a>
-							</li>
-							<li class="nav-item"><a class="nav-link bg-light" href="#">Active</a>
-							</li>
-							<li class="nav-item"><a class="nav-link bg-light" href="#">Active</a>
-							</li>
-
-						</ul>
-					</div>
-				</div>
 				<div class="row mb-3">
 
 					<div class="col-md-12" style="margin-top: 17px; margin-left: -1px;">
-					
-					<c:forEach var="hoteis" items="${listaHotel}">
-					
-						<div class="card">
-							<div class="card-body">
-								<div class="row">
-									<div class="col-md-3">
-										<img
-											src="https://dynamic.realestateindia.com/proj_images/project14122/proj_img-14122_1-small.jpg">
-									</div>
-									<div class="col-md-6  card-body">
-										<div class="list-title">
-											<ul class="list-inline list-unstyled">
-												<li class="list-inline-item" ><a href="#"><h4>${hoteis.nomeHotel}</h4></a></li>
-												<li class="list-inline-item text-warning"><i
-													class="fa fa-star"></i><i class="fa fa-star"></i><i
-													class="fa fa-star"></i><i class="fa fa-star"></i><i
-													class="fa fa-star-half"></i></li>
-												<li class="list-inline-item text-success"><i
-													class="fa fa-thumbs-up"></i></li>
-											</ul>
-										</div>
-										<div class="list-location">
-											<a href="#"><i class="fa fa-map-marker"></i><small>
-													${hoteis.endereco}– Shsow on map (4.7 km from center)</small> </a>
-										</div>
-										<div class="list-descrip">
-											<small>${hoteis.descricao} </small> 
-										</div>
 
+						<c:forEach var="hoteis" items="${listaHotel}">
 
-
+							<div class="card">
+								<div class="card-body">
+									<div class="row">
+										<div class="col-md-3">
+											<img
+												src="https://dynamic.realestateindia.com/proj_images/project14122/proj_img-14122_1-small.jpg">
+										</div>
+										<div class="col-md-6  card-body">
+											<div class="list-title">
+												<ul class="list-inline list-unstyled">
+													<li class="list-inline-item"><a href="#"><h4>${hoteis.nomeHotel}</h4></a></li>
+													<li class="list-inline-item text-warning"><i
+														class="fa fa-star"></i><i class="fa fa-star"></i><i
+														class="fa fa-star"></i><i class="fa fa-star"></i><i
+														class="fa fa-star-half"></i></li>
+													<li class="list-inline-item text-success"><i
+														class="fa fa-thumbs-up"></i></li>
+												</ul>
+											</div>
+											<div class="list-location">
+												<a href="#"><i class="fa fa-map-marker"></i><small>
+														${hoteis.endereco}– Shsow on map (4.7 km from center)</small> </a>
+											</div>
+											<div class="list-descrip">
+												<small>${hoteis.descricao} </small>
+											</div>
+											</div>
+											<div class="col-md-3 border-left card-body">
+												<ul class="list-unstyled">
+													<li><h3>Muito Bom</h3></li>
+													<li class="text-secondary"><small>8067 Reviews
+													</small></li>
+												</ul>
+											<a class="btn btn-outline-primary"
+												href="usuarioCompra?id=${hoteis.idhotel}">Comprar</a> &nbsp; &nbsp;
+										</div>
 									</div>
-									<div class="col-md-3 border-left card-body">
-										<ul class="list-unstyled">
-											<li><h3>Muito Bom</h3></li>
-											<li class="text-secondary"><small>8067 Reviews </small></li>
-										</ul>
-											<a class="btn btn-outline-primary" href="usuarioCompra?id=${hoteis.idhotel}">Alterar</a> &nbsp; &nbsp;
-									</div>
-								</div>
+								</div> 	
+							</div>
+						</c:forEach>
+							<div class="col-md-12">
+								<ul class="pagination">
+									<li class="page-item enable"><a class="page-link" href="#">Previous</a></li>
+									<li class="page-item"><a class="page-link" href="#">1</a></li>
+									<li class="page-item"><a class="page-link" href="#">2</a></li>
+									<li class="page-item"><a class="page-link" href="#">3</a></li>
+									<li class="page-item"><a class="page-link" href="#">Next</a></li>
+								</ul>
 							</div>
 						</div>
-						
-						</c:forEach>
-						
-					<div class="col-md-12">
-						<ul class="pagination">
-							<li class="page-item enable"><a class="page-link" href="#">Previous</a></li>
-							<li class="page-item"><a class="page-link" href="#">1</a></li>
-							<li class="page-item"><a class="page-link" href="#">2</a></li>
-							<li class="page-item"><a class="page-link" href="#">3</a></li>
-							<li class="page-item"><a class="page-link" href="#">Next</a></li>
-						</ul>
-					</div>
-				</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	</section>
+</section>
 
 	<!-- ##### Footer Area Start ##### -->
 	<footer> <section class="cta py-5 bg-dark text-white">

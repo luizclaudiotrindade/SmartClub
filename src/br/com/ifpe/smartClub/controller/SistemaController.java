@@ -10,12 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 public class SistemaController {
-	@RequestMapping("home")
-	public String olaMundo() {
-		System.out.println("Iniciando a Pagina inicial");
-		return "home/home";
-	}
-
 	@RequestMapping("/beneficio")
 	public String beneficio() {
 		System.out.println("Iniciando a Pagina de beneficio");

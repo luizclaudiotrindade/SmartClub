@@ -44,8 +44,8 @@ line-heigth:43px;
 				<nav class="classy-navbar justify-content-between" id="palatinNav">
 
 					<!-- Nav brand -->
-					<img
-						src="<%=request.getContextPath()%>/resources/bootstrap/img/core-img/logoooo.png"
+					
+					<img src="<%=request.getContextPath()%>/resources/bootstrap/img/core-img/logoooo.png"
 						style="max-width: 19%" alt="Logo tipo Smart Club">
 
 					<!-- Navbar Toggler -->

@@ -1,8 +1,6 @@
 	<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -36,23 +34,9 @@
 </style>
 </head>
 <body>
-
-
-
 	<!--  navegação -->
-	<c:import url="nav.jsp" />
-
-	
-	
+	<c:import url="nav.jsp" />	
 <h1 class="mt-4 mb-3">Contato</h1>
-      		<ol class="breadcrumb">
-		    	<li class="breadcrumb-item">
-		    		<a href="home">Home</a>
-			    </li>
-			    <li class="breadcrumb-item active">Contatos</li>
-		  	</ol>
-
-	
 	<div class="my-5"></div>
 <!-- Contact -->
 <section class="container">

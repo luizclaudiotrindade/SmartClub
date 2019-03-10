@@ -37,38 +37,56 @@
 .col {
 	padding-top: 10%;
 }
-form{
-text-aling: center;
 
-
+form {
+	text-aling: center;
 }
 </style>
 </head>
 <body>
 	<!--  navegação -->
 	<c:import url="nav.jsp" />
-
 	
-	<form action="save" method="post">
-		<div class="col">
-			
-			<p>
-				<input maxlength="32" type="text" class="form-control"
-					placeholder="Nome" name="nome" required>
-			</p>
-			<input 	maxlength="32" type="text" class="form-control"	placeholder="E-mail" name="email" required><br>
-			<input	maxlength="32" type="password" class="form-control"	placeholder="Senha" name="senha" required><br> 
-			<input	maxlength="9" type="text" class="form-control"placeholder="Telefone" name="telefone" required><br> 
-			<input	maxlength="11" type="text" class="form-control" placeholder="Cpf" name="cpf" required><br> 
-			<input type="submit"class="btn btn-dark" value="cadastrar"> <a	class="btn btn-dark" href="home">Inicio</a>
-
-
+	<section class="breadcumb-area bg-img d-flex align-items-center justify-content-center">
+<div class="container" style="margin-top: 8%;">
+<form action="save" method="post">
+	<div class="row">
+		<div class="col-sm">
+			<table class="table table-striped table-dark">
+				<thead>
+					<tr>
+						<th scope="col"> Seus plano contem:</th>
+					</tr>	
+				</thead>
+				<tbody>
+					<c:forEach items="${listaBeneficio}" var="obj">
+						<tr>
+							<th scope="row">1</th>
+							<th>${obj.descricao}</th>
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>
 		</div>
-		
-	</form>
-	</header>
-	<br>
-	<br>
+		<div class="col-sm">
+			<p>
+					<input maxlength="32" type="text" class="form-control"
+						placeholder="Nome" name="nome" required>
+				</p>
+				<input maxlength="32" type="email" class="form-control" placeholder="E-mail" name="email" required><br> 
+				<input maxlength="32" type="password" class="form-control" placeholder="Senha" name="senha" required><br> 
+				<input maxlength="9" minlength=9 type="text" class="form-control" placeholder="Telefone" name="telefone" required><br> 
+				<input maxlength="11" minlength=11 type="text" class="form-control"placeholder="Cpf" name="cpf" required><br> 
+					<c:forEach items="${listaPlano}" var="obj">
+						<input type="hidden" id="Plano" name="plano" value="${obj.idPlano}">
+					</c:forEach><br> 
+				<input type="submit" class="btn btn-dark" value="cadastrar">
+				<a class="btn btn-dark" href="home">Inicio</a>
+			</div>
+	</div>
+</form>
+</div>
+</section>
 
 	<!-- ##### Footer Area Start ##### -->
 	<footer class="footer-area">

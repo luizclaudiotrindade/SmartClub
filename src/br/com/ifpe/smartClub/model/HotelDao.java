@@ -21,11 +21,12 @@ public class HotelDao {
 	}
 	
 
-	public List<Hotel> listarHotel() {
+	public List<Hotel> listarHotel(Hotel hotel) {
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT);
 		EntityManager manager = factory.createEntityManager();
 		Query query = null;
-		query = manager.createQuery("FROM Hotel ORDER BY idhotel");
+		String nomeHotel = hotel != null ? hotel.getNomeHotel() : "";
+		query = manager.createQuery("FROM Hotel ORDER BY nomeHotel");
 		List<Hotel> lista = query.getResultList();
 		manager.close();
 		factory.close();

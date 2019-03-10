@@ -2,6 +2,8 @@ package br.com.ifpe.smartClub.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,10 +22,13 @@ import br.com.ifpe.smartClub.model.UsuarioDao;
 public class UsuarioController {
 	@RequestMapping("/cadastro")
 	public String cadastro(Model model) {
-		// Codigo para popular o combo de categoria de produto
 		PlanoDao dao = new PlanoDao();
 		List<Plano> listaPlano = dao.listarPlano();
 		model.addAttribute("listaPlano", listaPlano);
+
+		BeneficiosDao daoBeneficio = new BeneficiosDao();
+		List<Beneficios> listaBeneficio = daoBeneficio.listarBeneficio();
+		model.addAttribute("listaBeneficio", listaBeneficio);
 		return "home/cadastro";
 	}
 
@@ -34,13 +39,14 @@ public class UsuarioController {
 		return "usuario/cadastradoSucesso";
 	}
 
-	@RequestMapping("/produto/edit")
+	@RequestMapping("")
 	public String edit(@RequestParam("id") Integer id, Model model) {
 		PlanoDao dao = new PlanoDao();
 		Plano plano = dao.buscarPorId(id);
 		model.addAttribute("plano", plano);
 		return "produto/alterarProduto";
 	}
+
 	@RequestMapping("idUsuario")
 	public String usuario(@RequestParam("id") Integer id, Model model) {
 		UsuarioDao dao = new UsuarioDao();
@@ -52,45 +58,83 @@ public class UsuarioController {
 	@RequestMapping("/autenticar")
 	public String autenticar(Usuario usuario, Model model) {
 		UsuarioDao dao = new UsuarioDao();
+		// verifica a existencia do usuario
 		if (dao.verificarExistencia(usuario) == true) {
 			System.out.println("O usuario foi logado com sucesso!");
+
 			System.out.println("Iniciando a tela usuario");
+			// lista os beneficios do usuario
 			BeneficiosDao daoBeneficio = new BeneficiosDao();
 			List<Beneficios> listaBeneficio = daoBeneficio.listarBeneficio();
 			model.addAttribute("listaBeneficio", listaBeneficio);
-			
+
+			// lista os hoteis cadastrados no banco de dados
 			HotelDao daoHotel = new HotelDao();
-			List<Hotel> listaHotel = daoHotel.listarHotel();
+			List<Hotel> listaHotel = daoHotel.listarHotel(null);
 			model.addAttribute("listaHotel", listaHotel);
+
 			return "usuario/telaUsuario";
 		}
+		model.addAttribute("msg", "Não foi encontrado nenhum usuário com o login e senha informados.");
 		return "forward:home";
 	}
+
+	@RequestMapping("efetuarLogin")
+	public String efetuarLogin(Usuario usuario, HttpSession session, Model model) {
+	UsuarioDao dao = new UsuarioDao();
+	Usuario usuarioLogado = dao.buscarUsuario(usuario);
+	if (usuarioLogado != null) {
+	 session.setAttribute("usuarioLogado", usuarioLogado);
+	 return "/usuario/telaUsuario";
+	}
+	model.addAttribute("msg", "Não foi encontrado um usuário com o login e senha informados.");
+	return "home/home";
+	}
 	
-	@RequestMapping("/usuarioCompra")
-	public String usuarioCompra(@RequestParam("id") Integer id, Model model) {
+	@RequestMapping("logout")
+	public String logout(HttpSession session) {
+	session.invalidate();
+	return "home/home";
+	}
+
+
+	@RequestMapping("filter")
+	public String filtrarHotel(Hotel hotel, Model model) {
+		// lista os beneficios do usuario
 		BeneficiosDao daoBeneficio = new BeneficiosDao();
 		List<Beneficios> listaBeneficio = daoBeneficio.listarBeneficio();
 		model.addAttribute("listaBeneficio", listaBeneficio);
-		
-		HotelDao daoHotel = new HotelDao();
-		List<Hotel> listaHotel = daoHotel.listarHotel();
+
+		HotelDao dao = new HotelDao();
+		List<Hotel> listaHotel = dao.listarHotel(hotel);
 		model.addAttribute("listaHotel", listaHotel);
-		
+		return "usuario/telaUsuario";
+	}
+
+	@RequestMapping("/usuarioCompra")
+	public String usuarioCompra(@RequestParam("id") Integer id, Model model, Hotel hotell) {
+		BeneficiosDao daoBeneficio = new BeneficiosDao();
+		List<Beneficios> listaBeneficio = daoBeneficio.listarBeneficio();
+		model.addAttribute("listaBeneficio", listaBeneficio);
+
+		HotelDao daoHotel = new HotelDao();
+		List<Hotel> listaHotel = daoHotel.listarHotel(hotell);
+		model.addAttribute("listaHotel", listaHotel);
+
 		Hotel hotel = daoHotel.buscarPorId(id);
 		model.addAttribute("hotelId", hotel);
-		
+
 		return "usuario/UsuarioCompra";
 	}
-	
+
 	@RequestMapping("alterarDados")
 	public String alterarDados(Usuario usuario) {
 		return "usuario/alterarDados";
 	}
-	
+
 	@RequestMapping("trocarSenha")
 	public String trocarSenha(Usuario usuario) {
 		return "usuario/trocarSenha";
 	}
-	
+
 }
