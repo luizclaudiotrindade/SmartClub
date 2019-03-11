@@ -213,7 +213,8 @@ padding-left: 6px;
 			<div class="col-12 col-sm-6 col-lg-4">
 				<div class="single-service-area mb-100 wow fadeInUp"
 					data-wow-delay="100ms">
-					<i class="glyphicon glyphicon-user"></i>
+					<img src="<%=request.getContextPath()%>/resources/bootstrap/img/equipe/ellem.jpg"
+						style="max-width: 35%" alt="Imagem do Programador Luiz Claudio">
 					<h4>Ellem Diana</h4>
 					<p>Gerente de vendas do hotel. Seu objetivo: trabalhar para a empresa crescer cada dia mais.<br>
 					Email: ellemdianasilva.1994@gmail.com</p>
@@ -224,7 +225,8 @@ padding-left: 6px;
 			<div class="col-12 col-sm-6 col-lg-4">
 				<div class="single-service-area mb-100 wow fadeInUp"
 					data-wow-delay="200ms">
-					<i class="glyphicon glyphicon-user"></i>
+					<img src="<%=request.getContextPath()%>/resources/bootstrap/img/equipe/luiz.jpg"
+						style="max-width: 35%" alt="Imagem do Programador Luiz Claudio">
 					<h4>Luiz Claudio</h4>
 					<p>Fundador do hotel. Acredita no potencial transformador das novas mídias e nos impactos positivos gerados. <br>
 					Email:luizclaudiotrindadee@gmail.com</p>
@@ -235,7 +237,8 @@ padding-left: 6px;
 			<div class="col-12 col-sm-6 col-lg-4">
 				<div class="single-service-area mb-100 wow fadeInUp"
 					data-wow-delay="300ms">
-					<i class="glyphicon glyphicon-user"></i>
+					<img src="<%=request.getContextPath()%>/resources/bootstrap/img/equipe/gustav.jpg"
+						style="max-width: 35%" alt="Imagem do Programador Luiz Claudio">
 					<h4>Gustavo Macedo</h4>
 					<p>Gerente de Reservas, tem como missão ser um profissional exemplar para ajudar a empresa ser reconhecida nacionalmente e internacionalmente.<br>
 					Email:macedogustavo17@gmail.com</p>

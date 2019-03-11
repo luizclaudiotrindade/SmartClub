@@ -192,7 +192,8 @@
 										<div class="dropdown">
 											<div id="myDropdown" class="dropdown-content">
 												<a href="#">Alterar Dados</a> <a href="#">Excluir Conta</a>
-												<a href="#">Histórico de Compras</a><br> <a href="home">Sair</a>
+												<a href="#">Histórico de Compras</a><br> <a
+														href="<%=request.getContextPath()%>/logout">Sair</a>
 											</div>
 										</div>
 

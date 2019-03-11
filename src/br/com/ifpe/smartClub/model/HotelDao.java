@@ -19,7 +19,6 @@ public class HotelDao {
 		manager.close();
 		factory.close();
 	}
-	
 
 	public List<Hotel> listarHotel(Hotel hotel) {
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT);
@@ -27,17 +26,33 @@ public class HotelDao {
 		Query query = null;
 		String nomeHotel = hotel != null ? hotel.getNomeHotel() : "";
 		if (nomeHotel != null) {
-			 query = manager.createQuery("FROM Hotel WHERE nomeHotel LIKE :paramNomeHotel ORDER BY idHotel");
-			 query.setParameter("paramNomeHotel", "%" + nomeHotel + "%");
-			}else {
-				query = manager.createQuery("FROM Hotel ORDER BY nomeHotel");
-			}
+			query = manager.createQuery("FROM Hotel WHERE nomeHotel LIKE :paramNomeHotel ORDER BY idHotel");
+			query.setParameter("paramNomeHotel", "%" + nomeHotel + "%");
+		} else {
+			query = manager.createQuery("FROM Hotel ORDER BY nomeHotel");
+		}
 		List<Hotel> lista = query.getResultList();
 		manager.close();
 		factory.close();
 		return lista;
 	}
-	
+
+	public Hotel buscarHotel(Hotel hotel) {
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT);
+		EntityManager manager = factory.createEntityManager();
+		Query query = manager.createQuery("FROM Hotel WHERE email LIKE :paramEmail AND senha LIKE :paramSenha");
+		query.setParameter("paramEmail", hotel.getEmail());
+		query.setParameter("paramSenha", hotel.getSenha());
+		List<Hotel> registros = query.getResultList();
+		Hotel obj = null;
+		if (!registros.isEmpty()) {
+			obj = (Hotel) registros.get(0);
+		}
+		manager.close();
+		factory.close();
+		return obj;
+	}
+
 	public Hotel buscarPorId(int id) {
 		Hotel obj = null;
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT);
