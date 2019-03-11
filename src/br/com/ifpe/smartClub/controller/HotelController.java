@@ -24,7 +24,7 @@ public class HotelController {
 
 	}
 
-	@RequestMapping("cadastroHotel")
+	@RequestMapping("cadastroQuarto")
 	public String cadastroQuarto() {
 		return "hotel/cadastroQuarto";
 	}
