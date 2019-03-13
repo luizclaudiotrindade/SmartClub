@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
@@ -19,117 +19,98 @@
 	href="<%=request.getContextPath()%>/resources/bootstrap/style.css" />
 <link rel="stylesheet" type="text/css"
 	href="<%=request.getContextPath()%>/resources/bootstrap/login.css" />
+	<link rel="stylesheet" type="text/css"
+	href="<%=request.getContextPath()%>/resources/bootstrap/cadastro.css" />
+	
+<link rel="stylesheet" type="text/css"
+	href="<%=request.getContextPath()%>/resources/bootstrap/cadastro.css" />
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Cadastro</title>
 <style>
-.breadcumb-area {
-	position: relative;
-	z-index: 10;
-	width: 100%;
-	height: auto;
-}
-
-.table {
-	width: 20%;
-}
-
 .col {
-	padding-top: 10%;
+    padding-top: 3%;
+    margin-top: 13px;
+}
+body{
+color : #cb8670;
+width: 1110px;
+margin: 0 auto;
+background-size: 1900px 1400px;
+}
+h2{
+color: #ffffff;
+    line-height: 0.3;
+    font-weight: 500;
+}
+h1{
+	margin-bottom: -37px;	
+    color: #ffffff;
+    line-height: 6.3;
+    font-weight: 400;
 }
 
-form {
-	text-aling: center;
+form{
+border: solid;
+
 }
 </style>
 </head>
 <body>
-	<!--  navegação -->
+		<!--  navegaÃ§Ã£o -->
 	<c:import url="nav.jsp" />
+
 	
-	<section class="breadcumb-area bg-img d-flex align-items-center justify-content-center">
-<div class="container" style="margin-top: 8%;">
-<form action="save" method="post">
-	<div class="row">
-		<div class="col-sm">
-			<table class="table table-striped table-dark">
-				<thead>
-					<tr>
-						<th scope="col"> Seus plano contem:</th>
-					</tr>	
-				</thead>
-				<tbody>
-					<c:forEach items="${listaBeneficio}" var="obj">
-						<tr>
-							<th scope="row">1</th>
-							<th>${obj.descricao}</th>
-						</tr>
-					</c:forEach>
-				</tbody>
-			</table>
+
+
+	<h1>Cadastre-se</h1>
+	<form action="save" method="post" >
+		<div class="col">
+			<h2>Preencha o formulÃ¡rio</h2><br><br>
+				
+		<label>Nome Completo</label>	<input maxlength="32" type="text" class="form-control"	placeholder="Nome" name="nome" required><br>		
+		<label>Email</label>	<input maxlength="32" type="email" class="form-control"	placeholder="E-mail" name="email" required><br> 
+		<label>Senha</label>	<input maxlength="32" type="password" class="form-control"placeholder="Senha" name="senha" required><br> 
+		<label>Telefone</label>	<input maxlength="9" minlength=9 type="text" class="form-control"placeholder="Telefone" name="telefone" required><br>
+		<label>CPF</label>	<input maxlength="11" minlength=11 type="text" class="form-control"	placeholder="Cpf" name="cpf" required><br> 
+			<label for="Plano">Seu Plano</label> <br/><select id="Plano"	name="plano">
+				<c:forEach items="${listaPlano}" var="obj">
+					<option value="${obj.idPlano}">${obj.descricao}</option>
+				</c:forEach>
+			</select><br> <br><br><input type="submit" class="btn btn-dark" value="cadastrar">
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<a class="btn btn-dark" href="home">Inicio</a>
+
+
 		</div>
-		<div class="col-sm">
-			<p>
-					<input maxlength="32" type="text" class="form-control"
-						placeholder="Nome" name="nome" required>
-				</p>
-				<input maxlength="32" type="email" class="form-control" placeholder="E-mail" name="email" required><br> 
-				<input maxlength="32" type="password" class="form-control" placeholder="Senha" name="senha" required><br> 
-				<input maxlength="9" minlength=9 type="text" class="form-control" placeholder="Telefone" name="telefone" required><br> 
-				<input maxlength="11" minlength=11 type="text" class="form-control"placeholder="Cpf" name="cpf" required><br> 
-					<c:forEach items="${listaPlano}" var="obj">
-						<input type="hidden" id="Plano" name="plano" value="${obj.idPlano}">
-					</c:forEach><br> 
-				<input type="submit" class="btn btn-dark" value="cadastrar">
-				<a class="btn btn-dark" href="home">Inicio</a>
-			</div>
-	</div>
-</form>
-</div>
-</section>
+
+	</form>
+				 
+			
+		
+	</header>
+	<br>
+	<br>
 
 	<!-- ##### Footer Area Start ##### -->
-	<footer class="footer-area">
+	<footer> <section class="cta py-5 bg-dark text-white" style="    margin-left: -300px;
+    margin-right: -288px; margin-top: 11%">
 	<div class="container">
-		<div class="row">
-
-			<!-- Footer Widget Area -->
-			<div class="col-12 col-lg-5">
-				<div class="footer-widget-area mt-50">
-					<a href="#" class="d-block mb-5"><img
-						src="img/core-img/logo.png" alt=""></a>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla
-						dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.
-					</p>
-				</div>
+		<div class="row text-center">
+			<div class="col-md-12">
+				<a href="home" style="color: #ffffff"> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					Copyright &copy;<script>
+						document.write(new Date().getFullYear());
+					</script>Todos os Direitos Reservados | SmartClub Company.
+				</a>
 			</div>
-
-			<!-- Footer Widget Area -->
-			<div class="col-12 col-md-6 col-lg-4">
-				<div class="footer-widget-area mt-50">
-					<h6 class="widget-title mb-5">Find us on the map</h6>
-					<img src="img/bg-img/footer-map.png" alt="">
-				</div>
-			</div>
+		</div>
+	</div>
+	</section> <!-- Footer Widget Area --> <!-- Copywrite Text --> </footer>
 
 			<!-- Footer Widget Area -->
 			<!-- Copywrite Text -->
-			<div class="col-12">
-				<div class="copywrite-text mt-30">
-					<p>
-						<a href="#"> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-							Copyright &copy;<script>
-								document.write(new Date().getFullYear());
-							</script> All rights reserved | This template is made with <i
-							class="fa fa-heart-o" aria-hidden="true"></i> by <a
-							href="https://colorlib.com" target="_blank">Colorlib</a> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	</footer>
+			
 	<!-- Modal -->
 	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
 		aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -138,14 +119,14 @@ form {
 				style="background-color: rgba(0, 0, 0, 0.5) !important;">
 				<div class="card" style="width: 498px">
 					<div class="card-header">
-						<!--  aqui está a parte do header do moldal de login  -->
+						<!--  aqui estÃ¡ a parte do header do moldal de login  -->
 						<button type="button" class="close" style="color: #b3b3b3"
 							data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
 					</div>
 					<!--  fim do header -->
-					<!--  aqui está todo o corpo -->
+					<!--  aqui estÃ¡ todo o corpo -->
 					<div class="card-body">
 						<form action="autenticar" method="post">
 							<div class="input-group form-group">
@@ -175,7 +156,7 @@ form {
 					<!--  inicio do footer -->
 					<div class="card-footer">
 						<div class="d-flex justify-content-center links" style="">
-							Ainda não é cadastrado?<a href="beneficio">Cadastre-se</a>
+							Ainda nÃ£o Ã© cadastrado?<a href="beneficio">Cadastre-se</a>
 						</div>
 						<div class="d-flex justify-content-center">
 							<a style="color: white;" href="#">Recuperar Conta?</a>

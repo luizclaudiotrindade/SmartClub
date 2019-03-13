@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+.breadcumb-area {
+	position: relative;
+	z-index: 10;
+	width: 100%;
+	height: auto;
+}
+
+.table {
+	width: 20%;
+}
+
+.col {
+    padding-top: 3%;
+    margin-top: 13px;
+}
+
+body{
+	
+	background-image:
+		url("https://businessblog.trivago.com/wp-content/uploads/2019/01/vita-vilcina-3217-unsplash-guest-expectation-feature.jpg");
+	
+}
+form {
+	/* Apenas para centralizar o form na página */
+	margin: 0 auto;
+	width: 600px;
+
+	
+	/* Para ver as bordas do formulário */
+	
+	
+}
+h1{
+	
+	color: #ffffff;
+    line-height: 6.3;
+    font-weight: 400;
+}
+
+h2{
+	
+	color: #ffffff;
+    line-height: 0.3;
+    font-weight: 500;
+}
