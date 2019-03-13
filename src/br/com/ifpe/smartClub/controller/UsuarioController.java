@@ -36,14 +36,15 @@ public class UsuarioController {
 	}
 
 	@RequestMapping("save")
-	public String save(Usuario usuario) {
+	public String save(Usuario usuario,Plano plano) {
 		usuario.setSenha(Criptografia.criptografar(usuario.getSenha()));
 		UsuarioDao dao = new UsuarioDao();
+
 		dao.salvar(usuario);
 		return "usuario/cadastradoSucesso";
 	}
 
-	//Autenticação
+	//Autenticaï¿½ï¿½o
 	@RequestMapping("")
 	public String edit(@RequestParam("id") Integer id, Model model) {
 		PlanoDao dao = new PlanoDao();
@@ -78,7 +79,7 @@ public class UsuarioController {
 
 			return "/usuario/telaUsuario";
 		}
-		model.addAttribute("msg", "Não foi encontrado um usuário com o login e senha informados.");
+		model.addAttribute("msg", "Nï¿½o foi encontrado um usuï¿½rio com o login e senha informados.");
 		return "home/home";
 	}
 

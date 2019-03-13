@@ -27,7 +27,7 @@ public class HotelController {
 		return "usuario/cadastradoSucesso";	
 
 	}
-	// trecho responsável pelo login hotel e autenticação 
+	// trecho responsï¿½vel pelo login hotel e autenticaï¿½ï¿½o 
 	@RequestMapping("loginHotel")
 	public String logarHotel() {
 		return "hotel/login";
@@ -42,7 +42,7 @@ public class HotelController {
 			session.setAttribute("hotelLogado", hotelLogado);
 			return "/hotel/telaHotel";
 		}
-		model.addAttribute("msg", "Não foi encontrado nenhum usuário com o login e senha informados.");
+		model.addAttribute("msg", "Nï¿½o foi encontrado nenhum usuï¿½rio com o login e senha informados.");
 		return "hotel/login";
 	}
 	
@@ -59,10 +59,20 @@ public class HotelController {
 		return "hotel/cadastroQuarto";
 	}
 	@RequestMapping("salvarQuarto")
-	public String saveQuarto(Quarto quarto, Model model) {
+	public String saveQuarto(Quarto quarto, Model model, HttpSession session) {
+		Hotel hotel = (Hotel)session.getAttribute("hotelLogado");
 		QuartoDao dao = new QuartoDao();
+		quarto.setHotel(hotel);
 		dao.salvar(quarto);
 		return "hotel/cadastroQuarto";
 	}
 
+	@RequestMapping("teste")
+	public String teste(Quarto quarto){
+
+		QuartoDao dao = new QuartoDao();
+		//quarto.setHotel(hotel);
+		dao.salvar(quarto);
+		return "hotel/cadastroQuarto";
+	}
 }

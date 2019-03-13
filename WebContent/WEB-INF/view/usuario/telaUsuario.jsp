@@ -39,8 +39,7 @@
 }
 
 body {
- background-image: url('https://images5.alphacoders.com/372/372649.jpg');
-
+	background-image: url('https://images5.alphacoders.com/372/372649.jpg');
 }
 </style>
 </head>
@@ -48,13 +47,6 @@ body {
 
 	<c:import url="navUsuario.jsp" />
 
-
-	<!-- Preloader -->
-	<div class="preloader d-flex align-items-center justify-content-center">
-		<div class="cssload-container">
-			<div class="cssload-loading"></div>
-		</div>
-	</div>
 
 	<!-- ##### Header Area Start ##### -->
 	<header class="header-area"> <!-- Navbar Area -->
@@ -245,123 +237,145 @@ body {
 			</nav>
 		</div>
 	</div>
-</header>
-	<!-- ******************************************************   CORPO     ***************************************************** -->
-	<section class="listings">
-		<div class="container" style="margin-top: 6%;">
-			<div class="row">
-				<div class="col-md-3">
-					<div class="row mb-3">
-					<div class="col-md-12">
-						<div class="card"
-							style="background-color: rgb(200, 135, 114); margin-top: 41%;">
-							<div class="card-body">
-								<div class="row">
-									<div class="col-md-12">
-										<h4>Pesquisar por:</h4>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-12">
-										<form action="filter">
-											<div class="form-group">
-												<div class="form-group">
-													<label for="inputNomeHotel">Hotel</label> <input type="text"
-														id="inputNomeHotel" class="form-control" name="nomeHotel"
-														style="width: 100px;" maxlength="15" />
-												</div>
-											</div>
-											<button type="submit" class="btn btn-primary btn-lg btn-block">Pesquisar</button>
-											<div class="pb-3"></div>
-										</form>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row ">
-					<div class="col-md-12"></div>
-				</div>
+	</header>
+</head>
+<body>
+
+	<div class="preloader d-flex align-items-center justify-content-center">
+		<div class="cssload-container">
+			<div class="cssload-loading">
+				<i></i><i></i><i></i><i></i>
 			</div>
-			<div class="col-md-9">
-				<div class="row"
-					style="background-color: rgb(200, 135, 114); margin-right: 1px; margin-left: 0px;">
-					<div class="row">
-						<div class="col-md-12"
-							style="text-align: center; margin-left: 181px;">
-							<h2>Resultado da pesquisa:</h2>
-							<p>Foram encontrados Estes Hoteis:</p>
-						</div>
-					</div>
-				</div>
-				<div class="row">
+		</div>
+	</div>
 
-				<div class="row mb-3">
 
-					<div class="col-md-12" style="margin-top: 17px; margin-left: -1px;">
 
-						<c:forEach var="hoteis" items="${listaHotel}">
 
-							<div class="card">
-								<div class="card-body">
-									<div class="row">
-										<div class="col-md-3">
-											<img
-												src="https://dynamic.realestateindia.com/proj_images/project14122/proj_img-14122_1-small.jpg">
-										</div>
-										<div class="col-md-6  card-body">
-											<div class="list-title">
-												<ul class="list-inline list-unstyled">
-													<li class="list-inline-item"><a href="#"><h4>${hoteis.nomeHotel}</h4></a></li>
-													<li class="list-inline-item text-warning"><i
-														class="fa fa-star"></i><i class="fa fa-star"></i><i
-														class="fa fa-star"></i><i class="fa fa-star"></i><i
-														class="fa fa-star-half"></i></li>
-													<li class="list-inline-item text-success"><i
-														class="fa fa-thumbs-up"></i></li>
-												</ul>
-											</div>
-											<div class="list-location">
-												<a href="#"><i class="fa fa-map-marker"></i><small>
-														${hoteis.endereco}– Shsow on map (4.7 km from center)</small> </a>
-											</div>
-											<div class="list-descrip">
-												<small>${hoteis.descricao} </small>
-											</div>
-											</div>
-											<div class="col-md-3 border-left card-body">
-												<ul class="list-unstyled">
-													<li><h3>Muito Bom</h3></li>
-													<li class="text-secondary"><small>8067 Reviews
-													</small></li>
-												</ul>
-											<a class="btn btn-outline-primary"
-												href="usuarioCompra?id=${hoteis.idhotel}">Comprar</a> &nbsp; &nbsp;
-										</div>
-									</div>
-								</div> 	
+	<section
+		class="breadcumb-area bg-img d-flex align-items-center justify-content-center"
+		style="background-image: url(https://images5.alphacoders.com/372/372649.jpg);">
+	<div class="bradcumbContent">
+		<h2>Hoteis</h2>
+	</div>
+	</section>
+
+
+	<div class="book-now-area">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-12 col-lg-10">
+					<div class="book-now-form">
+						<form action="filter">
+<!--
+							<div class="form-group">
+							  
+								<label for="select1">Check In</label> <select
+									class="form-control" id="select1">
+									<option>19 June</option>
+									<option>20 June</option>
+									<option>21 June</option>
+									<option>22 June</option>
+									<option>23 June</option>
+									<option>24 June</option>
+									<option>25 June</option>
+								</select>
 							</div>
-						</c:forEach>
-							<div class="col-md-12">
-								<ul class="pagination">
-									<li class="page-item enable"><a class="page-link" href="#">Previous</a></li>
-									<li class="page-item"><a class="page-link" href="#">1</a></li>
-									<li class="page-item"><a class="page-link" href="#">2</a></li>
-									<li class="page-item"><a class="page-link" href="#">3</a></li>
-									<li class="page-item"><a class="page-link" href="#">Next</a></li>
-								</ul>
+
+							<div class="form-group">
+								<label for="select2">Check Out</label> <select
+									class="form-control" id="select2">
+									<option>20 June</option>
+									<option>21 June</option>
+									<option>22 June</option>
+									<option>23 June</option>
+									<option>24 June</option>
+									<option>25 June</option>
+									<option>26 June</option>
+									<option>27 June</option>
+								</select>
 							</div>
-						</div>
+
+							<div class="form-group">
+								<label for="select3">Adults</label> <select class="form-control"
+									id="select3">
+									<option>02</option>
+									<option>03</option>
+									<option>04</option>
+									<option>05</option>
+									<option>06</option>
+								</select>
+							</div>
+-->
+							<div class="form-group">
+								<label for="select4">Buscar Hotel</label> 
+								<label for="inputNomeHotel">Hotel</label> <input type="text"id="inputNomeHotel" class="form-control" name="nomeHotel"style="width: 100px;" maxlength="15" />
+								
+							</div>
+
+							<button type="submit">Book Now</button>
+						</form>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</section>
 
-	<!-- ##### Footer Area Start ##### -->
-	<footer> <section class="cta py-5 bg-dark text-white">
+
+	<section class="rooms-area section-padding-0-100">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-12 col-lg-6">
+				<div class="section-heading text-center">
+					<div class="line-"></div>
+					<h2>Lista  de Hoteis</h2>
+					<p>Aqui estão alguns Hoteis</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+		
+		<c:forEach items="${listaHotel}" var="obj">	
+			<div class="col-12 col-md-6 col-lg-4">
+				<div class="single-rooms-area wow fadeInUp" data-wow-delay="100ms">
+
+					<div class="bg-thumbnail bg-img"
+						style="background-image: url(https://www.hotelpremiumcampinas.com.br/wp-content/uploads/2017/10/banner1.jpg);"></div>
+
+					<p class="price-from">  - Valor: $150/Diaria</p>
+
+					<div class="rooms-text">
+						<div class="line"></div>
+						<h4>${obj.nomeHotel}</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							Donec malesuada lorem maximus mauris sceleri sque.</p>
+					</div>
+
+					<a href="usuarioCompra?id=${hoteis.idhotel}" class="book-room-btn btn palatin-btn">Comprar Quarto</a>
+				</div>
+			</div>
+			</c:forEach>
+
+			
+			<div class="col-12">
+
+				<div class="pagination-area wow fadeInUp" data-wow-delay="400ms">
+					<nav>
+					<ul class="pagination">
+						<li class="page-item active"><a class="page-link" href="#">01.</a></li>
+						<li class="page-item"><a class="page-link" href="#">02.</a></li>
+						<li class="page-item"><a class="page-link" href="#">03.</a></li>
+					</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+	</section>
+
+
+	<footer> <section class="cta py-5 bg-dark text-white" style="    margin-left: -121px;
+    margin-right: -119px; margin-top: 2%">
 	<div class="container">
 		<div class="row text-center">
 			<div class="col-md-12">
@@ -373,7 +387,7 @@ body {
 			</div>
 		</div>
 	</div>
-	</section> <!-- Footer Widget Area --> <!-- Copywrite Text --> </footer>
+	</section> <!-- Footer Widget Area --> <!-- Copywrite Text --> </footer>	
 
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"></script>
@@ -388,7 +402,7 @@ body {
 
 
 
-	<!-- ******************************************************  FIM DO CORPO     ***************************************************** -->
+	<!-- ******  FIM DO CORPO     ******* -->
 
 
 

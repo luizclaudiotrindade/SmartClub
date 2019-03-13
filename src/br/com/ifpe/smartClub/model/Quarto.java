@@ -3,12 +3,16 @@ package br.com.ifpe.smartClub.model;
 import java.util.Date;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "quartos")
 public class Quarto {
 
 	@Id
@@ -16,14 +20,13 @@ public class Quarto {
 	private int idQuartos;
 	@JoinColumn(name = "id_hotel_quartos")
 	@ManyToOne
-	@Column(name = "id_hotel_quartos")
-	private int idHotelQuarto;
+	private Hotel hotel;
 	@Column(name = "nome_quarto")
 	private String nomeQuarto;
 	@Column
 	private String descricao;
 	@Column
-	private Date disponivel;
+	private String disponivel;
 	@Column
 	private int acomoda;
 	@Column
@@ -37,12 +40,13 @@ public class Quarto {
 		this.idQuartos = idQuartos;
 	}
 
-	public int getIdHotelQuarto() {
-		return idHotelQuarto;
+
+	public Hotel getHotel() {
+		return hotel;
 	}
 
-	public void setIdHotelQuarto(int idHotelQuarto) {
-		this.idHotelQuarto = idHotelQuarto;
+	public void setHotel(Hotel hotel) {
+		this.hotel = hotel;
 	}
 
 	public String getNomeQuarto() {
@@ -61,11 +65,11 @@ public class Quarto {
 		this.descricao = descricao;
 	}
 
-	public Date getDisponivel() {
+	public String getDisponivel() {
 		return disponivel;
 	}
 
-	public void setDisponivel(Date disponivel) {
+	public void setDisponivel(String disponivel) {
 		this.disponivel = disponivel;
 	}
 
