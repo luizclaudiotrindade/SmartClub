@@ -20,6 +20,9 @@
     background: black !important;
     color: white !important;
 }
+dropdown{
+background-color: rgba(203, 134, 112, 0.65);	
+}
 .btn palatin-btn{
 line-heigth:43px;
 }
@@ -55,6 +58,7 @@ line-heigth:43px;
 
 					<!-- Menu -->
 					<div class="classy-menu">
+					
 
 						<!-- close btn -->
 						<div class="classycloseIcon">
@@ -64,11 +68,7 @@ line-heigth:43px;
 						</div>
 
 						<!-- Nav Start -->
-						<div class="classynav">
-							<ul>
-								<li><a href="home">Home</a></li>
-								<li><a href="QuemSomos">Quem Somos</a></li>
-								<li><a href="contato">Contato</a></li>
+						
 								<!-- mega menu desativado  e services desativados
                                     <li><a href="#">Pages</a>
                                         <ul class="dropdown">
@@ -123,18 +123,31 @@ line-heigth:43px;
                                         </div>
                                     </li>
                                     -->
-								
-								<li class=""><a href="beneficio">Beneficios</a></li>
-								<li><a href="beneficio">Cadastre-se</a></li>
-								<li><a href="#altocontraste" id="altocontraste" accesskey="3" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()"><svg-icon><src href="sprite.svg#si-glyph-contrast" /></svg-icon></a></li>
+                                    
+                                    <!-- Dropdown-->
+                                   	<div class="classynav">
+                                    <ul>
+                                    <li>
+									<!-- Single Cool Facts -->
+									<div class="col-12 col-sm-4">
+										<div class="btn single-cool-fact">
+											<div class="scf-text">
+												<i class="glyphicon glyphicon-user"></i>
+												<p>Usuario</p>
+											</div>
+											<div class="dropdown" style="background-color: rgba(203, 134, 112, 0.65);">
+												<div id="myDropdown" class="dropdown-content">
+													<a href="alterarDados">Alterar Dados</a> 
+													<a href="#">Excluir Conta</a>
+													<a href="#">Histórico de Compras</a> 
+													<a href="<%=request.getContextPath()%>/logout">Sair</a>
+												</div>
+											</div>
 
+										</div>
+									</div>
+								</li>
 							</ul>
-
-							<!-- Button -->
-							<div class="menu-btn">
-								<button type="button" class="btn palatin-btn"
-									data-toggle="modal" data-target="#exampleModal">Login</button>
-							</div>
 						</div>
 
 						<!-- Nav End -->

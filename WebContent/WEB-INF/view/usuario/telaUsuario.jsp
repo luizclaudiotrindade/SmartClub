@@ -37,9 +37,17 @@
 .pb-5, .py-5 {
 	padding-bottom: 8rem !important;
 }
+
+body {
+ background-image: url('https://images5.alphacoders.com/372/372649.jpg');
+
+}
 </style>
 </head>
 <body>
+
+	<c:import url="navUsuario.jsp" />
+
 
 	<!-- Preloader -->
 	<div class="preloader d-flex align-items-center justify-content-center">
