@@ -128,10 +128,4 @@ public class UsuarioController {
 	public String trocarSenha(Usuario usuario) {
 		return "usuario/trocarSenha";
 	}
-	
-	@RequestMapping("telaAdm")
-	public String telaAdm(Usuario usuario) {
-		return "usuario/telaAdm";
-	}
-	
 }
