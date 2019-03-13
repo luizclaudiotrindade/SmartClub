@@ -52,7 +52,7 @@ public class HotelDao {
 		factory.close();
 		return obj;
 	}
-
+	
 	public Hotel buscarPorId(int id) {
 		Hotel obj = null;
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT);

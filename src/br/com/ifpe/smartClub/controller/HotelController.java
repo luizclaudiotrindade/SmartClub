@@ -15,6 +15,7 @@ import br.com.ifpe.smartClub.util.Criptografia;
 @Controller
 public class HotelController {
 
+	// cadastro do hotel
 	@RequestMapping("cadastroHotel")
 	public String cadastroHotel() {
 		return "hotel/cadastroHotel";
@@ -24,33 +25,40 @@ public class HotelController {
 		hotel.setSenha(Criptografia.criptografar(hotel.getSenha()));
 		HotelDao dao = new HotelDao();
 		dao.salvar(hotel);
-		return "usuario/cadastradoSucesso";
+		return "usuario/cadastradoSucesso";	
 
 	}
+	// trecho responsável pelo login hotel e autenticação 
+	@RequestMapping("loginHotel")
+	public String logarHotel() {
+		return "hotel/login";
+	}
+	
 	@RequestMapping("efetuarLoginHotel")
 	public String efetuarLogin(Hotel hotel, HttpSession session, Model model) {
 		hotel.setSenha(Criptografia.criptografar(hotel.getSenha()));
 		HotelDao dao = new HotelDao();
 		Hotel hotelLogado = dao.buscarHotel(hotel);
 		if (hotelLogado != null) {
-			session.setAttribute("usuarioLogado", hotelLogado);
+			session.setAttribute("hotelLogado", hotelLogado);
 			return "/hotel/telaHotel";
 		}
-		model.addAttribute("msg", "Não foi encontrado um usuário com o login e senha informados.");
+		model.addAttribute("msg", "Não foi encontrado nenhum usuário com o login e senha informados.");
 		return "hotel/login";
 	}
-
-	@RequestMapping("cadastroQuarto")
-	public String cadastroQuarto() {
-		return "hotel/login";
+	
+	@RequestMapping("logoutHotel")
+	public String logout(HttpSession session) {
+		session.invalidate();
+		return "redirect:/loginHotel";
 	}
 
-	@RequestMapping("salvarQuarto")
-	public String save(Quarto quarto) {
-		QuartoDao dao = new QuartoDao();
-		dao.salvar(quarto);
-		return "usuario/cadastradoSucesso";
-
+	
+	//requestes de quartos
+	@RequestMapping("cadastrarQuarto")
+	public String cadastroQuarto( HttpSession session , Model model) {
+		Hotel hotel = (Hotel)session.getAttribute("hotelLogado");
+		return "hotel/cadastroQuarto";
 	}
 
 }

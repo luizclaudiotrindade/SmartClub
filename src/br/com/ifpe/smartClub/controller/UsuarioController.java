@@ -21,6 +21,7 @@ import br.com.ifpe.smartClub.util.Criptografia;
 
 @Controller
 public class UsuarioController {
+	//cadastroUsuario
 	@RequestMapping("/cadastro")
 	public String cadastro(Model model) {
 		
@@ -42,6 +43,7 @@ public class UsuarioController {
 		return "usuario/cadastradoSucesso";
 	}
 
+	//Autenticação
 	@RequestMapping("")
 	public String edit(@RequestParam("id") Integer id, Model model) {
 		PlanoDao dao = new PlanoDao();
@@ -85,7 +87,8 @@ public class UsuarioController {
 		session.invalidate();
 		return "redirect:/";
 	}
-
+	
+	//Trecho de codigo para buscar hoteis.
 	@RequestMapping("filter")
 	public String filtrarHotel(Hotel hotel, Model model) {
 		// lista os beneficios do usuario
@@ -98,7 +101,8 @@ public class UsuarioController {
 		model.addAttribute("listaHotel", listaHotel);
 		return "usuario/telaUsuario";
 	}
-
+	
+	// Compra de Usuario.
 	@RequestMapping("/usuarioCompra")
 	public String usuarioCompra(@RequestParam("id") Integer id, Model model, Hotel hotell) {
 		BeneficiosDao daoBeneficio = new BeneficiosDao();

@@ -66,6 +66,12 @@ body {
 	background-image:
 		url("https://irp-cdn.multiscreensite.com/cf0e971b/dms3rep/multi/desktop/slideshow-capas+_1920x1080pxl-3.jpg");
 }
+td{
+		background-color:#0a0a0a96;
+	}
+	label{
+		color:white;
+	}
 
 </style>
 </head>
@@ -85,14 +91,6 @@ body {
 			</div>
 		</div>
 	</div>
-	<style>
-	td{
-		background-color:#0a0a0a96;
-	}
-	label{
-		color:white;
-	}
-	</style>
 	<section class="listings">
 		<div class="container">
 			<form action="salvarHotel">
@@ -102,14 +100,12 @@ body {
 					<td colspan="1">
 						<fieldset>
 							<div class="form-group">
-								<label style="" class="col-md-4 control-label">Nome
-									do Hotel</label>
+								<label style="" class="col-md-4 control-label">Nome do Hotel</label>
 								<div class="col-md-8 inputGroupContainer">
 									<div class="input-group">
-										<span class="input-group-addon"><i
-											class="glyphicon glyphicon-user"></i></span> <input 
+										<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> <input 
 											name="nomeHotel" placeholder="Digite o nome  do Hotel"
-											class="form-control" required="true" value="" type="text">
+											class="form-control" required="true" value="" type="text" maxlength="32" minlength=5>
 									</div>
 								</div>
 							</div>
@@ -121,7 +117,7 @@ body {
 										<span class="input-group-addon"><i
 											class="glyphicon glyphicon-home"></i></span><input name="email"
 											placeholder="Email do hotel" class="form-control"
-											required="true" value="" type="text">
+											required="true" value="" type="email" maxlength="45" minlength=11 >
 									</div>
 								</div>
 							</div>
@@ -135,7 +131,7 @@ body {
 										<textarea name="descricao" id="fullName"
 											placeholder="Uma breve Descrição do Hotel informando alguns detalhes"
 											class="form-control" required="true" value=""
-											type="text-area"></textarea>
+											type="text-area" maxlength="200" minlength=1 ></textarea>
 									</div>
 								</div>
 							</div>
@@ -146,7 +142,7 @@ body {
 										<span class="input-group-addon"><i
 											class="glyphicon glyphicon-home"></i></span><input name="cnpj"
 											placeholder="Por favor informe seu CNPJ" class="form-control"
-											required="true" value="" type="text">
+											required="true" value="" type="text" maxlength="14" minlength=14 >
 									</div>
 								</div>
 							</div>
@@ -156,8 +152,8 @@ body {
 									<div class="input-group">
 										<span class="input-group-addon"><i
 											class="glyphicon glyphicon-home"></i></span><input name="cpf"
-											placeholder="Digite uma Senha de acesso"
-											class="form-control" required="true" value="" type="text">
+											placeholder="Digite uma Senha de acesso" maxlength="11"
+											class="form-control" required="true" value="" type="text" minlength=11>
 									</div>
 								</div>
 							</div>
@@ -173,7 +169,7 @@ body {
 										<span class="input-group-addon"><i
 											class="glyphicon glyphicon-user"></i></span><input name="endereco"
 											placeholder="Informe Seu Endereço" class="form-control"
-											required="true" value="" type="text">
+											required="true" value="" type="text" maxlength="60" minlength=11  >
 									</div>
 								</div>
 							</div>
@@ -184,7 +180,7 @@ body {
 										<span class="input-group-addon"><i
 											class="glyphicon glyphicon-user"></i></span><input name="bairro"
 											placeholder="Informe sueu bairro" class="form-control"
-											required="true" value="" type="text">
+											required="true" value="" type="text" maxlength="32" minlength=5  >
 									</div>
 								</div>
 							</div>
@@ -195,7 +191,7 @@ body {
 										<span class="input-group-addon"><i
 											class="glyphicon glyphicon-user"></i></span><input name="cidade"
 											placeholder="Informe sua Cidade" class="form-control"
-											required="true" value="" type="text">
+											required="true" value="" type="text" maxlength="32" minlength=5 >
 									</div>
 								</div>
 							</div>
@@ -207,7 +203,7 @@ body {
 										<span class="input-group-addon"><i
 											class="glyphicon glyphicon-user"></i></span><input name="nomeUsuario"
 											placeholder="Informe sua Cidade" class="form-control"
-											required="true" value="" type="text">
+											required="true" value="" type="text" maxlength="45" minlength=10 >
 									</div>
 								</div>
 							</div>
@@ -220,7 +216,7 @@ body {
 										<span class="input-group-addon"><i
 											class="glyphicon glyphicon-home"></i></span><input name="senha"
 											placeholder="Digite uma Senha de acesso"
-											class="form-control" required="true" value="" type="password">
+											class="form-control" required="true" value="" type="password" maxlength="45" minlength=8 >
 									</div>
 								</div>
 							</div>

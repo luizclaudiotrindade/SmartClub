@@ -66,7 +66,7 @@ line-heigth:43px;
 						<!-- Nav Start -->
 						<div class="classynav">
 							<ul>
-								<li><a href="home">Home</a></li>
+								<li><a href="/smartClub/">Home</a></li>
 								<li><a href="QuemSomos">Quem Somos</a></li>
 								<li><a href="contato">Contato</a></li>
 								<!-- mega menu desativado  e services desativados
@@ -125,17 +125,19 @@ line-heigth:43px;
                                     -->
 								
 								<li class=""><a href="beneficio">Beneficios</a></li>
-								<li><a href="beneficio">Cadastre-se</a></li>
+								<!--  Desabilitado Temporáriamente!!!
+								<li><a href="cadastroHotel">Cadastre-se</a></li>
+								 -->
 								<li><a href="#altocontraste" id="altocontraste" accesskey="3" onclick="window.toggleContrast()" onkeydown="window.toggleContrast()"><svg-icon><src href="sprite.svg#si-glyph-contrast" /></svg-icon></a></li>
-
 							</ul>
 
-							<!-- Button -->
+							<!-- Button 
 							<div class="menu-btn">
 								<button type="button" class="btn palatin-btn"
 									data-toggle="modal" data-target="#exampleModal">Login</button>
 							</div>
 						</div>
+						-->
 
 						<!-- Nav End -->
 					</div>

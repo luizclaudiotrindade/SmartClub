@@ -108,7 +108,7 @@ body {
 
         </div>
         <div class="card-body">
-            <form action="" method="post">
+            <form action="efetuarLoginHotel" method="post">
                 <div class="input-group form-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fas fa-user"></i></span>
@@ -120,11 +120,14 @@ body {
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="fas fa-key"></i></span>
                     </div>
-                    <input type="password" name="password" class="form-control" placeholder="Password">
+                    <input type="password" name="senha" class="form-control" placeholder="Password">
                 </div>
 
                 <div class="form-group">
                     <input type="submit" name="btn" value="Login" class="btn btn-outline-danger float-right login_btn">
+                </div>
+                <div clas="form-group">
+                	<h4 style="color:red;">${msg}</h4>
                 </div>
 
             </form>
