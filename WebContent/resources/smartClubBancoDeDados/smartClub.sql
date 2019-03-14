@@ -28,203 +28,17 @@ CREATE SCHEMA IF NOT EXISTS `smartClub` DEFAULT CHARACTER SET utf8 ;
 USE `smartClub` ;
 
 -- -----------------------------------------------------
--- Table `smartClub`.`usuario`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `smartClub`.`usuario` (
-  `idusuario` INT NOT NULL AUTO_INCREMENT,
-  `nome` VARCHAR(32) NOT NULL,
-  `email` VARCHAR(32) NOT NULL,
-  `senha` VARCHAR(32) NOT NULL,
-  `telefone` VARCHAR(9) NOT NULL,
-  `cpf` VARCHAR(11) NOT NULL,
-  PRIMARY KEY (`idusuario`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `smartClub`.`plano`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `smartClub`.`plano` (
-  `idPlano` INT NOT NULL AUTO_INCREMENT,
-  `descricao` VARCHAR(90) NULL,
-  PRIMARY KEY (`idPlano`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `smartClub`.`usuario_plano`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `smartClub`.`usuario_plano` (
-  `idusuario_plano` INT NOT NULL AUTO_INCREMENT,
-  `id_usuario_usuario_plano` INT NOT NULL,
-  `id_plano_usuario_plano` INT NOT NULL,
-  PRIMARY KEY (`idusuario_plano`),
-  INDEX `fk_idusuario_idx` (`id_usuario_usuario_plano` ASC),
-  INDEX `fk_idplano_idx` (`id_plano_usuario_plano` ASC),
-  CONSTRAINT `fk_idusuario`
-    FOREIGN KEY (`id_usuario_usuario_plano`)
-    REFERENCES `smartClub`.`usuario` (`idusuario`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_idplano`
-    FOREIGN KEY (`id_plano_usuario_plano`)
-    REFERENCES `smartClub`.`plano` (`idplano`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `smartClub`.`beneficio`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `smartClub`.`beneficio` (
-  `idbeneficio` INT NOT NULL AUTO_INCREMENT,
-  `descricao` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`idbeneficio`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `smartClub`.`hotel`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `smartClub`.`hotel` (
-  `idhotel` INT NOT NULL AUTO_INCREMENT,
-  `nome_hotel` VARCHAR(32) NOT NULL,
-  `email` VARCHAR(45) NOT NULL,
-  `senha` VARCHAR(45) NOT NULL,
-  `descricao` VARCHAR(200) NOT NULL,
-  `cnpj` VARCHAR(14) NOT NULL,
-  `endereco` VARCHAR(60) NOT NULL,
-  `bairro` VARCHAR(32) NOT NULL,
-  `cidade` VARCHAR(32) NOT NULL,
-  `nome_usuario` VARCHAR(45) NOT NULL,
-  `cpf` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`idhotel`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `smartClub`.`quartos`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `smartClub`.`quartos` (
-  `idquartos` INT NOT NULL AUTO_INCREMENT,
-  `id_hotel_quartos` INT NOT NULL,
-  `nome_quarto` VARCHAR(32) NOT NULL,
-  `descricao` VARCHAR(100) NOT NULL,
-  `acomoda` INT NOT NULL,
-  PRIMARY KEY (`idquartos`),
-  INDEX `fk_idhotel_idx` (`id_hotel_quartos` ASC),
-  CONSTRAINT `fk_idhotel`
-    FOREIGN KEY (`id_hotel_quartos`)
-    REFERENCES `smartClub`.`hotel` (`idhotel`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `smartClub`.`plano`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `smartClub`.`plano` (
-  `idPlano` INT NOT NULL AUTO_INCREMENT,
-  `descricao` VARCHAR(90) NULL,
-  PRIMARY KEY (`idPlano`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `smartClub`.`compra`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `smartClub`.`compra` (
-  `idcompra` INT NOT NULL,
-  `id_usuario_compra` INT NOT NULL,
-  `data` DATE NOT NULL,
-  `plano_idPlano` INT NOT NULL,
-  PRIMARY KEY (`idcompra`),
-  INDEX `fk_usuario_compra_idx` (`id_usuario_compra` ASC),
-  INDEX `fk_compra_plano1_idx` (`plano_idPlano` ASC),
-  CONSTRAINT `fk_usuario_compra`
-    FOREIGN KEY (`id_usuario_compra`)
-    REFERENCES `smartClub`.`usuario` (`idusuario`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_compra_plano1`
-    FOREIGN KEY (`plano_idPlano`)
-    REFERENCES `smartClub`.`plano` (`idPlano`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `smartClub`.`imagem_quarto`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `smartClub`.`imagem_quarto` (
-  `imagem_quarto` INT NOT NULL,
-  `id_quartos_imagem_quarto` INT NOT NULL,
-  `url_imagem` VARCHAR(70) NOT NULL,
-  PRIMARY KEY (`imagem_quarto`),
-  INDEX `fk_quartos_imagem_quarto_idx` (`id_quartos_imagem_quarto` ASC),
-  CONSTRAINT `fk_quartos_imagem_quarto`
-    FOREIGN KEY (`id_quartos_imagem_quarto`)
-    REFERENCES `smartClub`.`quartos` (`idquartos`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `smartClub`.`imagem_hotel`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `smartClub`.`imagem_hotel` (
-  `idimagem_hotel` INT NOT NULL,
-  `id_hotel_imagem_hotel` INT NOT NULL,
-  `url_imagem` VARCHAR(70) NOT NULL,
-  PRIMARY KEY (`idimagem_hotel`),
-  INDEX `fk_id_hotel_imagem_hotel_idx` (`id_hotel_imagem_hotel` ASC),
-  CONSTRAINT `fk_id_hotel_imagem_hotel`
-    FOREIGN KEY (`id_hotel_imagem_hotel`)
-    REFERENCES `smartClub`.`hotel` (`idhotel`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `smartClub`.`plano_beneficio`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `smartClub`.`plano_beneficio` (
-  `idPlanoBeneficio` INT NOT NULL,
-  `beneficio_idbeneficio` INT NOT NULL,
-  `plano_idPlano` INT NOT NULL,
-  `utilizado` INT NULL,
-  PRIMARY KEY (`idPlanoBeneficio`),
-  INDEX `fk_plano_beneficio_beneficio1_idx` (`beneficio_idbeneficio` ASC),
-  INDEX `fk_plano_beneficio_plano1_idx` (`plano_idPlano` ASC),
-  CONSTRAINT `fk_plano_beneficio_beneficio1`
-    FOREIGN KEY (`beneficio_idbeneficio`)
-    REFERENCES `smartClub`.`beneficio` (`idbeneficio`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_plano_beneficio_plano1`
-    FOREIGN KEY (`plano_idPlano`)
-    REFERENCES `smartClub`.`plano` (`idPlano`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
 -- Table `smartClub`.`reserva`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `smartClub`.`reserva` (
+  `idreserva` INT NOT NULL AUTO_INCREMENT,
   `usuario_idusuario` INT NOT NULL,
   `quartos_idquartos` INT NOT NULL,
-  `quantidade_quartos` INT NULL,
-  `data_Inicio_reserva` DATE NULL,
-  `data_termino_reserva` DATE NULL,
+  `quantidade_quartos` INT NOT NULL,
+  `data_Inicio_reserva` DATE NOT NULL,
+  `data_termino_reserva` DATE NOT NULL,
   `valor` FLOAT NULL,
-  PRIMARY KEY (`usuario_idusuario`, `quartos_idquartos`),
+  PRIMARY KEY (`idreserva`),
   INDEX `fk_usuario_has_quartos_quartos1_idx` (`quartos_idquartos` ASC),
   INDEX `fk_usuario_has_quartos_usuario1_idx` (`usuario_idusuario` ASC),
   CONSTRAINT `fk_usuario_has_quartos_usuario1`
@@ -349,7 +163,7 @@ ENGINE = InnoDB;
 -- Table `smartClub`.`usuario_beneficio`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `smartClub`.`usuario_beneficio` (
-  `idusuario_beneficio` INT NOT NULL,
+  `idusuario_beneficio` INT NOT NULL AUTO_INCREMENT,
   `id_usuario_usuario_beneficio` INT NOT NULL,
   `id_beneficio_usuario_beneficio` INT NOT NULL,
   `utilizado` INT(1) NOT NULL,
@@ -373,28 +187,21 @@ ENGINE = InnoDB;
 -- Table `smartClub`.`compra`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `smartClub`.`compra` (
-  `idcompra` INT NOT NULL,
+  `idcompra` INT NOT NULL AUTO_INCREMENT,
   `id_usuario_compra` INT NOT NULL,
   `data` DATE NOT NULL,
-  `id_usuario_beneficio_compra` INT NOT NULL,
-  `id_quartos_compra` INT NOT NULL,
+  `id_plano_compra` INT NOT NULL,
   PRIMARY KEY (`idcompra`),
   INDEX `fk_usuario_compra_idx` (`id_usuario_compra` ASC),
-  INDEX `fk_usuario_beneficio_compra_idx` (`id_usuario_beneficio_compra` ASC),
-  INDEX `fk_quartos_compra_idx` (`id_quartos_compra` ASC),
+  INDEX `fk_id_plano_compra_idx` (`id_plano_compra` ASC),
   CONSTRAINT `fk_usuario_compra`
     FOREIGN KEY (`id_usuario_compra`)
     REFERENCES `smartClub`.`usuario` (`idusuario`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_usuario_beneficio_compra`
-    FOREIGN KEY (`id_usuario_beneficio_compra`)
-    REFERENCES `smartClub`.`usuario_beneficio` (`idusuario_beneficio`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_quartos_compra`
-    FOREIGN KEY (`id_quartos_compra`)
-    REFERENCES `smartClub`.`quartos` (`idquartos`)
+  CONSTRAINT `fk_id_plano_compra`
+    FOREIGN KEY (`id_plano_compra`)
+    REFERENCES `smartClub`.`plano` (`idPlano`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -404,7 +211,7 @@ ENGINE = InnoDB;
 -- Table `smartClub`.`imagem_quarto`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `smartClub`.`imagem_quarto` (
-  `imagem_quarto` INT NOT NULL,
+  `imagem_quarto` INT NOT NULL AUTO_INCREMENT,
   `id_quartos_imagem_quarto` INT NOT NULL,
   `url_imagem` VARCHAR(70) NOT NULL,
   PRIMARY KEY (`imagem_quarto`),
@@ -421,7 +228,7 @@ ENGINE = InnoDB;
 -- Table `smartClub`.`imagem_hotel`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `smartClub`.`imagem_hotel` (
-  `idimagem_hotel` INT NOT NULL,
+  `idimagem_hotel` INT NOT NULL AUTO_INCREMENT,
   `id_hotel_imagem_hotel` INT NOT NULL,
   `url_imagem` VARCHAR(70) NOT NULL,
   PRIMARY KEY (`idimagem_hotel`),
@@ -438,7 +245,7 @@ ENGINE = InnoDB;
 -- Table `smartClub`.`plano_beneficio`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `smartClub`.`plano_beneficio` (
-  `idplano` INT NOT NULL,
+  `idplano` INT NOT NULL AUTO_INCREMENT AUTO_INCREMENT,
   `beneficio_idbeneficio` INT NOT NULL,
   `plano_idPlano` INT NOT NULL,
   `quantidadeUso` INT NOT NULL,
@@ -466,5 +273,11 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 insert into hotel (nome_hotel, email, senha, descricao, cnpj, endereco, bairro, cidade, nome_usuario, cpf)
 values('Hotel Atlântico', 'hotelatlantico@gmail.com', '123456', 'Hotel 5 estrelas', 'av. 13 de maio', 'ne12356', 'Jardim Brasil', 'Olinda', 'Luiz', '45678095677');
 
-insert into beneficio (descricao) values ('Todas as refeições: café, almoço e jantar');
+insert into beneficio (descricao) values ('Diaria+1');
+insert into beneficio (descricao) values ('Diaria+1');
+insert into beneficio (descricao) values ('Quarto Triplo');
+insert into beneficio (descricao) values ('Estacionamento');
+insert into beneficio (descricao) values ('Open Bar');
+insert into beneficio (descricao) values ('Translado');
+insert into beneficio (descricao) values ('Refeicoes');
 
