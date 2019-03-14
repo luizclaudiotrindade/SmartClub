@@ -63,6 +63,9 @@ padding-left: 6px;
     visibility: hidden;
     padding: 10px 0;
 }
+.bg-dark {
+    background-color: #000000 !important;
+}
 
 </style>
 </head>

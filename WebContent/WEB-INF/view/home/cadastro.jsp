@@ -21,9 +21,6 @@
 	href="<%=request.getContextPath()%>/resources/bootstrap/login.css" />
 	<link rel="stylesheet" type="text/css"
 	href="<%=request.getContextPath()%>/resources/bootstrap/cadastro.css" />
-	
-<link rel="stylesheet" type="text/css"
-	href="<%=request.getContextPath()%>/resources/bootstrap/cadastro.css" />
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Cadastro</title>
@@ -54,6 +51,10 @@ form{
 border: solid;
 
 }
+.bg-dark {
+    background-color: #000000 !important;
+}
+
 </style>
 </head>
 <body>

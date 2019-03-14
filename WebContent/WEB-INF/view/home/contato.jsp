@@ -25,6 +25,8 @@
 <link rel="stylesheet" type="text/css"
 	href="<%=request.getContextPath()%>/resources/bootstrap/contato.css" />	
 
+
+
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Contato</title>
 
