@@ -27,6 +27,8 @@
 	integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
 	crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script type="text/javascript"
+	src="<%=request.getContextPath()%>/resources/bootstrap/js/bootstrap/autoContraste.js"></script>
 	
 
 <title>Smart-Club</title>
@@ -36,10 +38,12 @@
 	.contrast aside, .contrast article {
 	background: black !important;
 	color: white !important;
-}
+	}
+	
+.bg-dark {
+    background-color: #000000 !important;
+}	
 </style>
-<script type="text/javascript"
-	src="<%=request.getContextPath()%>/resources/bootstrap/js/bootstrap/autoContraste.js"></script>
 
 </head>
 <body>
@@ -273,18 +277,13 @@
 		</div>
 	</div>
 	</section>
-
-	<!-- ##### Footer Area Start ##### -->
-	<footer class="footer-area">
-	<div class="container">
-		<div class="row">
-
+	
 	<!-- ##### Footer Area Start ##### -->
 	<footer> <section class="cta py-5 bg-dark text-white">
 	<div class="container">
 		<div class="row text-center">
 			<div class="col-md-12">
-				<a href="#" style="color: #fff"> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				<a href="/smartClub/" style="color: #fff"> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 					Copyright &copy;<script>
 						document.write(new Date().getFullYear());
 					</script>Todos os Direitos Reservados | SmartClub Company.

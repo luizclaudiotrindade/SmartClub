@@ -21,9 +21,6 @@
 	href="<%=request.getContextPath()%>/resources/bootstrap/login.css" />
 	<link rel="stylesheet" type="text/css"
 	href="<%=request.getContextPath()%>/resources/bootstrap/cadastro.css" />
-	
-<link rel="stylesheet" type="text/css"
-	href="<%=request.getContextPath()%>/resources/bootstrap/cadastro.css" />
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Cadastro</title>
@@ -54,6 +51,10 @@ form{
 border: solid;
 
 }
+.bg-dark {
+    background-color: #000000 !important;
+}
+
 </style>
 </head>
 <body>
@@ -98,7 +99,7 @@ border: solid;
 	<div class="container">
 		<div class="row text-center">
 			<div class="col-md-12">
-				<a href="home" style="color: #ffffff"> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				<a href="/smartClub/" style="color: #ffffff"> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 					Copyright &copy;<script>
 						document.write(new Date().getFullYear());
 					</script>Todos os Direitos Reservados | SmartClub Company.

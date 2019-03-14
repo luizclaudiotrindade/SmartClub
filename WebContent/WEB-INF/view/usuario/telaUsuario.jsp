@@ -41,6 +41,9 @@
 body {
 	background-image: url('https://images5.alphacoders.com/372/372649.jpg');
 }
+.bg-dark{
+background-color: #000000!important;
+}
 </style>
 </head>
 <body>
