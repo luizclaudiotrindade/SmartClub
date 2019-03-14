@@ -1,8 +1,6 @@
 package br.com.ifpe.smartClub.model;
 
-import java.time.Instant;
 import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,7 +11,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 @Entity
 @Table(name = "compra")
-
 public class Compra {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,7 +20,7 @@ public class Compra {
 	@ManyToOne
 	private Usuario usuario;
 
-	@JoinColumn(name = "plano_idplano")
+	@JoinColumn(name = "id_plano_compra")
 	@ManyToOne
 	private Plano plano;
 	

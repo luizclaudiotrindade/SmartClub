@@ -27,15 +27,13 @@
 	href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
 	integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
 	crossorigin="anonymous">
-	<style>
-		body{ background-image: url('https://images5.alphacoders.com/372/372649.jpg');}
-	</style>
+
 </head>
 
 <body>
-<c:import url="nav.jsp" />
+	<c:import url="nav.jsp" />
 
-	
+
 	<!-- ##### Header Area End ##### -->
 
 	<!-- ##### Login Area ##### -->
@@ -44,17 +42,94 @@
 
 
 	<!-- ##### Breadcumb Area Start ##### -->
-	<section
-		class="breadcumb-area bg-img d-flex align-items-center justify-content-center">
-		
-		<div class="bradcumbContent">
-			
-			<h2>Smart Club</h2>
-			<h4 style="color:red;">${msg}</h4>
-		</div>
+	<section class="hero-area">
+		<div class="hero-slides owl-carousel">
 
+			<div
+				class="single-hero-slide d-flex align-items-center justify-content-center">
+
+				<div class="slide-img bg-img">
+					<img
+						src="<%=request.getContextPath()%>/resources/bootstrap/img/bg-img/bg-1.jpg">
+				</div>
+
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-12 col-lg-9">
+
+							<div class="hero-slides-content" data-animation="fadeInUp"
+								data-delay="100ms">
+								<div class="line" data-animation="fadeInUp" data-delay="300ms"></div>
+								<h2 data-animation="fadeInUp" data-delay="500ms">SmartClub</h2>
+								<p data-animation="fadeInUp" data-delay="700ms">Seja bem
+									vindo a plataforma de compra de diarias , que foi criada
+									pensando no seu conforto, visando tornar seus dias mais felizes
+									e gratificantes.</p>
+								<h5 data-animation="fadeInUp" data-delay="700ms"
+									style="color: red; background-color: white;">${msg}</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div
+				class="single-hero-slide d-flex align-items-center justify-content-center">
+
+				<div class="slide-img bg-img">
+					<img
+						src="<%=request.getContextPath()%>/resources/bootstrap/img/bg-img/bg-2.jpg">
+				</div>
+
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-12 col-lg-9">
+
+							<div class="hero-slides-content" data-animation="fadeInUp"
+								data-delay="100ms">
+								<div class="line" data-animation="fadeInUp" data-delay="300ms"></div>
+								<h2 data-animation="fadeInUp" data-delay="500ms">Um Lugar
+									Para Se Lembrar</h2>
+								<h5 data-animation="fadeInUp" data-delay="700ms"
+									style="color: red; background-color: white;">${msg}</h5>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div
+				class="single-hero-slide d-flex align-items-center justify-content-center">
+
+				<div class="slide-img bg-img">
+					<img
+						src="<%=request.getContextPath()%>/resources/bootstrap/img/bg-img/bg-3.jpg">
+				</div>
+
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-12 col-lg-9">
+
+							<div class="hero-slides-content" data-animation="fadeInUp"
+								data-delay="100ms">
+								<div class="line" data-animation="fadeInUp" data-delay="300ms"></div>
+								<h2 data-animation="fadeInUp" data-delay="500ms">Aproveite
+									sua Vida</h2>
+								<p data-animation="fadeInUp" data-delay="700ms">Aproveite o
+									máximo de si, pois é tudo o que existe em você.</p>
+								<h5 data-animation="fadeInUp" data-delay="700ms"
+									style="color: red; background-color: white;">${msg}</h5>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
-	
+
+
 	<!-- Modal -->
 	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
 		aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -64,13 +139,13 @@
 				<div class="card" style="width: 498px">
 					<div class="card-header">
 						<!--  aqui está a parte do header do moldal de login  -->
-						<button type="button" class="close" style="color:#b3b3b3" data-dismiss="modal"
-							aria-label="Close">
+						<button type="button" class="close" style="color: #b3b3b3"
+							data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
 					</div>
 					<!--  fim do header -->
-						<!--  aqui está todo o corpo -->
+					<!--  aqui está todo o corpo -->
 					<div class="card-body">
 						<form action="efetuarLogin" method="post">
 							<div class="input-group form-group">
@@ -91,7 +166,8 @@
 								<input type="submit" value="Login"
 									class="btn float-right login_btn">
 							</div>
-							<input type="checkbox" value="lembrar-me"><p style="color:white">Lembrar-me?</p>
+							<input type="checkbox" value="lembrar-me">
+							<p style="color: white">Lembrar-me?</p>
 						</form>
 
 					</div>
@@ -110,27 +186,26 @@
 			</div>
 		</div>
 
-		
 
-	<script type="text/javascript"
-		src="<%=request.getContextPath()%>/resources/bootstrap/js/jquery/jquery-2.2.4.min.js"></script>
 
-	<!-- Popper js -->
-	<script type="text/javascript"
-		src="<%=request.getContextPath()%>/resources/bootstrap/js/bootstrap/popper.min.js"></script>
+		<script type="text/javascript"
+			src="<%=request.getContextPath()%>/resources/bootstrap/js/jquery/jquery-2.2.4.min.js"></script>
 
-	<!-- Bootstrap js -->
-	<script type="text/javascript"
-		src="<%=request.getContextPath()%>/resources/bootstrap/js/bootstrap/bootstrap.min.js"></script>
-	<!-- All Plugins js -->
-	<script type="text/javascript"
-		src="<%=request.getContextPath()%>/resources/bootstrap/js/plugins/plugins.js"></script>
-	<!-- Active js -->
-	<script type="text/javascript"
-		src="<%=request.getContextPath()%>/resources/bootstrap/js/active.js"></script>
-<script type="text/javascript"
+		<!-- Popper js -->
+		<script type="text/javascript"
+			src="<%=request.getContextPath()%>/resources/bootstrap/js/bootstrap/popper.min.js"></script>
+
+		<!-- Bootstrap js -->
+		<script type="text/javascript"
+			src="<%=request.getContextPath()%>/resources/bootstrap/js/bootstrap/bootstrap.min.js"></script>
+		<!-- All Plugins js -->
+		<script type="text/javascript"
+			src="<%=request.getContextPath()%>/resources/bootstrap/js/plugins/plugins.js"></script>
+		<!-- Active js -->
+		<script type="text/javascript"
+			src="<%=request.getContextPath()%>/resources/bootstrap/js/active.js"></script>
+		<script type="text/javascript"
 			src="<%=request.getContextPath()%>/resources/bootstrap/js/bootstrap/autoContraste.js"></script>
-	
 </body>
 
 </html>

@@ -20,6 +20,10 @@ public class Plano {
 		return idPlano;
 	}
 
+	public void setIdPlano(int idPlano) {
+		this.idPlano = idPlano;
+	}
+
 	public String getDescricao() {
 		return descricao;
 	}
@@ -28,8 +32,5 @@ public class Plano {
 		this.descricao = descricao;
 	}
 
-	public void setIdPlano(int idPlano) {
-		this.idPlano = idPlano;
-	}
 
 }

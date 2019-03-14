@@ -1,11 +1,15 @@
 package br.com.ifpe.smartClub.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import br.com.ifpe.smartClub.model.Beneficios;
+import br.com.ifpe.smartClub.model.BeneficiosDao;
 import br.com.ifpe.smartClub.model.Hotel;
 import br.com.ifpe.smartClub.model.HotelDao;
 import br.com.ifpe.smartClub.model.Quarto;
@@ -40,9 +44,10 @@ public class HotelController {
 		Hotel hotelLogado = dao.buscarHotel(hotel);
 		if (hotelLogado != null) {
 			session.setAttribute("hotelLogado", hotelLogado);
+			
 			return "/hotel/telaHotel";
 		}
-		model.addAttribute("msg", "Nï¿½o foi encontrado nenhum usuï¿½rio com o login e senha informados.");
+		model.addAttribute("msg", "Não foi possivel encontrar um usuario e senha informados.");
 		return "hotel/login";
 	}
 	
@@ -63,15 +68,7 @@ public class HotelController {
 		Hotel hotel = (Hotel)session.getAttribute("hotelLogado");
 		QuartoDao dao = new QuartoDao();
 		quarto.setHotel(hotel);
-		dao.salvar(quarto);
-		return "hotel/cadastroQuarto";
-	}
-
-	@RequestMapping("teste")
-	public String teste(Quarto quarto){
-
-		QuartoDao dao = new QuartoDao();
-		//quarto.setHotel(hotel);
+		hotel.setIdhotel(hotel.getIdhotel());
 		dao.salvar(quarto);
 		return "hotel/cadastroQuarto";
 	}

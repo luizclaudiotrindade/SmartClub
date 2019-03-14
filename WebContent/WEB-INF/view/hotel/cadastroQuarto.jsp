@@ -38,7 +38,7 @@ body {
 						</h3>
 					</div>
 					<div class="panel-body">
-						<form action="/smartClub/teste" method="get">
+						<form action="salvarQuarto" method="get">
 							<div class="row">
 								<div class="col-xs-6 col-sm-6 col-md-6">
 									<div class="form-group">
@@ -47,7 +47,7 @@ body {
 								</div>
 								<div class="col-xs-6 col-sm-6 col-md-6">
 									<div class="form-group">
-										<textarea name="descricao" id="last_name" class="form-control input-sm" placeholder="Descricao"></textarea>
+										<textarea name="descricao" id="last_name" class="form-control input-sm" maxlength="100" placeholder="Descricao"></textarea>
 									</div>
 								</div>
 							</div>
@@ -69,6 +69,12 @@ body {
 									</div>
 								</div>
 							</div>
+							<div class="row">
+								<div class="col-xs-6 col-sm-6 col-md-6">
+									<div class="form-group">
+										<input type="text" name="valor" id="password" class="form-control input-sm" placeholder="Valor do Quarto">
+									</div>
+								</div>
 							<input type="submit" value="Register" class="btn btn-info btn-block">
 						</form>
 

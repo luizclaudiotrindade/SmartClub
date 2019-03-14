@@ -31,6 +31,17 @@ public class Quarto {
 	private int acomoda;
 	@Column
 	private String quantidade;
+	@Column
+	private String valor;
+	
+
+	public String getValor() {
+		return valor;
+	}
+
+	public void setValor(String valor) {
+		this.valor = valor;
+	}
 
 	public int getIdQuartos() {
 		return idQuartos;

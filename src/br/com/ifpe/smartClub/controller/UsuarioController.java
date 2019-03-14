@@ -15,6 +15,8 @@ import br.com.ifpe.smartClub.model.Hotel;
 import br.com.ifpe.smartClub.model.HotelDao;
 import br.com.ifpe.smartClub.model.Plano;
 import br.com.ifpe.smartClub.model.PlanoDao;
+import br.com.ifpe.smartClub.model.Quarto;
+import br.com.ifpe.smartClub.model.QuartoDao;
 import br.com.ifpe.smartClub.model.Usuario;
 import br.com.ifpe.smartClub.model.UsuarioDao;
 import br.com.ifpe.smartClub.util.Criptografia;
@@ -79,7 +81,7 @@ public class UsuarioController {
 
 			return "/usuario/telaUsuario";
 		}
-		model.addAttribute("msg", "Nï¿½o foi encontrado um usuï¿½rio com o login e senha informados.");
+		model.addAttribute("msg", "Não foi encontrado nenhum usuario com o login e senha informados.");
 		return "home/home";
 	}
 
@@ -116,6 +118,10 @@ public class UsuarioController {
 
 		Hotel hotel = daoHotel.buscarPorId(id);
 		model.addAttribute("hotelId", hotel);
+
+		QuartoDao daoQuarto = new QuartoDao();
+		List<Quarto> listaQuarto = daoQuarto.listarQuarto();
+		model.addAttribute("listaQuarto", listaQuarto);
 
 		return "usuario/UsuarioCompra";
 	}

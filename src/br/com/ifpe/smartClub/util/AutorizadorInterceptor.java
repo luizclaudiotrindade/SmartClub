@@ -17,10 +17,10 @@ public class AutorizadorInterceptor extends HandlerInterceptorAdapter {
 		if (uri.contains("bootstrap") || uri.contains("css") || uri.contains("img") || uri.contains("js")
 				|| uri.endsWith("/smartClub") || uri.endsWith("efetuarLogin") || uri.endsWith("cadastro")
 				|| uri.endsWith("/smartClub/QuemSomos") || uri.endsWith("/smartClub/beneficio")
-				|| uri.endsWith("/smartClub/contato") || uri.endsWith("/smartClub/efetuarLoginHotel") || uri.endsWith("/smartClub/loginHotel") || uri.endsWith("/smartClub/save")|| uri.endsWith("/smartClub/cadastroHotel")|| uri.endsWith("/smartClub/salvarHotel")) {
+				|| uri.endsWith("/smartClub/contato") || uri.endsWith("/smartClub/saveCompraa") || uri.endsWith("/smartClub/efetuarLoginHotel") || uri.endsWith("/smartClub/loginHotel") || uri.endsWith("/smartClub/save")|| uri.endsWith("/smartClub/cadastroHotel")|| uri.endsWith("/smartClub/salvarHotel")) {
 			return true;
 		}
-
+		
 	if(request.getSession().getAttribute("usuarioLogado")!=null)
 
 	{
