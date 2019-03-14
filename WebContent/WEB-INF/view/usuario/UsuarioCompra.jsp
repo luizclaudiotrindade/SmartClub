@@ -241,40 +241,49 @@ h1{
 
 	</header>
 	
-	<form action="update" method="post">
-		<input type="hidden" name="id" value="${hotelId.idhotel}">
-	<h1>Compras de Diária</h1>
-	<h2 style="text-align: center;">${hotelId.nomeHotel}</h2>
-	
-	<div class="container">
-	<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img  style="height: 179px;
-    max-width: 27%; margin-left: 379px;"  class="d-block w-100" src="https://dynamic.realestateindia.com/proj_images/project14122/proj_img-14122_1-small.jpg"
- alt="Second slide">
-    </div>
-    <div class="carousel-item">
-    
-      <img  style="height: 179px;
-    max-width: 27%; margin-left: 379px;" class="d-block w-100" src="https://dynamic.realestateindia.com/proj_images/project14122/proj_img-14122_1-small.jpg"
- alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img  style="height: 179px;
-    max-width: 27%; margin-left: 379px;"  class="d-block w-100" src="https://dynamic.realestateindia.com/proj_images/project14122/proj_img-14122_1-small.jpg"
- alt="Second slide">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span style="background-color: #c0846a;" class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a  class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span style="background-color: #c0846a;" class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+	<section class="about-us-area">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-12 col-lg-6">
+<div class="about-text text-center mb-100">
+<div class="section-heading text-center">
+<div class="line-"></div>
+<h2>Nome do Hotel</h2>
 </div>
+<p> Descricao do Hotel Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
+<div class="about-key-text">
+<h6><span class="fa fa-check"></span> Donec malesuada lorem maximus mauris sceleri</h6>
+<h6><span class="fa fa-check"></span> Malesuada lorem maximus mauris sceleri</h6>
+</div>
+<a href="#" class="btn palatin-btn mt-50">Read More</a>
+</div>
+</div>
+<div class="col-12 col-lg-6">
+<div class="about-thumbnail homepage mb-100">
+
+<div class="first-img wow fadeInUp" data-wow-delay="100ms">
+<img src="<%=request.getContextPath()%>/resources/bootstrap/img/imgHotel/copacabana.jpg"
+						 alt="Imagem do Hotel">
+</div>
+
+<div class="second-img wow fadeInUp" data-wow-delay="300ms">
+<img src="<%=request.getContextPath()%>/resources/bootstrap/img/imgHotel/copacabana2.jpg"
+						 alt="Imagem do Hotel">
+</div>
+
+<div class="third-img wow fadeInUp" data-wow-delay="500ms">
+<img src="<%=request.getContextPath()%>/resources/bootstrap/img/imgHotel/copacabana3.jpg"
+						 alt="Imagem do Hotel">
+</div>
+</div>
+</div>
+</div>
+</div>
+
+	
+    
+     
+   
 
 
 			
@@ -405,41 +414,7 @@ h1{
   <!--/.Slides-->
 
 </div>
-
-<!--/.Carousel Wrapper-->
-<div style="text-align:center ; margin-left: 240px;">
-	<p>${hotelId.descricao }</p>
-	</div>
-
-	<div id="bar">
-		<label>Quantidade de Quartos</label><input type="number"
-			name="quantidadeQuartos" min="1" max="10">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<label>Quantidade de Pessoas</label><input type="number"
-			name="quantidadePessoas" min="1" max="10">
-	</div><br><br><br>
-
-
-	<p><strong>tabela do banco</strong></p>
-
-	
-	</div>
-	
-	<!-- ##### Footer Area Start ##### -->
-	<footer> <section class="cta py-5 bg-dark text-white" style="    margin-left: -121px;
-    margin-right: -119px; margin-top: 11%; margin-bottom: -44px;">
-	<div class="container">
-		<div class="row text-center">
-			<div class="col-md-12">
-				<a href="home" style="color: #ffffff"> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-					Copyright &copy;<script>
-						document.write(new Date().getFullYear());
-					</script>Todos os Direitos Reservados | SmartClub Company.
-				</a>
-			</div>
-		</div>
-	</div>
-	</section> <!-- Footer Widget Area --> <!-- Copywrite Text --> </footer>		
-	</form>
+</section>
 		
 
 

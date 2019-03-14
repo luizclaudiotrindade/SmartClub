@@ -48,6 +48,13 @@ body {
 	<c:import url="navUsuario.jsp" />
 
 
+	<!-- Preloader -->
+	<div class="preloader d-flex align-items-center justify-content-center">
+		<div class="cssload-container">
+			<div class="cssload-loading"></div>
+		</div>
+	</div>
+
 	<!-- ##### Header Area Start ##### -->
 	<header class="header-area"> <!-- Navbar Area -->
 	<div class="palatin-main-menu">
@@ -267,7 +274,7 @@ body {
 				<div class="col-12 col-lg-10">
 					<div class="book-now-form">
 						<form action="filter">
-<!--
+							<!--
 							<div class="form-group">
 							  
 								<label for="select1">Check In</label> <select
@@ -308,9 +315,11 @@ body {
 							</div>
 -->
 							<div class="form-group">
-								<label for="select4">Buscar Hotel</label> 
-								<label for="inputNomeHotel">Hotel</label> <input type="text"id="inputNomeHotel" class="form-control" name="nomeHotel"style="width: 100px;" maxlength="15" />
-								
+								<label for="select4">Buscar Hotel</label> <label
+									for="inputNomeHotel">Hotel</label> <input type="text"
+									id="inputNomeHotel" class="form-control" name="nomeHotel"
+									style="width: 100px;" maxlength="15" />
+
 							</div>
 
 							<button type="submit">Book Now</button>
@@ -328,35 +337,36 @@ body {
 			<div class="col-12 col-lg-6">
 				<div class="section-heading text-center">
 					<div class="line-"></div>
-					<h2>Lista  de Hoteis</h2>
+					<h2>Lista de Hoteis</h2>
 					<p>Aqui estão alguns Hoteis</p>
 				</div>
 			</div>
 		</div>
 		<div class="row">
-		
-		<c:forEach items="${listaHotel}" var="obj">	
-			<div class="col-12 col-md-6 col-lg-4">
-				<div class="single-rooms-area wow fadeInUp" data-wow-delay="100ms">
 
-					<div class="bg-thumbnail bg-img"
-						style="background-image: url(https://www.hotelpremiumcampinas.com.br/wp-content/uploads/2017/10/banner1.jpg);"></div>
+			<c:forEach items="${listaHotel}" var="obj">
+				<div class="col-12 col-md-6 col-lg-4">
+					<div class="single-rooms-area wow fadeInUp" data-wow-delay="100ms">
 
-					<p class="price-from">  - Valor: $150/Diaria</p>
+						<div class="bg-thumbnail bg-img"
+							style="background-image: url(https://www.hotelpremiumcampinas.com.br/wp-content/uploads/2017/10/banner1.jpg);"></div>
 
-					<div class="rooms-text">
-						<div class="line"></div>
-						<h4>${obj.nomeHotel}</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-							Donec malesuada lorem maximus mauris sceleri sque.</p>
+						<p class="price-from">- Valor: $150/Diaria</p>
+
+						<div class="rooms-text">
+							<div class="line"></div>
+							<h4>${obj.nomeHotel}</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+								Donec malesuada lorem maximus mauris sceleri sque.</p>
+						</div>
+
+						<a href="usuarioCompra?id=${obj.idhotel}"
+							class="book-room-btn btn palatin-btn">Comprar Quarto</a>
 					</div>
-
-					<a href="usuarioCompra?id=${hoteis.idhotel}" class="book-room-btn btn palatin-btn">Comprar Quarto</a>
 				</div>
-			</div>
 			</c:forEach>
 
-			
+
 			<div class="col-12">
 
 				<div class="pagination-area wow fadeInUp" data-wow-delay="400ms">
@@ -374,7 +384,8 @@ body {
 	</section>
 
 
-	<footer> <section class="cta py-5 bg-dark text-white" style="    margin-left: -121px;
+	<footer> <section class="cta py-5 bg-dark text-white"
+		style="    margin-left: -121px;
     margin-right: -119px; margin-top: 2%">
 	<div class="container">
 		<div class="row text-center">
@@ -387,7 +398,7 @@ body {
 			</div>
 		</div>
 	</div>
-	</section> <!-- Footer Widget Area --> <!-- Copywrite Text --> </footer>	
+	</section> <!-- Footer Widget Area --> <!-- Copywrite Text --> </footer>
 
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"></script>
