@@ -256,7 +256,7 @@ padding-left: 6px;
 	<div class="container">
 		<div class="row text-center">
 			<div class="col-md-12">
-				<a href="#" style="color: #fff"> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				<a href="/smartClub/" style="color: #fff"> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 					Copyright &copy;<script>
 						document.write(new Date().getFullYear());
 					</script>Todos os Direitos Reservados | SmartClub Company.

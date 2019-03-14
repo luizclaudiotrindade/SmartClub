@@ -58,7 +58,10 @@ h1{
     margin-bottom: 12px;
 
 }
-.
+.bg-dark{
+background-color: #000000!important;
+
+}
 
 </style>
 </head>
@@ -415,9 +418,25 @@ h1{
   <!--/.Slides-->
 
 </div>
-</section>
-		
 
+<footer> <section class="cta py-5 bg-dark text-white"
+		style="    margin-left: -121px;
+    margin-right: -119px; margin-top: 2%">
+	<div class="container">
+		<div class="row text-center">
+			<div class="col-md-12">
+				<a href="/smartClub/" style="color: #fff"> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					Copyright &copy;<script>
+						document.write(new Date().getFullYear());
+					</script>Todos os Direitos Reservados | SmartClub Company.
+				</a>
+			</div>
+		</div>
+	</div>
+	</section> <!-- Footer Widget Area --> <!-- Copywrite Text --> </footer>
+
+		
+	
 
 
 	<script type="text/javascript"
